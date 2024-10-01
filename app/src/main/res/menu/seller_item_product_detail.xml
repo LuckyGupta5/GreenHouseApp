@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/menu_background">
+    <item
+        android:id="@+id/edit_bid_time"
+        android:title="@string/edit_bid_time"
+        android:titleTextColor="@color/black" />
+    <item
+        android:id="@+id/remove_product"
+        android:title="@string/remove_product"
+        android:titleTextColor="@color/black" />
+</menu>

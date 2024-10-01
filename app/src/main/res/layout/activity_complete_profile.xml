@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        tools:context=".screen.CompleteProfile">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/screen_background"
+            tools:ignore="ContentDescription" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/continue_btn"
+            android:fillViewport="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/complete_profile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="34dp"
+                    android:text="@string/complete_profile"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_23_title"
+                    android:textStyle="bold"
+                    tools:ignore="RelativeOverlap" />
+
+                <ImageView
+                    android:id="@+id/cross"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="95dp"
+                    android:layout_marginTop="31dp"
+                    android:layout_marginEnd="20dp"
+                    android:src="@drawable/ic_cross_white_bg"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:id="@+id/personal_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/complete_profile"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="9dp"
+                    android:text="@string/enter_personal_detail"
+                    android:textAlignment="viewStart"
+                    android:textColor="#434343"
+                    android:textSize="@dimen/button_text_size_17"
+                    android:textStyle="normal" />
+
+                <RelativeLayout
+                    android:id="@+id/complete_profile_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/personal_detail"
+                    android:layout_marginTop="40dp">
+
+                    <com.ripenapps.greenhouse.utills.CustomInputLayout
+                        android:id="@+id/fullname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp" />
+
+                    <com.ripenapps.greenhouse.utills.CustomInputNumberLayout
+                        android:id="@+id/mobileNumberComplete"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/fullname"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="15dp" />
+
+                    <com.ripenapps.greenhouse.utills.CustomInputLayout
+                        android:id="@+id/email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/mobileNumberComplete"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp" />
+
+
+                    <com.ripenapps.greenhouse.utills.CustomInputLayout
+                        android:id="@+id/tax"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/email"
+                        android:layout_marginTop="5dp" />
+
+
+                    <com.ripenapps.greenhouse.utills.CustomInputLayout
+                        android:id="@+id/password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tax"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp" />
+
+
+                    <com.ripenapps.greenhouse.utills.CustomInputLayout
+                        android:id="@+id/confirm_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/password"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp" />
+
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/term_and_condition"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/confirm_password"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="30dp"
+                        android:layout_marginBottom="20dp"
+                        android:fontFamily="@font/euclid_circular_medium"
+                        android:lineSpacingExtra="6sp"
+                        android:paddingVertical="5dp"
+                        android:text="@string/terms_and_condition_privacy_policy"
+                        android:textAlignment="viewStart"
+                        android:textColor="#99000000"
+                        android:textColorLink="@color/black"
+                        android:textSize="@dimen/resend_code_size13"
+                        android:textStyle="normal" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+        </ScrollView>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/continue_btn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height_75"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="#DCE0DF"
+            android:text="@string/btn_continue"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/button_text_size_17"
+            app:cornerRadius="10dp" />
+
+    </RelativeLayout>
+</layout>

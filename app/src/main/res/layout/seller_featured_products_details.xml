@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="featuredBidding"
+            type="com.ripenapps.greenhouse.datamodels.sellermodel.HighestBiddingListModel" />
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/highest_bid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        tools:background="@drawable/bg_bottom_view">
+
+        <RelativeLayout
+            android:id="@+id/detailLayer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/idNameCard"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="5dp"
+                app:cardCornerRadius="50dp"
+                tools:background="@drawable/bg_highest_bid_position">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/position"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/euclid_circular_semi_bold"
+                    android:gravity="center"
+                    android:text="@{featuredBidding.cardViewText}"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    tools:text="@string/_1_" />
+
+            </androidx.cardview.widget.CardView>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/subCategoryName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="@dimen/dimen_8"
+                android:layout_toEndOf="@id/idNameCard"
+                android:fontFamily="@font/euclid_circular_semi_bold"
+                android:maxLength="20"
+                android:maxLines="1"
+                android:text="@{featuredBidding.subCategoryName}"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                tools:text="@string/cauliflower" />
+
+            <TextView
+                android:id="@+id/userName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/subCategoryName"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="@dimen/dimen_15"
+                android:layout_toEndOf="@id/idNameCard"
+                android:fontFamily="@font/euclid_circular_medium"
+                android:maxLength="15"
+                android:maxLines="1"
+                android:text="@{featuredBidding.username}"
+                android:textColor="#6D6D6D"
+                android:textSize="13sp"
+                android:textStyle="normal"
+                tools:text="jdoe15" />
+
+            <TextView
+                android:id="@+id/bid_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/dimen10dp"
+                android:fontFamily="@font/euclid_circular_medium"
+                android:text="@{featuredBidding.bidPrice}"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                tools:text="SAR 45.69" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/detailLayer"
+            android:layout_marginStart="65dp"
+            android:background="#1A707070" />
+    </RelativeLayout>
+</layout>

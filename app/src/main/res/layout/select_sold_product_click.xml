@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="sellerSoldProductModel"
+            type="com.ripenapps.greenhouse.datamodels.sellermodel.SelectSoldProductModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginBottom="20dp">
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/subCategory"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/euclid_circular_bold"
+            android:maxLines="2"
+            android:text="@{sellerSoldProductModel.subCategory}"
+            android:textAlignment="viewStart"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            android:textStyle="normal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/cauliflower" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/ic_map_pin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/subCategory"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="15dp"
+            android:drawableStart="@drawable/ic_map_pin"
+            android:drawablePadding="10dp"
+            android:ellipsize="end"
+            android:maxLength="20"
+            android:fontFamily="@font/euclid_circular_light"
+            android:inputType="textMultiLine"
+            android:maxLines="2"
+            android:text="@{sellerSoldProductModel.location}"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/subCategory"
+            app:layout_constraintTop_toBottomOf="@+id/subCategory"
+            app:layout_constraintVertical_bias="0.0"
+            tools:text="riyadh_sa" />
+
+        <ImageView
+            android:id="@+id/view_img"
+            android:layout_width="5dp"
+            android:layout_height="5dp"
+            android:layout_below="@id/subCategory"
+            android:layout_marginStart="16dp"
+            android:layout_toEndOf="@id/ic_map_pin"
+            android:src="@drawable/ellipse_18"
+            app:layout_constraintBottom_toBottomOf="@+id/ic_map_pin"
+            app:layout_constraintStart_toEndOf="@+id/ic_map_pin"
+            app:layout_constraintTop_toBottomOf="@+id/subCategory"
+            app:layout_constraintVertical_bias="0.76" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/item_weight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/money"
+            android:layout_marginStart="11dp"
+            android:layout_toEndOf="@id/view_img"
+            android:fontFamily="@font/euclid_circular_light"
+            android:text="@{sellerSoldProductModel.weight}"
+            android:textAlignment="center"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/ic_map_pin"
+            app:layout_constraintStart_toEndOf="@+id/view_img"
+            app:layout_constraintTop_toTopOf="@+id/ic_map_pin"
+            tools:text="100_kg" />
+
+        <TextView
+            android:id="@+id/money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="18dp"
+            android:fontFamily="@font/euclid_circular_regular"
+            android:text="@{sellerSoldProductModel.price}"
+            android:textAlignment="viewEnd"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/ic_map_pin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/subCategory"
+            tools:text="25_99" />
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/ic_map_pin"
+            android:layout_marginTop="20dp"
+            android:background="#D9D9D9"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ic_map_pin" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

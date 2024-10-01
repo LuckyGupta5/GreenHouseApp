@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+<variable
+    name="itemMultipleModel"
+    type="com.ripenapps.greenhouse.datamodels.sellermodel.SellerMultipleImagesModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:background="@color/white"
+        android:layout_marginEnd="25dp"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/img"
+            android:layout_width="93dp"
+            android:layout_height="96dp"
+            android:scaleType="centerCrop"
+            app:shapeAppearanceOverlay="@style/circleImageView"
+            tools:src="@drawable/images" />
+
+        <ImageView
+            android:id="@+id/delete_img"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignEnd="@id/img"
+            android:elevation="20dp"
+            android:layout_marginEnd="10dp"
+            android:scaleType="fitXY"
+            android:layout_marginTop="6dp"
+            android:src="@drawable/group_1000004056" />
+    </RelativeLayout>
+</layout>

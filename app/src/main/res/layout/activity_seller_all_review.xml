@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".screen.bidder.SellerAllReview">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/screen_background" />
+
+        <ImageView
+            android:id="@+id/closeAllReviews"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11dp"
+            android:paddingHorizontal="15dp"
+            android:paddingVertical="20dp"
+            android:src="@drawable/ic_back_black" />
+
+        <TextView
+            android:id="@+id/titleRatingReviews"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="28dp"
+            android:text="@string/rating_reviews"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/profile_heading_21"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/linaerLayer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/titleRatingReviews"
+            android:layout_marginTop="24dp"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/ebebeb_border"
+                android:gravity="center"
+                android:paddingHorizontal="5dp">
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/avgRating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginVertical="15dp"
+                    android:drawableStart="@drawable/ic_star_yellow"
+                    android:drawablePadding="4dp"
+                    android:fontFamily="@font/euclid_circular_medium"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/resend_code_size13"
+                    tools:text="@string/_4" />
+
+                <View
+                    android:id="@+id/viewReview"
+                    android:layout_width="2dp"
+                    android:layout_height="15dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_toEndOf="@id/avgRating"
+                    android:background="@color/black" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/totalRating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginVertical="15dp"
+                    android:layout_toEndOf="@id/viewReview"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/euclid_circular_medium"
+                    android:maxLines="1"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/resend_code_size13"
+                    tools:text="15 reviews" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/sortFilter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/ebebeb_border">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginVertical="15dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginEnd="10dp"
+                    android:drawableEnd="@drawable/ic_black_down"
+                    android:fontFamily="@font/euclid_circular_medium"
+                    android:text="@string/sort_by"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/resend_code_size13" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/idRefreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linaerLayer"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="25dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/allReviewsRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/review_layout" />
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <include
+            android:id="@+id/reviewShimmer"
+            layout="@layout/review_shimmer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/linaerLayer" />
+
+    </RelativeLayout>
+</layout>

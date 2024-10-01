@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_lang_selection"
+        tools:context=".fragment.sellerfragemnt.SellerOrderDetailsAddPackageDetails">
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="85dp"
+            android:layout_height="5dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/view_top_verify_num" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/add_package"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/view1"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="25dp"
+            android:text="@string/add_package_details"
+            android:textColor="@color/black"
+            android:textSize="19sp"
+            android:textStyle="normal"
+            app:fontFamily="@font/euclid_circular_semi_bold" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/boxes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/add_package"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="41dp"
+            android:fontFamily="@font/euclid_circular_semi_bold"
+            android:text="@string/boxes"
+            android:textColor="#434343"
+            android:textSize="17sp"
+            android:textStyle="normal" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/box_count_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/boxes"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/ededed_border"
+            android:elevation="@dimen/elevation_5"
+            android:hint="@string/enter_box_count"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:maxLength="5"
+            android:paddingHorizontal="15dp"
+            android:paddingVertical="22dp"
+            android:textColor="@color/black"
+            android:textColorHint="#9E9E9E" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/dimension"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/box_count_number"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="25dp"
+            android:fontFamily="@font/euclid_circular_semi_bold"
+            android:text="@string/boxes_dimension"
+            android:textColor="#434343"
+            android:textSize="17sp"
+            android:textStyle="normal" />
+
+        <LinearLayout
+            android:id="@+id/dimen_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dimension"
+            android:layout_centerHorizontal="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/length_count"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="15dp"
+                android:layout_marginStart="15dp"
+                android:layout_weight="1"
+                android:background="@drawable/ededed_border"
+                android:elevation="@dimen/elevation_5"
+                android:ellipsize="end"
+                android:hint="@string/length_mtr"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="5"
+                android:paddingHorizontal="@dimen/dimen10dp"
+                android:paddingVertical="15dp"
+                android:textColor="@color/black"
+                android:textColorHint="#9E9E9E"
+                android:textSize="@dimen/text_size_19_subheading"
+                android:textStyle="normal" />
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/height_count"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="9dp"
+                android:layout_marginVertical="15dp"
+                android:layout_weight="1"
+                android:background="@drawable/ededed_border"
+                android:elevation="@dimen/elevation_5"
+                android:ellipsize="end"
+                android:hint="@string/height_mtr"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="5"
+                android:paddingHorizontal="@dimen/dimen10dp"
+                android:paddingVertical="15dp"
+                android:textColor="@color/black"
+                android:textColorHint="#9E9E9E"
+                android:textSize="@dimen/text_size_19_subheading"
+                android:textStyle="normal" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/width_count"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_weight="1"
+                android:background="@drawable/ededed_border"
+                android:elevation="@dimen/elevation_5"
+                android:ellipsize="end"
+                android:hint="@string/width_mtr"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:maxLength="5"
+                android:paddingHorizontal="@dimen/dimen10dp"
+                android:paddingVertical="15dp"
+                android:textColor="@color/black"
+                android:textColorHint="#9E9E9E"
+                android:textSize="@dimen/text_size_19_subheading"
+                android:textStyle="normal" />
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_save"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height_75"
+            android:layout_below="@id/dimen_layout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="21dp"
+            android:layout_marginBottom="9dp"
+            android:backgroundTint="#28B17B"
+            android:fontFamily="@font/euclid_circular_medium"
+            android:text="@string/btn_save"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/button_text_size_17"
+            app:cornerRadius="8dp" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="115dp"
+            android:layout_height="4dp"
+            android:layout_below="@id/btn_save"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="9dp"
+            android:background="@drawable/bottom_black_view_3dp" />
+
+    </RelativeLayout>
+</layout>

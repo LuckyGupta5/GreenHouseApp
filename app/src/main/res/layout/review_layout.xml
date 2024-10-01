@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="reviewModel"
+            type="com.ripenapps.greenhouse.datamodels.biddermodel.ReviewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginVertical="5dp">
+
+        <RelativeLayout
+            android:id="@+id/picture_img"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:background="@drawable/ellipse_19159__1_">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/userNameInitials"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/euclid_circular_bold"
+                android:textAlignment="center"
+                android:textColor="@color/greenhousetheme"
+                android:textSize="21sp"
+                android:textStyle="bold"
+                app:getInitials="@{reviewModel.initials}"
+                tools:text="AF" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/reviewerName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="2dp"
+            android:layout_toEndOf="@id/picture_img"
+            android:text="@{reviewModel.reviewerName}"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/number_size_15"
+            android:textStyle="bold"
+            tools:text="rishabh_jain" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="119dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/rating_border">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/reviewRating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginVertical="4dp"
+                android:drawableStart="@drawable/star_rating"
+                android:drawablePadding="2dp"
+                android:text="@{reviewModel.reviewStar}"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                android:textStyle="normal"
+                tools:text="@string/_4_5" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/reviewDay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/reviewerName"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="2dp"
+            android:layout_toEndOf="@id/picture_img"
+            android:text="@{reviewModel.reviewDay}"
+            android:textAlignment="center"
+            android:textColor="#737373"
+            android:textSize="@dimen/resend_code_size13"
+            android:textStyle="normal"
+            tools:text="@string/today" />
+
+        <TextView
+            android:id="@+id/review"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/picture_img"
+            android:layout_marginTop="20dp"
+            android:lineSpacingExtra="6sp"
+            android:text="@{reviewModel.review}"
+            android:textAlignment="viewStart"
+            android:textColor="#5B5B5B"
+            android:textSize="@dimen/text_size_15_desc"
+            android:textStyle="normal"
+            tools:text="@string/description" />
+
+        <View
+            android:id="@+id/lastView"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/review"
+            android:layout_marginTop="20dp"
+            android:background="#1C707070" />
+
+
+    </RelativeLayout>
+</layout>

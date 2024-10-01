@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_lang_selection"
+        tools:context=".screen.seller.SelectCategory">
+
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="85dp"
+            android:layout_height="5dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/view_top_verify_num" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/category1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/view1"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/euclid_circular_medium"
+            android:text="@string/select_category"
+            android:textColor="@color/black"
+            android:textSize="21sp" />
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/category1"
+            android:layout_marginTop="30dp"
+            android:background="#D9D9D9" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/select_category_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/view2"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            tools:listitem="@layout/seller_select_category_product_recycler"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="115dp"
+            android:layout_height="4dp"
+            android:layout_below="@id/select_category_recycler"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="35dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/bottom_black_view_3dp" />
+
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="onBoardingModel"
+            type="com.ripenapps.greenhouse.datamodels.ViewPagerItem" />
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/idOnBoardScreen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".fragment.OnBoardingFragment1">
+
+        <ImageView
+            android:id="@+id/mobileImage"
+            android:layout_width="271dp"
+            android:layout_height="435dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="45dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/walkthroughscreen" />
+
+        <ImageView
+            android:id="@+id/auctionImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/mobileImage"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="19dp"
+            android:src="@drawable/green_house_logo" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/auctionImg"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="18dp"
+            android:fontFamily="@font/euclid_circular_bold"
+            android:lineSpacingExtra="10sp"
+            android:text="@{onBoardingModel.heading}"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            tools:text="@string/auction_title" />
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title"
+            android:layout_centerHorizontal="true"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="18dp"
+            android:lineSpacingExtra="7sp"
+            android:text="@{onBoardingModel.description}"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            android:textStyle="normal"
+            tools:text="@string/auction_desc" />
+
+    </RelativeLayout>
+</layout>

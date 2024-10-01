@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="historyModel"
+            type="com.ripenapps.greenhouse.datamodels.sellermodel.HistoryModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/idNameCard"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            app:cardBackgroundColor="#74D5FF"
+            app:cardCornerRadius="50dp">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="2dp"
+                android:fontFamily="@font/euclid_circular_semi_bold"
+                android:padding="14dp"
+                android:text="@{historyModel.cardViewText}"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="normal"
+                tools:text="@string/ms" />
+
+        </androidx.cardview.widget.CardView>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="2dp"
+            android:layout_toEndOf="@id/idNameCard"
+            android:fontFamily="@font/euclid_circular_semi_bold"
+            android:text="@{historyModel.username}"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            android:textStyle="normal"
+            tools:text="mwhite2_5" />
+
+        <TextView
+            android:id="@+id/highestBtn"
+            android:layout_width="85dp"
+            android:layout_height="25dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="14dp"
+            android:layout_toEndOf="@+id/user_name"
+            android:background="@drawable/green_house_color_border"
+            android:gravity="center"
+            android:text="@string/highest"
+            android:textColor="@color/white"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/user_name"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="8dp"
+            android:layout_toEndOf="@id/idNameCard"
+            android:fontFamily="@font/euclid_circular_medium"
+            android:text="@{historyModel.time}"
+            android:textColor="#6D6D6D"
+            android:textSize="13sp"
+            android:textStyle="normal"
+            tools:text="2023_12_25_10_30_am" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/bid_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/euclid_circular_medium"
+            android:text="@{historyModel.bidPrice}"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="normal"
+            tools:text="aed_28_13" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/time"
+            android:layout_marginStart="65dp"
+            android:layout_marginTop="22dp"
+            android:layout_marginEnd="@dimen/dimen10dp"
+            android:background="#1A707070" />
+    </RelativeLayout>
+</layout>

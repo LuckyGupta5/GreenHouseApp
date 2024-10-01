@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="selectCategoryModel"
+            type="com.ripenapps.greenhouse.datamodels.sellermodel.SelectCategoryModel" />
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/select_category_product"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="@dimen/dimen_20"
+            android:fontFamily="@font/euclid_circular_regular"
+            android:text="@{selectCategoryModel.text}"
+            android:textAlignment="viewStart"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            android:textStyle="normal"
+            tools:text="@string/vegetables" />
+
+        <ImageView
+            android:id="@+id/click"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/ic_green_tick_filter"
+            android:textAlignment="viewStart"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+        <View
+            android:id="@+id/view3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/text1"
+            android:layout_marginStart="15dp"
+            android:background="#F5F5F5" />
+
+    </RelativeLayout>
+</layout>

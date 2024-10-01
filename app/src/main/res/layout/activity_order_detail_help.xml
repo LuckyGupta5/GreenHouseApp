@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".screen.bidder.OrderDetailHelp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/screen_background" />
+
+        <RelativeLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/backButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="25dp"
+                android:padding="5dp"
+                android:src="@drawable/ic_back_black" />
+
+            <TextView
+                android:id="@+id/heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="27dp"
+                android:fontFamily="@font/euclid_circular_semi_bold"
+                android:text="@string/help"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/profile_heading_21" />
+        </RelativeLayout>
+
+        <include
+            android:id="@+id/orderHelpShimmer"
+            layout="@layout/my_profile_shimmer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/header" />
+
+        <RelativeLayout
+            android:id="@+id/dataLayer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/header"
+            android:layout_marginTop="27dp">
+
+            <TextView
+                android:id="@+id/titleActiveConversations"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="20dp"
+                android:fontFamily="@font/euclid_circular_semi_bold"
+                android:text="@string/active_conversations"
+                android:textAlignment="viewStart"
+                android:textColor="#2D2D2D"
+                android:textSize="@dimen/name_size_17" />
+
+            <RelativeLayout
+                android:id="@+id/orderDetailLayer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/titleActiveConversations"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/ebebeb_border">
+
+                <TextView
+                    android:id="@+id/orderId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="14dp"
+                    android:fontFamily="@font/euclid_circular_medium"
+                    android:textAlignment="viewStart"
+                    android:textColor="#2D2D2D"
+                    android:textSize="@dimen/name_size_17"
+                    tools:text="ORDER ID #252655" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/orderStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginEnd="15dp"
+                    android:drawableStart="@drawable/ic_i_yellow"
+                    android:drawablePadding="8dp"
+                    android:textAlignment="viewEnd"
+                    android:textColor="#F4AE23"
+                    android:textSize="@dimen/resend_code_size13"
+                    android:textStyle="normal"
+                    tools:text="@string/open" />
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/orderId"
+                    android:layout_marginTop="14dp"
+                    android:background="#EBEBEB" />
+
+                <TextView
+                    android:id="@+id/titleItemMissing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/view"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="13dp"
+                    android:layout_marginEnd="20dp"
+                    android:fontFamily="@font/euclid_circular_medium"
+                    android:textAlignment="viewStart"
+                    android:textColor="#2D2D2D"
+                    android:textSize="@dimen/name_size_17"
+                    tools:text="@string/few_items_are_missing" />
+
+                <TextView
+                    android:id="@+id/dayAndTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/titleItemMissing"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="9dp"
+                    android:layout_marginBottom="13dp"
+                    android:textAlignment="center"
+                    android:textColor="#767676"
+                    android:textSize="11sp"
+                    android:textStyle="normal"
+                    tools:text="Today, 9:30 PM" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/titleHelpWith"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/orderDetailLayer"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="18dp"
+                android:fontFamily="@font/euclid_circular_semi_bold"
+                android:text="@string/help_with"
+                android:textAlignment="viewStart"
+                android:textColor="#2D2D2D"
+                android:textSize="@dimen/name_size_17" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/faqQuestionRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/titleHelpWith"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/faq_questions_layout" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+</layout>

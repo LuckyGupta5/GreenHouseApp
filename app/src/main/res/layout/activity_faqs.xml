@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".screen.bidder.FAQs">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/screen_background"
+            android:importantForAccessibility="no" />
+
+        <ImageView
+            android:id="@+id/ic_faq"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="26dp"
+            android:src="@drawable/ic_faqs"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/faq_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="24dp"
+            android:layout_toStartOf="@id/close_faq"
+            android:layout_toEndOf="@id/ic_faq"
+            android:fontFamily="@font/euclid_circular_semi_bold"
+            android:lineSpacingExtra="6sp"
+            android:text="@string/faq"
+            android:textAlignment="viewStart"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_19_subheading" />
+
+        <ImageView
+            android:id="@+id/close_faq"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="26dp"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/ic_cross_white_bg" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerFaqTypes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/faq_title"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dimen_20"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/faq_types_layout" />
+
+        <TextView
+            android:id="@+id/subHeadingTopQues"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/recyclerFaqTypes"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/euclid_circular_semi_bold"
+            android:text="@string/top_questions"
+            android:textAlignment="viewStart"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_19_subheading" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/faqQuestionRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/subHeadingTopQues"
+            android:layout_marginTop="@dimen/dimen10dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/faq_questions_layout" />
+
+        <include
+            android:id="@+id/myProfileShimmer"
+            layout="@layout/my_profile_shimmer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/subHeadingTopQues"
+            android:layout_marginTop="@dimen/dimen10dp"
+            android:visibility="gone" />
+    </RelativeLayout>
+</layout>

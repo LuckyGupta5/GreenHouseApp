@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="recentSearchMode"
+            type="com.ripenapps.greenhouse.datamodels.biddermodel.RecentSearchModel" />
+
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/itemSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_marginTop="@dimen/dimen_20"
+        android:orientation="vertical">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/searchedItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="@dimen/dimen_15"
+            android:layout_toStartOf="@id/crossIcon"
+            android:drawableStart="@drawable/ic_recent_search"
+            android:drawablePadding="@dimen/dimen10dp"
+            android:text="@{recentSearchMode.recentSearch}"
+            android:textAlignment="viewStart"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            tools:text="Vegetables" />
+
+        <ImageView
+            android:id="@+id/crossIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/dimen_15"
+            android:padding="5dp"
+            android:src="@drawable/ic_cross" />
+
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/searchedItem"
+            android:layout_marginHorizontal="@dimen/dimen_15"
+            android:layout_marginTop="@dimen/text_size_25"
+            android:background="#1C707070" />
+
+    </RelativeLayout>
+</layout>

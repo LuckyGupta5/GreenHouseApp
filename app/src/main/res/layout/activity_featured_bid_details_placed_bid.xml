@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".screen.seller.FeaturedBidDetailsPlacedBid">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/backgroundimage" />
+
+        <ImageView
+            android:id="@+id/backward_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="25dp"
+            android:padding="5dp"
+            android:src="@drawable/layer_1" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/euclid_circular_medium"
+            android:text="@string/featured_bidding_details"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="21sp"
+            android:textStyle="normal" />
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/idRefreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/btn_place_a_bid"
+            android:layout_below="@id/text"
+            android:layout_marginTop="15dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/nested"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fillViewport="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/top_ranking"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginHorizontal="23dp"
+                        android:layout_marginTop="20dp"
+                        android:lines="3"
+                        android:text="@string/the_products_of_top_10_rankers_will_be_marked_as_featured_and_product_ranking_will_be_same_as_their_bidding"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="normal" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/bid_ranking"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/top_ranking"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="18dp"
+                        android:text="@string/bid_ranking"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/black"
+                        android:textSize="19sp"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:id="@+id/top"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/bid_ranking"
+                        android:layout_marginHorizontal="@dimen/dimen10dp"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/bg_top_left_right_border"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_gravity="start"
+                            android:layout_marginVertical="15dp"
+                            android:layout_marginStart="15dp"
+                            android:maxLength="14"
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/black"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            tools:text="10 Jan 2023" />
+
+                        <TextView
+                            android:id="@+id/time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginVertical="15dp"
+                            android:layout_marginEnd="15dp"
+                            android:maxLength="20"
+                            android:textAlignment="viewEnd"
+                            android:textColor="@color/red"
+                            android:textSize="15sp"
+                            android:textStyle="normal"
+                            tools:text="1h 30m left" />
+                    </RelativeLayout>
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/ranking_recycler"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@id/buttonLayer"
+                        android:layout_below="@id/top"
+                        android:layout_marginHorizontal="@dimen/dimen10dp"
+                        android:visibility="visible"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        tools:ignore="NotSibling"
+                        tools:itemCount="2"
+                        tools:listitem="@layout/seller_featured_products_details" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/top">
+
+                        <ImageView
+                            android:id="@+id/placeHolder"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/featured"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/headingPlaceHolder"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/placeHolder"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="100dp"
+                            android:fontFamily="@font/euclid_circular_medium"
+                            android:text="@string/no_featured_bidding_yet"
+                            android:textAlignment="center"
+                            android:textColor="#000000"
+                            android:textSize="@dimen/name_size_17"
+                            android:textStyle="bold"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/placeHolderDescription"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/headingPlaceHolder"
+                            android:layout_marginHorizontal="66dp"
+                            android:layout_marginTop="8dp"
+                            android:lineSpacingExtra="6sp"
+                            android:text="@string/no_product_featured"
+                            android:textAlignment="center"
+                            android:textColor="#494949"
+                            android:textSize="@dimen/text_size_15_desc"
+                            android:textStyle="normal"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+            </androidx.core.widget.NestedScrollView>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_place_a_bid"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height_75"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="15dp"
+            android:backgroundTint="#28B17B"
+            android:fontFamily="@font/euclid_circular_medium"
+            android:text="@string/place_a_bid"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:textStyle="normal"
+            app:cornerRadius="8dp" />
+
+        <include
+            android:id="@+id/featuredDetailsMainShimmer"
+            layout="@layout/seller_featured_details_shimmer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible" />
+
+
+    </RelativeLayout>
+</layout>

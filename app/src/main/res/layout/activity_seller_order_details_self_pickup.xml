@@ -1,0 +1,1430 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".screen.seller.SellerOrderDetailsSelfPickup">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/backward_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:padding="5dp"
+            android:src="@drawable/layer_1" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/euclid_circular_semi_bold"
+            android:text="@string/order_details"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="21sp" />
+
+        <LinearLayout
+            android:id="@+id/help_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="22dp"
+            android:layout_marginEnd="22dp"
+            android:background="@drawable/ebebeb_border">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/vector__10_"
+                android:drawablePadding="5dp"
+                android:fontFamily="@font/euclid_circular_medium"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="12dp"
+                android:text="@string/help"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/main_scroll_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/backward_image"
+            android:fillViewport="true">
+
+            <RelativeLayout
+                android:id="@+id/scroll_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/seller_my_bids"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginTop="23dp"
+                    android:background="@drawable/ededed_border"
+                    tools:ignore="NotSibling">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/veg_img"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_marginVertical="15dp"
+                        android:layout_marginStart="15dp"
+                        android:scaleType="centerCrop"
+                        app:shapeAppearanceOverlay="@style/vegetableImageBid"
+                        tools:src="@drawable/cauliflowermybids" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/veg_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_toEndOf="@id/veg_img"
+                        android:fontFamily="@font/euclid_circular_semi_bold"
+                        android:text="@string/cauliflower"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/name_size_17" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/veg_text"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_toEndOf="@id/veg_img"
+                        android:drawableStart="@drawable/map_pin"
+                        android:drawablePadding="3dp"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/euclid_circular_light"
+                        android:inputType="textImeMultiLine"
+                        android:maxLength="10"
+                        android:maxLines="2"
+                        android:textColor="#5B5B5B"
+                        android:textSize="@dimen/resend_code_size13"
+                        android:textStyle="normal"
+                        tools:text="normal normal normal normal normal" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/view_add"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/veg_text"
+                        android:layout_marginStart="6dp"
+                        android:layout_marginTop="14dp"
+                        android:layout_toEndOf="@id/location"
+                        android:src="@drawable/ellipse_19172" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/quantity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/veg_text"
+                        android:layout_marginStart="7dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="@dimen/dimen_20"
+                        android:layout_toStartOf="@+id/sar"
+                        android:layout_toEndOf="@id/view_add"
+                        android:fontFamily="@font/euclid_circular_light"
+                        android:maxWidth="40dp"
+                        android:maxLines="1"
+                        android:textAlignment="viewStart"
+                        android:textColor="#5F5F5F"
+                        android:textSize="13sp"
+                        android:textStyle="normal"
+                        tools:text="10kg." />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/sar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="32dp"
+                        android:layout_marginEnd="15dp"
+                        android:fontFamily="@font/euclid_circular_medium"
+                        android:text="@string/sar"
+                        android:textColor="#707070"
+                        android:textSize="13sp"
+                        android:textStyle="normal" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/product_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/sar"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_toStartOf="@+id/quantity"
+                        android:fontFamily="@font/euclid_circular_semi_bold"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        tools:text="45.69" />
+
+
+                    <View
+                        android:id="@+id/view_ebebeb"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/veg_img"
+                        android:layout_marginTop="15dp"
+                        android:background="#EBEBEB" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/view_ebebeb"
+                        android:layout_marginVertical="15dp"
+                        android:layout_marginStart="12dp"
+                        android:fontFamily="@font/euclid_circular_semi_bold"
+                        android:text="@string/bid_count"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_15_desc" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/bidcount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/view_ebebeb"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginVertical="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:fontFamily="@font/euclid_circular_bold"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_15_desc"
+                        android:textStyle="normal"
+                        tools:text="15" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/order_status_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/seller_my_bids"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginTop="13dp"
+                    android:background="@drawable/ebebeb_border"
+                    android:visibility="visible">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/order_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="9dp"
+                        android:fontFamily="@font/euclid_circular_medium"
+                        android:text="@string/order_status"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/button_text_size_17"
+                        android:textStyle="normal" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="15dp"
+                        android:src="@drawable/ic_down_arrow_646464" />
+
+                    <TextView
+                        android:id="@+id/orderId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/order_status"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="17dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="10dp"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/greenhousetheme"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        tools:text="ORDER ID #252655" />
+
+                    <View
+                        android:id="@+id/view_status"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/orderId"
+                        android:background="#EBEBEB" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/waitingSecondOne"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/view_status"
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:fontFamily="@font/euclid_circular_medium"
+                        android:text="@string/we_are_awaiting_the_user_s_acceptance_of_your_order_request_upon_their_confirmation_we_will_proceed_to_create_a_new_order"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:visibility="visible"
+                        tools:text="kljhg" />
+
+                    <RelativeLayout
+                        android:id="@+id/receivedContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/waitingSecondOne">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/circle_img"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="19dp"
+                            android:layout_marginTop="20dp"
+                            android:src="@drawable/ic_statuc_check" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/order_receive"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_toEndOf="@id/circle_img"
+                            android:fontFamily="@font/euclid_circular_medium"
+                            android:text="@string/order_received"
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/black"
+                            android:textSize="15sp"
+                            android:textStyle="normal" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/order_receive_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/order_receive"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_toEndOf="@id/circle_img"
+                            android:fontFamily="@font/euclid_circular_medium"
+                            android:textAlignment="viewStart"
+                            android:textColor="#737373"
+                            android:textSize="11sp"
+                            android:textStyle="normal"
+                            tools:text="Sat, 03 Dec 2023, 12:30 AM" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/dot_img"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/circle_img"
+                            android:layout_marginStart="27dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="2dp"
+                            android:src="@drawable/group_153437" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/status_dot_img"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/circle_img"
+                            android:layout_marginStart="27dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="2dp"
+                            android:src="@drawable/ic_statusmove"
+                            android:visibility="gone"
+                            tools:visibility="visible" />
+
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/packed"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/order_receive_time"
+                            android:layout_marginStart="28dp"
+                            android:layout_marginTop="28dp"
+                            android:layout_toEndOf="@id/dot_img"
+                            android:fontFamily="@font/euclid_circular_medium"
+                            android:text="@string/packed"
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/black"
+                            android:textSize="15sp"
+                            android:textStyle="normal" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/packed_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/packed"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_toEndOf="@id/circle_img"
+                            android:fontFamily="@font/euclid_circular_medium"
+                            android:textAlignment="viewStart"
+                            android:textColor="#737373"
+                            android:textSize="11sp"
+                            android:textStyle="normal"
+                            tools:text="Sat, 03 Dec 2023, 12:30 AM" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/cancelled_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/packed"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_toEndOf="@id/circle_img"
+                            android:fontFamily="@font/euclid_circular_medium"
+                            android:textColor="#737373"
+                            android:textSize="11sp"
+                            android:textStyle="normal"
+                            android:visibility="gone"
+                            tools:text="Sat, 03 Dec 2023, 12:30 AM" />
+
+                        <TextView
+                            android:id="@+id/self_pack"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/order_receive_time"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="28dp"
+                            android:layout_marginEnd="10dp"
+                            android:background="@drawable/mark_as_packed_border"
+                            android:fontFamily="@font/euclid_circular_medium"
+                            android:paddingHorizontal="9dp"
+                            android:paddingVertical="12dp"
+                            android:text="@string/mark_as_packed"
+                            android:textColor="#28B17B"
+                            android:textSize="12sp"
+                            android:textStyle="normal" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/circle_image"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/dot_img"
+                            android:layout_marginStart="19dp"
+                            android:src="@drawable/group_153436" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ic_pack_pending"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/dot_img"
+                            android:layout_marginStart="19dp"
+                            android:src="@drawable/ic_pack_pending" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/dot_img2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/circle_image"
+                            android:layout_marginStart="27dp"
+                            android:layout_marginTop="2dp"
+                            android:src="@drawable/group_157852" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/status_dot_img_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/circle_image"
+                            android:layout_marginStart="27dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="2dp"
+                            android:src="@drawable/ic_statusmove"
+                            android:visibility="gone" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/cancelled_by_user"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/circle_image"
+                            android:layout_marginStart="28dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="15dp"
+                            android:layout_marginBottom="8dp"
+                            android:layout_toEndOf="@id/dot_img2"
+                            android:fontFamily="@font/euclid_circular_medium"
+                            android:text="@string/order_is_cancelled_by_user_please_choose_your_decision_for_this_product"
+                            android:textColor="@color/black"
+                            android:textSize="15sp"
+                            android:textStyle="normal"
+                            android:visibility="gone" />
+
+                        <View
+                            android:id="@+id/view_cancelled"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_below="@id/cancelled_by_user"
+                            android:layout_marginTop="@dimen/dimen10dp"
+                            android:background="#EBEBEB"
+                            android:visibility="gone" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/cancelled_reason"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/view_cancelled"
+                            android:layout_marginStart="28dp"
+                            android:layout_marginTop="11dp"
+                            android:layout_marginBottom="10dp"
+                            android:fontFamily="@font/euclid_circular_medium"
+                            android:text="@string/reason_for_cancellation"
+                            android:textColor="@color/black"
+                            android:textSize="13sp"
+                            android:textStyle="normal"
+                            android:visibility="gone" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/cancelled_reason_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/cancelled_reason"
+                            android:layout_marginStart="28dp"
+                            android:layout_marginBottom="10dp"
+                            android:fontFamily="@font/euclid_circular_medium"
+                            android:textColor="@color/black"
+                            android:textSize="15sp"
+                            android:textStyle="normal"
+                            android:visibility="gone" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/delivered"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/dot_img2"
+                            android:layout_marginStart="17dp"
+                            android:layout_marginTop="-5dp"
+                            android:layout_toEndOf="@id/check_deliver"
+                            android:fontFamily="@font/euclid_circular_medium"
+                            android:text="@string/delivered"
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/black"
+                            android:textSize="15sp"
+                            android:textStyle="normal" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/delivered_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/delivered"
+                            android:layout_marginStart="17dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_toEndOf="@id/check_deliver"
+                            android:fontFamily="@font/euclid_circular_medium"
+                            android:textAlignment="viewStart"
+                            android:textColor="#737373"
+                            android:textSize="11sp"
+                            android:textStyle="normal"
+                            tools:text="Expected by Sat, 06 Dec 2023, 7:00 PM" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/check_deliver"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/dot_img2"
+                            android:layout_marginStart="19dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="19dp"
+                            android:src="@drawable/checkmark_circle__1_" />
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/order_return_status_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/order_status_layout"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginTop="13dp"
+                    android:background="@drawable/ebebeb_border"
+                    android:visibility="gone"
+                    tools:visibility="visible">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/return_order_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="9dp"
+                        android:fontFamily="@font/euclid_circular_medium"
+                        android:text="@string/order_status"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/button_text_size_17"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/return_orderId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/return_order_status"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="17dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="10dp"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/greenhousetheme"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        tools:text="ORDER ID #252655" />
+
+                    <View
+                        android:id="@+id/return_view_status"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/return_orderId"
+                        android:background="#EBEBEB" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/return_circle_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/return_view_status"
+                        android:layout_marginStart="19dp"
+                        android:layout_marginTop="27dp"
+                        android:src="@drawable/ic_statuc_check" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/return_order_receive"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/return_view_status"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="21dp"
+                        android:layout_toEndOf="@id/return_circle_img"
+                        android:fontFamily="@font/euclid_circular_medium"
+                        android:text="@string/return_received"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:textStyle="normal" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/return_order_receive_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/return_order_receive"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_toEndOf="@id/return_circle_img"
+                        android:fontFamily="@font/euclid_circular_medium"
+                        android:textAlignment="viewStart"
+                        android:textColor="#737373"
+                        android:textSize="11sp"
+                        android:textStyle="normal"
+                        tools:text="Sat, 03 Dec 2023, 12:30 AM" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/return_dot_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/return_circle_img"
+                        android:layout_marginStart="27dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="2dp"
+                        android:src="@drawable/group_153437" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/return_status_dot_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/return_circle_img"
+                        android:layout_marginStart="27dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="2dp"
+                        android:src="@drawable/ic_statusmove"
+                        android:visibility="gone" />
+
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/return_packed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/return_order_receive_time"
+                        android:layout_marginStart="22dp"
+                        android:layout_marginTop="28dp"
+                        android:layout_toEndOf="@id/return_dot_img"
+                        android:fontFamily="@font/euclid_circular_medium"
+                        android:text="@string/order_picked"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:textStyle="normal" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/return_packed_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/return_packed"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_toEndOf="@id/return_circle_img"
+                        android:fontFamily="@font/euclid_circular_medium"
+                        android:textAlignment="viewStart"
+                        android:textColor="#737373"
+                        android:textSize="11sp"
+                        android:textStyle="normal"
+                        tools:text="Sat, 03 Dec 2023, 12:30 AM" />
+
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/return_circle_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/return_dot_img"
+                        android:layout_marginStart="19dp"
+                        android:src="@drawable/group_153436" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/return_ic_pack_pending"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/return_dot_img"
+                        android:layout_marginStart="19dp"
+                        android:src="@drawable/ic_pack_pending" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/return_dot_img2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/return_circle_image"
+                        android:layout_marginStart="27dp"
+                        android:layout_marginTop="2dp"
+                        android:src="@drawable/group_157852" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/return_status_dot_img_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/return_circle_image"
+                        android:layout_marginStart="27dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="2dp"
+                        android:src="@drawable/ic_statusmove"
+                        android:visibility="gone" />
+
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/return_delivered"
+                        android:layout_width="133dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/return_dot_img2"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="-10dp"
+                        android:layout_toEndOf="@id/return_check_deliver"
+                        android:fontFamily="@font/euclid_circular_medium"
+                        android:text="@string/package_received"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:textStyle="normal" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/return_delivered_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/return_delivered"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toEndOf="@id/return_check_deliver"
+                        android:fontFamily="@font/euclid_circular_light"
+                        android:textAlignment="viewStart"
+                        android:textColor="#737373"
+                        android:textSize="11sp"
+                        android:textStyle="normal"
+                        tools:text="Expected by Sat, 06 Dec 2023, 7:00 PM" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/return_check_deliver"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/return_dot_img2"
+                        android:layout_marginStart="19dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="19dp"
+                        android:src="@drawable/checkmark_circle__1_" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/markAsReceived"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/return_check_deliver"
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:background="@drawable/greenhouse_corner_border"
+                        android:paddingVertical="10dp"
+                        android:text="@string/mark_as_received"
+                        android:textColor="@color/greenhousetheme"
+                        android:visibility="gone"
+                        tools:ignore="HardcodedText"
+                        tools:visibility="visible" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/shipping_details_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/order_return_status_layout"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/ebebeb_border"
+                    android:visibility="visible">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/shipping"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="13dp"
+                        android:fontFamily="@font/euclid_circular_medium"
+                        android:text="@string/shipping_details"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/button_text_size_17"
+                        android:textStyle="normal" />
+
+                    <View
+                        android:id="@+id/View_details"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/shipping"
+                        android:layout_marginTop="12dp"
+                        android:background="#1C707070" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/bus_deliver"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/View_details"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="27dp"
+                        android:src="@drawable/ic_bus_deliver" />
+
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/ship_method"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/View_details"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_toEndOf="@id/bus_deliver"
+                        android:fontFamily="@font/euclid_circular_medium"
+                        android:text="@string/shipping_method_title"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:textStyle="normal" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/pickup_order_user_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/ship_method"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="9dp"
+                        android:layout_toEndOf="@id/bus_deliver"
+                        android:textAlignment="viewStart"
+                        android:textColor="#515151"
+                        android:textSize="14sp"
+                        android:textStyle="normal"
+                        tools:text="mcl ar52 will pickup this order" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/View_details"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="27dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_toEndOf="@id/pickup_order_user_id"
+                        android:fontFamily="@font/euclid_circular_medium"
+                        android:textAlignment="viewEnd"
+                        android:textColor="#28B17B"
+                        android:textSize="17sp"
+                        android:textStyle="normal"
+                        tools:text="@string/_12_00" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/hours"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/time"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginEnd="15dp"
+                        android:text="@string/hr_left"
+                        android:textColor="#515151"
+                        android:textSize="12sp"
+                        android:textStyle="normal" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/map"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/bus_deliver"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="49dp"
+                        android:src="@drawable/map_pin" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/deliver_address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/pickup_order_user_id"
+                        android:layout_marginStart="9dp"
+                        android:layout_marginTop="26dp"
+                        android:layout_toEndOf="@id/map"
+                        android:fontFamily="@font/euclid_circular_medium"
+                        android:text="@string/delivery_address"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/number_size_15"
+                        android:textStyle="normal" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/deliver_address"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="@dimen/dimen10dp"
+                        android:layout_marginBottom="27dp"
+                        android:layout_toStartOf="@id/map_view"
+                        android:layout_toEndOf="@id/map"
+                        android:lineSpacingExtra="5dp"
+                        android:textAlignment="viewStart"
+                        android:textColor="#515151"
+                        android:textSize="14sp"
+                        android:textStyle="normal"
+                        tools:text="Ulaya Dist., P.O.Box: 64214 Ulaya Dist., P.O.Box: 64214" />
+
+                    <TextView
+                        android:id="@+id/map_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/hours"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="27dp"
+                        android:layout_marginEnd="16dp"
+                        android:fontFamily="@font/euclid_circular_medium"
+                        android:paddingVertical="3dp"
+                        android:text="@string/map_view"
+                        android:textColor="#28B17B"
+                        android:textSize="@dimen/number_size_15"
+                        android:visibility="gone" />
+
+                    <RelativeLayout
+                        android:id="@+id/phoneLayer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/address"
+                        android:layout_marginHorizontal="15dp">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ic_phone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:src="@drawable/union__7_" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/phone_number_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_toEndOf="@id/ic_phone"
+                            android:text="@string/phone_number"
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/black"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/number_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/phone_number_text"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="9dp"
+                            android:layout_marginBottom="15dp"
+                            android:layout_toEndOf="@id/ic_phone"
+                            android:textAlignment="viewStart"
+                            android:textColor="#515151"
+                            android:textSize="14sp"
+                            tools:text="96625 6258 6963" />
+
+                        <LinearLayout
+                            android:id="@+id/callButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/green_house_color_border">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingHorizontal="14dp"
+                                android:paddingVertical="11dp"
+                                android:text="@string/call_now"
+                                android:textColor="@color/white"
+                                android:textSize="13sp"
+                                android:textStyle="normal" />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/box_detail_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/phoneLayer"
+                        android:layout_marginHorizontal="11dp"
+                        android:layout_marginBottom="13dp"
+                        android:background="@drawable/f9f9f9_border"
+                        android:visibility="gone"
+                        tools:visibility="visible">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/box_details"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="15dp"
+                            android:layout_marginStart="15dp"
+                            android:fontFamily="@font/euclid_circular_medium"
+                            android:text="@string/box_details"
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/black"
+                            android:textSize="15sp"
+                            android:textStyle="normal" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/box_count_number"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginVertical="15dp"
+                            android:layout_marginStart="17dp"
+                            android:layout_marginEnd="20dp"
+                            android:fontFamily="@font/euclid_circular_light"
+                            android:textColor="#5B5B5B"
+                            android:textSize="14sp"
+                            android:textStyle="normal" />
+
+
+                        <View
+                            android:id="@+id/details_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_below="@id/box_details"
+                            android:background="#1C707070" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/details_view">
+
+                            <LinearLayout
+                                android:id="@+id/dimensionHeading"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="15dp">
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    android:id="@+id/box_length"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginVertical="14dp"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/euclid_circular_medium"
+                                    android:text="@string/box_length"
+                                    android:textColor="@color/black"
+                                    android:textSize="15sp"
+                                    android:textStyle="normal" />
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    android:id="@+id/box_height"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginVertical="14dp"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/euclid_circular_medium"
+                                    android:text="@string/box_height"
+                                    android:textColor="@color/black"
+                                    android:textSize="15sp"
+                                    android:textStyle="normal" />
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    android:id="@+id/box_width"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginVertical="14dp"
+                                    android:layout_weight="1"
+                                    android:ellipsize="end"
+                                    android:fontFamily="@font/euclid_circular_medium"
+                                    android:maxLines="1"
+                                    android:text="@string/box_width"
+                                    android:textColor="@color/black"
+                                    android:textSize="15sp"
+                                    android:textStyle="normal" />
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/dimensions"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/dimensionHeading"
+                                android:layout_marginHorizontal="15dp">
+
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    android:id="@+id/box_length_number"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="16dp"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/euclid_circular_light"
+                                    android:textColor="#5B5B5B"
+                                    android:textSize="14sp"
+                                    android:textStyle="normal"
+                                    tools:text="4.5" />
+
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    android:id="@+id/box_height_number"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="16dp"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/euclid_circular_light"
+                                    android:textColor="#5B5B5B"
+                                    android:textSize="14sp"
+                                    android:textStyle="normal"
+                                    tools:text="4.5" />
+
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    android:id="@+id/box_width_number"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="16dp"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/euclid_circular_light"
+                                    android:textColor="#5B5B5B"
+                                    android:textSize="14sp"
+                                    android:textStyle="normal"
+                                    tools:text="4.5" />
+                            </LinearLayout>
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/price_details_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/select_one"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/ebebeb_border"
+                    android:visibility="visible">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/price_details"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="13dp"
+                        android:fontFamily="@font/euclid_circular_medium"
+                        android:text="@string/price_details"
+                        android:textColor="@color/black"
+                        android:textSize="17sp"
+                        android:textStyle="normal" />
+
+                    <View
+                        android:id="@+id/view_price_details"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/price_details"
+                        android:layout_marginTop="12dp"
+                        android:background="#1C707070" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/commission"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/view_price_details"
+                        android:layout_marginStart="14dp"
+                        android:layout_marginTop="12dp"
+                        android:fontFamily="@font/euclid_circular_regular"
+                        android:text="@string/commission"
+                        android:textColor="#2E2E2E"
+                        android:textSize="@dimen/number_size_15"
+                        android:textStyle="normal" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/commission_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/view_price_details"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginEnd="15dp"
+                        android:fontFamily="@font/euclid_circular_regular"
+                        android:textColor="#2E2E2E"
+                        android:textSize="15sp"
+                        android:visibility="visible"
+                        android:textStyle="normal"
+                        tools:text="SAR 45.69" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/you_earned"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/commission"
+                        android:layout_marginStart="14dp"
+                        android:layout_marginTop="17dp"
+                        android:fontFamily="@font/euclid_circular_regular"
+                        android:labelFor="@id/commission"
+                        android:text="@string/you_earned"
+                        android:textColor="#2E2E2E"
+                        android:textSize="@dimen/number_size_15"
+                        android:textStyle="normal" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/you_earned_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/commission_price"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="17dp"
+                        android:layout_marginEnd="15dp"
+                        android:fontFamily="@font/euclid_circular_regular"
+                        android:textColor="#2E2E2E"
+                        android:textSize="15sp"
+                        android:textStyle="normal"
+                        tools:text="SAR 45.69" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/vat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/you_earned"
+                        android:layout_marginStart="14dp"
+                        android:layout_marginTop="17dp"
+                        android:layout_marginBottom="17dp"
+                        android:fontFamily="@font/euclid_circular_regular"
+                        android:text="@string/vat"
+                        android:textColor="#2E2E2E"
+                        android:textSize="@dimen/number_size_15"
+                        android:textStyle="normal" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/vat_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/you_earned_price"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="17dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginBottom="17dp"
+                        android:fontFamily="@font/euclid_circular_regular"
+                        android:textColor="#2E2E2E"
+                        android:textSize="15sp"
+                        android:textStyle="normal"
+                        tools:text="SAR 45.69" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/vat"
+                        android:layout_marginStart="14dp"
+                        android:layout_marginBottom="21dp"
+                        android:fontFamily="@font/euclid_circular_regular"
+                        android:text="@string/shipping_cost"
+                        android:textColor="#2E2E2E"
+                        android:textSize="@dimen/number_size_15"
+                        android:textStyle="normal"
+                        android:visibility="gone" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/shipping_cost_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/vat_price"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginBottom="21dp"
+                        android:fontFamily="@font/euclid_circular_regular"
+                        android:textColor="#2E2E2E"
+                        android:textSize="15sp"
+                        android:textStyle="normal"
+                        android:visibility="gone"
+                        tools:text="SAR 45.69" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/select_one"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/shipping_details_layout"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="60dp"
+                    android:visibility="gone"
+                    tools:visibility="visible">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/select_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/ic_radio_button_unselected"
+                        android:drawablePadding="20dp"
+                        android:padding="8dp"
+                        android:text="@string/award_product_to_second_highest_bidder"
+                        android:textAlignment="viewStart"
+                        android:textColor="#4A4A4A"
+                        android:textSize="@dimen/text_size_15_desc"
+                        android:textStyle="normal" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/select_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/select_1"
+                        android:layout_marginTop="9dp"
+                        android:drawableStart="@drawable/ic_radio_button_unselected"
+                        android:drawablePadding="20dp"
+                        android:padding="8dp"
+                        android:text="@string/open_auction_for_this_product"
+                        android:textAlignment="viewStart"
+                        android:textColor="#4A4A4A"
+                        android:textSize="@dimen/text_size_15_desc"
+                        android:textStyle="normal" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/select_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/select_2"
+                        android:layout_marginTop="9dp"
+                        android:drawableStart="@drawable/ic_radio_button_unselected"
+                        android:drawablePadding="20dp"
+                        android:padding="8dp"
+                        android:text="@string/end_this_auction"
+                        android:textAlignment="viewStart"
+                        android:textColor="#4A4A4A"
+                        android:textSize="@dimen/text_size_15_desc"
+                        android:textStyle="normal" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/generate_download_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/price_details_layout"
+                    android:layout_marginTop="13dp"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/generate_label_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/button_height_75"
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/dedede_border"
+                        android:text="@string/generate_label"
+                        android:textAlignment="center"
+                        android:textAllCaps="false"
+                        android:textColor="@color/greenhousetheme"
+                        android:textSize="@dimen/button_text_size_17"
+                        android:visibility="gone"
+                        app:cornerRadius="10dp"
+                        app:strokeColor="#DEDEDE"
+                        tools:visibility="visible" />
+
+                    <TextView
+                        android:id="@+id/download_invoice_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/button_height_75"
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_marginBottom="9dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/dedede_border"
+                        android:gravity="center"
+                        android:text="@string/download_invoice"
+                        android:textAlignment="center"
+                        android:textAllCaps="false"
+                        android:textColor="@color/greenhousetheme"
+                        android:textSize="@dimen/button_text_size_17"
+                        app:cornerRadius="10dp"
+                        app:strokeColor="#DEDEDE"
+                        tools:visibility="visible" />
+                </LinearLayout>
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_height_75"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginBottom="9dp"
+                    android:backgroundTint="@color/greenhousetheme"
+                    android:text="@string/btn_continue"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/button_text_size_17"
+                    android:visibility="gone"
+                    app:cornerRadius="10dp" />
+
+                <TextView
+                    android:id="@+id/generate_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_height_75"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginBottom="9dp"
+                    android:background="@drawable/dedede_border"
+                    android:text="@string/generate_label"
+                    android:textAlignment="center"
+                    android:textColor="@color/greenhousetheme"
+                    android:textSize="@dimen/button_text_size_17"
+                    android:visibility="gone"
+                    app:cornerRadius="10dp"
+                    app:strokeColor="#DEDEDE"
+                    tools:visibility="visible" />
+            </RelativeLayout>
+        </ScrollView>
+
+        <include
+            android:id="@+id/orderDetailShimmer"
+            layout="@layout/order_detail_shimmer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/text"
+            android:visibility="gone"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="28dp" />
+    </RelativeLayout>
+</layout>

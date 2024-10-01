@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".screen.seller.SellerBankAccount">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/screen_background" />
+
+        <ImageView
+            android:id="@+id/btn_back_bankAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="31dp"
+            android:src="@drawable/ic_back_black" />
+
+        <TextView
+            android:id="@+id/bankAccountHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="27dp"
+            android:text="@string/bank_accounts_heading"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/profile_heading_21"
+            android:textStyle="bold" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/btnLayer"
+            android:layout_marginBottom="16dp"
+            android:layout_below="@id/bankAccountHeading">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerBankAccounts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:listitem="@layout/bank_account_layout"
+                android:layout_marginTop="25dp"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/btnLayer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btnAddBankAccount"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height_75"
+                android:layout_marginHorizontal="20dp"
+                android:backgroundTint="@color/white"
+                android:text="@string/add_bank_account"
+                android:textAlignment="center"
+                android:textColor="#B9B9B9"
+                android:textSize="@dimen/button_text_size_17"
+                android:editable="false"
+                android:textStyle="normal"
+                app:cornerRadius="10dp"
+                app:strokeColor="#D6D6D6"
+                app:strokeWidth="1dp" />
+
+            <View
+                android:layout_width="115dp"
+                android:layout_height="4dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/bottom_black_view_3dp" />
+
+        </LinearLayout>
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,28 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.GreenHouse" parent="Base.Theme.GreenHouse">
+        <!-- Transparent system bars for edge-to-edge. -->
+
+        <item name="android:windowLightStatusBar">?attr/isLightTheme</item>
+        <item name="colorControlActivated">@color/greenhousetheme</item>
+        <item name="android:fontFamily">@font/euclid_circular_regular
+        </item>
+    </style>
+    <!-- Base application theme. -->
+    <style name="Base.Theme.GreenHouse" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/status_bar_color</item>
+        <item name="colorPrimaryVariant">@color/status_bar_color</item>
+        <item name="colorOnPrimary">@color/status_bar_color</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:fontFamily">@font/euclid_circular_regular</item>
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
+    </style>
+
+    <!--<style name="AppTheme.NoActionBar" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:statusBarColor">@color/white</item>
+    </style>-->
+</resources>

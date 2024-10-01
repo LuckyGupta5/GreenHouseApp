@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/bidInProgressMainShimmer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_50"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_20"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/border_d4d4d4">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/bidStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="11dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:fontFamily="@font/euclid_circular_medium"
+                    android:text="@string/you_won"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/address_size_14" />
+
+                <View
+                    android:id="@+id/view100"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/bidStatus"
+                    android:layout_marginTop="9dp"
+                    android:background="#EBEBEB" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/productImage"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_below="@id/view100"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="18dp"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:scaleType="centerCrop"
+                    android:textColor="@color/gray" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/view100"
+                    android:layout_marginEnd="@dimen/dimen_20"
+                    android:layout_toStartOf="@id/sar"
+                    android:layout_toEndOf="@id/productImage">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/productName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/ebebeb_border"
+                        android:backgroundTint="@color/gray"
+                        android:fontFamily="@font/euclid_circular_medium"
+                        android:text="@string/cauliflower"
+                        android:textAlignment="center"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/name_size_17" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/location"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/productName"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginEnd="@dimen/dimen10dp"
+                        android:background="@drawable/ebebeb_border"
+                        android:backgroundTint="@color/gray"
+                        android:drawableStart="@drawable/map_pin"
+                        android:drawablePadding="3dp"
+                        android:ellipsize="end"
+                        android:maxWidth="220dp"
+                        android:maxLines="1"
+                        android:paddingEnd="20dp"
+                        android:text="riyadh_sa"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/resend_code_size13" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/item_weight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/location"
+                        android:layout_marginStart="14dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/ebebeb_border"
+                        android:backgroundTint="@color/gray"
+                        android:text="100kg"
+                        android:textAlignment="center"
+                        android:textColor="@color/gray"
+                        android:textSize="13sp" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/sar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/view100"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="35dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:fontFamily="@font/euclid_circular_medium"
+                    android:text="@string/sar"
+                    android:textAlignment="center"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/resend_code_size13" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/sar"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="15dp"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:fontFamily="@font/euclid_circular_medium"
+                    android:text="25_99"
+                    android:textAlignment="viewEnd"
+                    android:textColor="@color/gray"
+                    android:textSize="13sp" />
+
+                <View
+                    android:id="@+id/view_ebebeb"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/productImage"
+                    android:layout_marginTop="12dp"
+                    android:background="#EBEBEB" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/view_ebebeb"
+                    android:layout_marginVertical="13dp"
+                    android:layout_marginStart="12dp"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:fontFamily="@font/euclid_circular_medium"
+                    android:text="@string/highest_bid"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/text_size_15_desc" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/view_ebebeb"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginVertical="13dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:fontFamily="@font/euclid_circular_medium"
+                    android:text="sar_29_50"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/text_size_15_desc" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen10dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/border_d4d4d4">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/bidStatus1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="11dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:fontFamily="@font/euclid_circular_medium"
+                    android:text="@string/you_won"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/address_size_14" />
+
+                <View
+                    android:id="@+id/view1001"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/bidStatus1"
+                    android:layout_marginTop="9dp"
+                    android:background="#EBEBEB" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/productImage1"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_below="@id/view1001"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="18dp"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:scaleType="centerCrop"
+                    android:textColor="@color/gray" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/view1001"
+                    android:layout_marginEnd="@dimen/dimen_20"
+                    android:layout_toStartOf="@id/sar1"
+                    android:layout_toEndOf="@id/productImage1">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/productName1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/ebebeb_border"
+                        android:backgroundTint="@color/gray"
+                        android:fontFamily="@font/euclid_circular_medium"
+                        android:text="@string/cauliflower"
+                        android:textAlignment="center"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/name_size_17" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/location1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/productName1"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginEnd="@dimen/dimen10dp"
+                        android:background="@drawable/ebebeb_border"
+                        android:backgroundTint="@color/gray"
+                        android:drawableStart="@drawable/map_pin"
+                        android:drawablePadding="3dp"
+                        android:ellipsize="end"
+                        android:maxWidth="220dp"
+                        android:maxLines="1"
+                        android:paddingEnd="20dp"
+                        android:text="riyadh_sa"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/resend_code_size13" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/item_weight1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/location1"
+                        android:layout_marginStart="14dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/ebebeb_border"
+                        android:backgroundTint="@color/gray"
+                        android:text="100kg"
+                        android:textAlignment="center"
+                        android:textColor="@color/gray"
+                        android:textSize="13sp" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/sar1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/view1001"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="35dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:fontFamily="@font/euclid_circular_medium"
+                    android:text="@string/sar"
+                    android:textAlignment="center"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/resend_code_size13" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/money1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/sar1"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="15dp"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:fontFamily="@font/euclid_circular_medium"
+                    android:text="25_99"
+                    android:textAlignment="viewEnd"
+                    android:textColor="@color/gray"
+                    android:textSize="13sp" />
+
+                <View
+                    android:id="@+id/view_ebebeb1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/productImage1"
+                    android:layout_marginTop="12dp"
+                    android:background="#EBEBEB" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/view_ebebeb1"
+                    android:layout_marginVertical="13dp"
+                    android:layout_marginStart="12dp"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:fontFamily="@font/euclid_circular_medium"
+                    android:text="@string/highest_bid"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/text_size_15_desc" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/view_ebebeb1"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginVertical="13dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:fontFamily="@font/euclid_circular_medium"
+                    android:text="sar_29_50"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/text_size_15_desc" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen10dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/border_d4d4d4">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/bidStatus3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="11dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:fontFamily="@font/euclid_circular_medium"
+                    android:text="@string/you_won"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/address_size_14" />
+
+                <View
+                    android:id="@+id/view1003"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/bidStatus3"
+                    android:layout_marginTop="9dp"
+                    android:background="#EBEBEB" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/productImage3"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_below="@id/view1003"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="18dp"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:scaleType="centerCrop"
+                    android:textColor="@color/gray" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/view1003"
+                    android:layout_marginEnd="@dimen/dimen_20"
+                    android:layout_toStartOf="@id/sar3"
+                    android:layout_toEndOf="@id/productImage3">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/productName3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/ebebeb_border"
+                        android:backgroundTint="@color/gray"
+                        android:fontFamily="@font/euclid_circular_medium"
+                        android:text="@string/cauliflower"
+                        android:textAlignment="center"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/name_size_17" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/location3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/productName3"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginEnd="@dimen/dimen10dp"
+                        android:background="@drawable/ebebeb_border"
+                        android:backgroundTint="@color/gray"
+                        android:drawableStart="@drawable/map_pin"
+                        android:drawablePadding="3dp"
+                        android:ellipsize="end"
+                        android:maxWidth="220dp"
+                        android:maxLines="1"
+                        android:paddingEnd="20dp"
+                        android:text="riyadh_sa"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/resend_code_size13" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/item_weight3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/location3"
+                        android:layout_marginStart="14dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/ebebeb_border"
+                        android:backgroundTint="@color/gray"
+                        android:text="100kg"
+                        android:textAlignment="center"
+                        android:textColor="@color/gray"
+                        android:textSize="13sp" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/sar3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/view1003"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="35dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:fontFamily="@font/euclid_circular_medium"
+                    android:text="@string/sar"
+                    android:textAlignment="center"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/resend_code_size13" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/money3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/sar3"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="15dp"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:fontFamily="@font/euclid_circular_medium"
+                    android:text="25_99"
+                    android:textAlignment="viewEnd"
+                    android:textColor="@color/gray"
+                    android:textSize="13sp" />
+
+                <View
+                    android:id="@+id/view_ebebeb3"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/productImage3"
+                    android:layout_marginTop="12dp"
+                    android:background="#EBEBEB" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/view_ebebeb3"
+                    android:layout_marginVertical="13dp"
+                    android:layout_marginStart="12dp"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:fontFamily="@font/euclid_circular_medium"
+                    android:text="@string/highest_bid"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/text_size_15_desc" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/view_ebebeb3"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginVertical="13dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:fontFamily="@font/euclid_circular_medium"
+                    android:text="sar_29_50"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/text_size_15_desc" />
+            </RelativeLayout>
+        </LinearLayout>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+</layout>

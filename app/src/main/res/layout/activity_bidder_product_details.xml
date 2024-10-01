@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".screen.bidder.BidderProductDetails">
+
+        <include
+            android:id="@+id/productDetailShimmer"
+            layout="@layout/product_detail_shimmer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/footer"
+            android:visibility="gone"
+            android:layout_alignParentTop="true"
+            android:background="@color/white"
+            android:fillViewport="true"
+            android:scrollbars="none">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/productImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:listitem="@layout/image_banner" />
+
+                <RelativeLayout
+                    android:id="@+id/backbtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="13dp"
+                    android:layout_marginTop="17dp"
+                    android:background="@drawable/bg_back_arrow">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/ic_back_black" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/id_3dot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="17dp"
+                    android:layout_marginEnd="20dp"
+                    android:src="@drawable/ic_3_dots"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/shareButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="17dp"
+                    android:layout_marginEnd="18dp"
+                    android:layout_toStartOf="@id/id_3dot"
+                    android:src="@drawable/ic_forward_product"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/productName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/productImage"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="15dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/profile_heading_21"
+                    android:textStyle="bold"
+                    tools:text="@string/cauliflower" />
+
+                <ImageView
+                    android:id="@+id/shareProduct"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/productImage"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_forward_curve" />
+
+                <ImageView
+                    android:id="@+id/idWishlist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/productImage"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_toStartOf="@id/shareProduct"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_wishlist" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/productName"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="6dp"
+                    android:drawableStart="@drawable/map_pin_gray"
+                    android:drawablePadding="4dp"
+                    android:ellipsize="end"
+                    android:inputType="textMultiLine"
+                    android:maxWidth="300dp"
+                    android:maxLines="3"
+                    android:textAlignment="viewStart"
+                    android:textColor="#5B5B5B"
+                    android:textSize="@dimen/text_size_15_desc"
+                    tools:text="@string/add_another_address" />
+
+                <View
+                    android:id="@+id/dotView"
+                    android:layout_width="5dp"
+                    android:layout_height="5dp"
+                    android:layout_below="@id/productName"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_toEndOf="@id/location"
+                    android:background="@drawable/dot_view" />
+
+                <TextView
+                    android:id="@+id/productWeight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/productName"
+                    android:layout_marginStart="11dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_toEndOf="@id/dotView"
+                    android:textAlignment="center"
+                    android:textColor="#5F5F5F"
+                    android:textSize="@dimen/text_size_15_desc"
+                    android:textStyle="normal"
+                    tools:text="1_kg" />
+
+                <TextView
+                    android:id="@+id/desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/location"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="44dp"
+                    android:lineSpacingExtra="6sp"
+                    android:textAlignment="viewStart"
+                    android:textColor="#565656"
+                    android:textSize="@dimen/text_size_15_desc"
+                    android:textStyle="normal"
+                    tools:text="@string/explore_our_new_categories_to_find_auctioned_fruits_vegetables_and_dates" />
+
+                <RelativeLayout
+                    android:id="@+id/sellerDetailLayer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/desc"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/bg_seller_profile">
+
+                    <RelativeLayout
+                        android:id="@+id/sellerUsernameBg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="14dp"
+                        android:layout_marginStart="15dp"
+                        android:background="@drawable/bg_image_user_circle">
+
+                        <TextView
+                            android:id="@+id/sellerInitials"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/name_size_17"
+                            android:textStyle="bold"
+                            tools:text="@string/ms" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/userName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_toEndOf="@id/sellerUsernameBg"
+                        android:ellipsize="end"
+                        android:maxLength="15"
+                        android:maxLines="1"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/name_size_17"
+                        android:textStyle="normal"
+                        tools:text="rishabh30" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_toEndOf="@id/userName"
+                        android:background="@drawable/rating_border">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/idRating"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="4dp"
+                            android:layout_marginVertical="2dp"
+                            android:drawableStart="@drawable/star_rating"
+                            android:drawablePadding="2dp"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="13sp"
+                            android:textStyle="normal"
+                            tools:text="@string/_4_5" />
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:id="@+id/ic_forward"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="16dp"
+                        android:src="@drawable/ic_forward_black"
+                        tools:ignore="ContentDescription" />
+
+                    <ImageView
+                        android:id="@+id/icApple"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/userName"
+                        android:layout_marginStart="11dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toEndOf="@id/sellerUsernameBg"
+                        android:src="@drawable/ic_apple"
+                        tools:ignore="ContentDescription" />
+
+                    <ImageView
+                        android:id="@+id/ic_capsicum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/userName"
+                        android:layout_marginStart="6dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_toEndOf="@id/icApple"
+                        android:src="@drawable/ic_capsicum" />
+
+                    <View
+                        android:id="@+id/dotView2"
+                        android:layout_width="5dp"
+                        android:layout_height="5dp"
+                        android:layout_below="@id/userName"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_toEndOf="@id/ic_capsicum"
+                        android:background="@drawable/dot_view" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/ratingNumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/userName"
+                        android:layout_marginStart="8.5dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_toEndOf="@id/dotView2"
+                        android:drawableStart="@drawable/ic_red_heart"
+                        android:drawablePadding="6dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/_100_user_s_favourite"
+                        android:textAlignment="center"
+                        android:textColor="#565656"
+                        android:textSize="@dimen/resend_code_size13"
+                        android:textStyle="normal"
+                        tools:ignore="RtlCompat" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/product_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/sellerDetailLayer"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="@font/euclid_circular_semi_bold"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/profile_heading_21"
+                    android:textStyle="bold"
+                    tools:text="aed_1_99" />
+
+                <TextView
+                    android:id="@+id/timeLeft"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/product_amount"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="5dp"
+                    android:textAlignment="center"
+                    android:textColor="#E33030"
+                    android:textSize="14sp"
+                    android:textStyle="normal"
+                    tools:text="1_h_30_m_left_for_bidding" />
+
+                <TextView
+                    android:id="@+id/sameSellerHeading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/timeLeft"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="29dp"
+                    android:text="@string/product_from_same_sellers"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="19sp"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/sameSellerHeading">
+
+                    <ImageView
+                        android:id="@+id/placeHolder"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="30dp"
+                        android:src="@drawable/ic_product_not_found"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/headingPlaceHolder"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/placeHolder"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="40dp"
+                        android:fontFamily="@font/euclid_circular_medium"
+                        android:text="@string/no_products_found"
+                        android:textAlignment="center"
+                        android:textColor="#000000"
+                        android:textSize="@dimen/name_size_17"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerSameSellerProduct"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:orientation="horizontal"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        tools:listitem="@layout/featured_products_home" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/viewAllButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/relativeLayout"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="30dp"
+                    android:background="@drawable/border_dedede"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginVertical="16dp"
+                        android:text="@string/view_all"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <RelativeLayout
+            android:id="@+id/footer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/highestBidLayer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:visibility="gone"
+                app:cardElevation="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="1dp"
+                    android:background="@drawable/highest_bid_bg"
+                    android:elevation="0dp"
+                    android:paddingHorizontal="20dp"
+                    android:paddingVertical="13dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/highest_bid"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/greenhousetheme"
+                        android:textSize="@dimen/address_size_14" />
+
+                    <TextView
+                        android:id="@+id/highestBid"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/euclid_circular_medium"
+                        android:textAlignment="viewEnd"
+                        android:textColor="@color/greenhousetheme"
+                        android:textSize="@dimen/address_size_14"
+                        tools:text="SAR 45.69" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <View
+                android:id="@+id/view1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/highestBidLayer"
+                android:layout_centerHorizontal="true"
+                android:background="#F3F3F3" />
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view1"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@+id/idPlaceABidBtn">
+
+                <TextView
+                    android:id="@+id/highestBidTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginTop="14dp"
+                    android:text="@string/highest_bid"
+                    android:textAlignment="center"
+                    android:textColor="#777777"
+                    android:textSize="15sp"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/highestBiddingAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/highestBidTitle"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginTop="8dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_19_subheading"
+                    android:textStyle="bold"
+                    tools:text="SAR 45.99" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/idPlaceABidBtn"
+                android:layout_width="200dp"
+                android:layout_height="@dimen/button_height_75"
+                android:layout_below="@id/view1"
+                android:layout_alignParentEnd="true"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="@color/greenhousetheme"
+                android:fontFamily="@font/euclid_circular_medium"
+                android:text="@string/place_a_bid"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/button_text_size_17"
+                app:cornerRadius="10dp" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</layout>

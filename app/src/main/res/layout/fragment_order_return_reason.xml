@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_lang_selection"
+        android:orientation="vertical"
+        tools:context=".fragment.bidderfragment.OrderReturnReason">
+
+        <View
+            android:layout_width="85dp"
+            android:layout_height="5dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/view_top_verify_num" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/euclid_circular_medium"
+            android:text="@string/why_u_want_return_order"
+            android:textAlignment="viewStart"
+            android:textColor="@color/black"
+            android:textSize="@dimen/profile_heading_21" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="12dp"
+            android:lineSpacingExtra="6sp"
+            android:text="@string/why_u_want_return_order_desc"
+            android:textAlignment="viewStart"
+            android:textColor="#535353"
+            android:textSize="@dimen/text_size_15_desc"
+            android:textStyle="normal" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="19dp"
+            android:background="#D9D9D9" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/reason1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="28dp"
+            android:drawableStart="@drawable/ic_radio_button_selected"
+            android:drawablePadding="20dp"
+            android:text="@string/item_not_as_described"
+            android:textAlignment="viewStart"
+            android:textColor="#2D2D2D"
+            android:textSize="@dimen/number_size_15"
+            android:textStyle="normal" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/reason2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="28dp"
+            android:drawableStart="@drawable/ic_radio_button_unselected"
+            android:drawablePadding="20dp"
+            android:text="@string/received_damaged_or_defective"
+            android:textAlignment="viewStart"
+            android:textColor="#2D2D2D"
+            android:textSize="@dimen/number_size_15"
+            android:textStyle="normal" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/reason3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="28dp"
+            android:drawableStart="@drawable/ic_radio_button_unselected"
+            android:drawablePadding="20dp"
+            android:text="@string/wrong_item_received"
+            android:textAlignment="viewStart"
+            android:textColor="#2D2D2D"
+            android:textSize="@dimen/number_size_15"
+            android:textStyle="normal" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/reason4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="28dp"
+            android:drawableStart="@drawable/ic_radio_button_unselected"
+            android:drawablePadding="20dp"
+            android:text="@string/size_dimensions_mismatch"
+            android:textAlignment="viewStart"
+            android:textColor="#2D2D2D"
+            android:textSize="@dimen/number_size_15"
+            android:textStyle="normal" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/reason5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="28dp"
+            android:drawableStart="@drawable/ic_radio_button_unselected"
+            android:drawablePadding="20dp"
+            android:text="@string/quality_concerns"
+            android:textAlignment="viewStart"
+            android:textColor="#2D2D2D"
+            android:textSize="@dimen/number_size_15"
+            android:textStyle="normal" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/reason6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="28dp"
+            android:drawableStart="@drawable/ic_radio_button_unselected"
+            android:drawablePadding="20dp"
+            android:text="@string/quantity_mismatch"
+            android:textAlignment="viewStart"
+            android:textColor="#2D2D2D"
+            android:textSize="@dimen/number_size_15"
+            android:textStyle="normal" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/otherReason"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="28dp"
+            android:drawableStart="@drawable/ic_radio_button_unselected"
+            android:drawablePadding="20dp"
+            android:text="@string/others"
+            android:textAlignment="viewStart"
+            android:textColor="#2D2D2D"
+            android:textSize="@dimen/number_size_15"
+            android:textStyle="normal" />
+
+        <RelativeLayout
+            android:id="@+id/reasonLayer"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="22dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/search_border_ebebeb"
+            android:elevation="@dimen/elevation_5"
+            android:paddingBottom="5dp"
+            android:visibility="gone">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/reason_editTextField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:hint="@string/others_write_reason_here"
+                android:imeOptions="actionDone"
+                android:inputType="textMultiLine"
+                android:lineSpacingExtra="6sp"
+                android:lines="8"
+                android:maxLines="10"
+                android:minLines="2"
+                android:overScrollMode="never"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="10dp"
+                android:scrollbars="vertical"
+                android:textColor="@color/black"
+                android:textColorHint="@color/hint_color"
+                android:textSize="@dimen/name_size_17"
+                android:textStyle="normal" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/goBackButton"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/button_height_75"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="37dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="15dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/white"
+                android:text="@string/go_back"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="@dimen/button_text_size_17"
+                android:textStyle="bold"
+                app:cornerRadius="10dp"
+                app:strokeColor="#CFCFCF"
+                app:strokeWidth="1dp" />
+
+            <Button
+                android:id="@+id/yesButton"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/button_height_75"
+                android:layout_marginTop="37dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="15dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/greenhousetheme"
+                android:elevation="@dimen/elevation_5"
+                android:text="@string/yes_cancel"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/button_text_size_17"
+                android:textStyle="bold"
+                app:cornerRadius="10dp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="115dp"
+            android:layout_height="4dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/bottom_black_view_3dp" />
+
+
+    </LinearLayout>
+</layout>

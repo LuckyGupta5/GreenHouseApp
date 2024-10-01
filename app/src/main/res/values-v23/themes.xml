@@ -1,0 +1,15 @@
+<resources>
+
+    <style name="Theme.GreenHouse" parent="Base.Theme.GreenHouse">
+        <!-- Transparent system bars for edge-to-edge. -->
+        <item name="android:windowLightStatusBar">?attr/isLightTheme</item>
+        <item name="android:colorPrimary">@color/greenhousetheme</item>
+        <item name="android:colorAccent">@color/greenhousetheme</item>
+        <item name="colorControlActivated">@color/greenhousetheme</item>
+        <item name="android:fontFamily">@font/euclid_circular_regular</item>
+        <item name="android:colorPrimaryDark">@color/greenhousetheme</item>
+        <item name="android:forceDarkAllowed">false</item>
+
+        <!--        <item name="android:windowTranslucentStatus">true</item>-->
+    </style>
+</resources>

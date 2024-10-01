@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_seller_myBids"
+        android:icon="@drawable/icon_my_bids"
+        android:title="@string/my_bids" />
+
+    <item
+        android:id="@+id/nav_seller_myOrders"
+        android:icon="@drawable/icon_my_orders"
+        android:title="@string/my_orders" />
+    <item
+        android:id="@+id/nav_seller_home"
+        android:icon="@drawable/icon_home"
+        android:title="@string/home" />
+
+    <item
+        android:id="@+id/nav_seller_products"
+        android:icon="@drawable/icon_products"
+        android:title="@string/products" />
+    <item
+        android:id="@+id/nav_seller_profile"
+        android:icon="@drawable/icon_my_profile"
+        android:title="@string/profile" />
+
+</menu>

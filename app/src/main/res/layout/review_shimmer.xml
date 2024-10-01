@@ -1,0 +1,676 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/reviewMainShimmer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="25dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginVertical="5dp">
+
+                <RelativeLayout
+                    android:id="@+id/picture_img"
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:textColor="@color/gray">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/userNameInitials"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/euclid_circular_bold"
+                        android:text="AF"
+                        android:textAlignment="center"
+                        android:textColor="@color/gray"
+                        android:textSize="21sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/reviewerName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_toEndOf="@id/picture_img"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:text="rishabh_jain"
+                    android:textAlignment="center"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/number_size_15"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="119dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:textColor="@color/gray">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/reviewRating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="8dp"
+                        android:layout_marginVertical="4dp"
+                        android:background="@drawable/ebebeb_border"
+                        android:backgroundTint="@color/gray"
+                        android:drawablePadding="2dp"
+                        android:text="@string/_4_5"
+                        android:textAlignment="center"
+                        android:textColor="@color/gray"
+                        android:textSize="13sp"
+                        android:textStyle="normal" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/reviewDay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/reviewerName"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_toEndOf="@id/picture_img"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:text="@string/today"
+                    android:textAlignment="center"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/resend_code_size13"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/review"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/picture_img"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:lineSpacingExtra="6sp"
+                    android:text="@string/description"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/text_size_15_desc"
+                    android:textStyle="normal" />
+
+                <View
+                    android:id="@+id/lastView"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/review"
+                    android:layout_marginTop="20dp"
+                    android:background="#1C707070" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginVertical="5dp">
+
+                <RelativeLayout
+                    android:id="@+id/picture_img1"
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:textColor="@color/gray">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/userNameInitials1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/euclid_circular_bold"
+                        android:text="AF"
+                        android:textAlignment="center"
+                        android:textColor="@color/gray"
+                        android:textSize="21sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/reviewerName1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_toEndOf="@id/picture_img1"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:text="rishabh_jain"
+                    android:textAlignment="center"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/number_size_15"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="119dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:textColor="@color/gray">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/reviewRating1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="8dp"
+                        android:layout_marginVertical="4dp"
+                        android:background="@drawable/ebebeb_border"
+                        android:backgroundTint="@color/gray"
+                        android:drawablePadding="2dp"
+                        android:text="@string/_4_5"
+                        android:textAlignment="center"
+                        android:textColor="@color/gray"
+                        android:textSize="13sp"
+                        android:textStyle="normal" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/reviewDay1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/reviewerName1"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_toEndOf="@id/picture_img1"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:text="@string/today"
+                    android:textAlignment="center"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/resend_code_size13"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/review1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/picture_img1"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:lineSpacingExtra="6sp"
+                    android:text="@string/description"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/text_size_15_desc"
+                    android:textStyle="normal" />
+
+                <View
+                    android:id="@+id/lastView1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/review1"
+                    android:layout_marginTop="20dp"
+                    android:background="#1C707070" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginVertical="5dp">
+
+                <RelativeLayout
+                    android:id="@+id/picture_img2"
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:textColor="@color/gray">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/userNameInitials2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/euclid_circular_bold"
+                        android:text="AF"
+                        android:textAlignment="center"
+                        android:textColor="@color/gray"
+                        android:textSize="21sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/reviewerName2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_toEndOf="@id/picture_img2"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:text="rishabh_jain"
+                    android:textAlignment="center"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/number_size_15"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="119dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:textColor="@color/gray">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/reviewRating2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="8dp"
+                        android:layout_marginVertical="4dp"
+                        android:background="@drawable/ebebeb_border"
+                        android:backgroundTint="@color/gray"
+                        android:drawablePadding="2dp"
+                        android:text="@string/_4_5"
+                        android:textAlignment="center"
+                        android:textColor="@color/gray"
+                        android:textSize="13sp"
+                        android:textStyle="normal" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/reviewDay2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/reviewerName2"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_toEndOf="@id/picture_img2"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:text="@string/today"
+                    android:textAlignment="center"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/resend_code_size13"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/review2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/picture_img2"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:lineSpacingExtra="6sp"
+                    android:text="@string/description"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/text_size_15_desc"
+                    android:textStyle="normal" />
+
+                <View
+                    android:id="@+id/lastView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/review2"
+                    android:layout_marginTop="20dp"
+                    android:background="#1C707070" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginVertical="5dp">
+
+                <RelativeLayout
+                    android:id="@+id/picture_img3"
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:textColor="@color/gray">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/userNameInitials3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/euclid_circular_bold"
+                        android:text="AF"
+                        android:textAlignment="center"
+                        android:textColor="@color/gray"
+                        android:textSize="21sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/reviewerName3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_toEndOf="@id/picture_img3"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:text="rishabh_jain"
+                    android:textAlignment="center"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/number_size_15"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="119dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:textColor="@color/gray">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/reviewRating3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="8dp"
+                        android:layout_marginVertical="4dp"
+                        android:background="@drawable/ebebeb_border"
+                        android:backgroundTint="@color/gray"
+                        android:drawablePadding="2dp"
+                        android:text="@string/_4_5"
+                        android:textAlignment="center"
+                        android:textColor="@color/gray"
+                        android:textSize="13sp"
+                        android:textStyle="normal" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/reviewDay3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/reviewerName3"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_toEndOf="@id/picture_img3"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:text="@string/today"
+                    android:textAlignment="center"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/resend_code_size13"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/review3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/picture_img3"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:lineSpacingExtra="6sp"
+                    android:text="@string/description"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/text_size_15_desc"
+                    android:textStyle="normal" />
+
+                <View
+                    android:id="@+id/lastView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/review3"
+                    android:layout_marginTop="20dp"
+                    android:background="#1C707070" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginVertical="5dp">
+
+                <RelativeLayout
+                    android:id="@+id/picture_img4"
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:textColor="@color/gray">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/userNameInitials4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/euclid_circular_bold"
+                        android:text="AF"
+                        android:textAlignment="center"
+                        android:textColor="@color/gray"
+                        android:textSize="21sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/reviewerName4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_toEndOf="@id/picture_img4"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:text="rishabh_jain"
+                    android:textAlignment="center"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/number_size_15"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="119dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:textColor="@color/gray">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/reviewRating4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="8dp"
+                        android:layout_marginVertical="4dp"
+                        android:background="@drawable/ebebeb_border"
+                        android:backgroundTint="@color/gray"
+                        android:drawablePadding="2dp"
+                        android:text="@string/_4_5"
+                        android:textAlignment="center"
+                        android:textColor="@color/gray"
+                        android:textSize="13sp"
+                        android:textStyle="normal" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/reviewDay4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/reviewerName4"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_toEndOf="@id/picture_img4"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:text="@string/today"
+                    android:textAlignment="center"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/resend_code_size13"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/review4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/picture_img4"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:lineSpacingExtra="6sp"
+                    android:text="@string/description"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/text_size_15_desc"
+                    android:textStyle="normal" />
+
+                <View
+                    android:id="@+id/lastView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/review4"
+                    android:layout_marginTop="20dp"
+                    android:background="#1C707070" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginVertical="5dp">
+
+                <RelativeLayout
+                    android:id="@+id/picture_img5"
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:textColor="@color/gray">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/userNameInitials5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/euclid_circular_bold"
+                        android:text="AF"
+                        android:textAlignment="center"
+                        android:textColor="@color/gray"
+                        android:textSize="21sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/reviewerName5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_toEndOf="@id/picture_img5"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:text="rishabh_jain"
+                    android:textAlignment="center"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/number_size_15"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="119dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:textColor="@color/gray">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/reviewRating5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="8dp"
+                        android:layout_marginVertical="4dp"
+                        android:background="@drawable/ebebeb_border"
+                        android:backgroundTint="@color/gray"
+                        android:drawablePadding="2dp"
+                        android:text="@string/_4_5"
+                        android:textAlignment="center"
+                        android:textColor="@color/gray"
+                        android:textSize="13sp"
+                        android:textStyle="normal" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/reviewDay5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/reviewerName5"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_toEndOf="@id/picture_img5"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:text="@string/today"
+                    android:textAlignment="center"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/resend_code_size13"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/review5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/picture_img5"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:lineSpacingExtra="6sp"
+                    android:text="@string/description"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/text_size_15_desc"
+                    android:textStyle="normal" />
+
+                <View
+                    android:id="@+id/lastView5"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/review5"
+                    android:layout_marginTop="20dp"
+                    android:background="#1C707070" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+</layout>

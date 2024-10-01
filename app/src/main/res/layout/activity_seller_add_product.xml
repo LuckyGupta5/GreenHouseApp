@@ -1,0 +1,629 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:id="@+id/addProductMainId"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".screen.seller.SellerAddProduct">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/backgroundimage"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/backward_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="30dp"
+            android:src="@drawable/layer_1"
+            tools:ignore="ContentDescription" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/euclid_circular_medium"
+            android:text="@string/add_product"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="21sp"
+            android:textStyle="bold" />
+
+        <ScrollView
+            android:id="@+id/scroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/btn_add"
+            android:layout_below="@id/text"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:overScrollMode="never"
+            android:scrollbars="none">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/sold_products"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="29dp"
+                    android:fontFamily="@font/euclid_circular_medium"
+                    android:text="@string/choose_from_sold_products"
+                    android:textColor="@color/black"
+                    android:textSize="19sp" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/spinner1"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_height_75"
+                    android:layout_below="@id/sold_products"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/ededed_border"
+                    android:drawableEnd="@drawable/vector__11_"
+                    android:elevation="5dp"
+                    android:fontFamily="@font/euclid_circular_medium"
+                    android:gravity="center_vertical"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="22dp"
+                    android:text="@string/select_sold_product"
+                    android:textColor="#434343"
+                    android:textSize="17sp"
+                    android:textStyle="normal" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/add_photos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/spinner1"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="21dp"
+                    android:fontFamily="@font/euclid_circular_medium"
+                    android:text="@string/add_photos"
+                    android:textColor="@color/black"
+                    android:textSize="19sp" />
+
+                <RelativeLayout
+                    android:id="@+id/upload_photo"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edit_field_65"
+                    android:layout_below="@id/add_photos"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/upload_border">
+
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/uploadImages"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:drawableStart="@drawable/union__9_"
+                        android:drawablePadding="10dp"
+                        android:gravity="center_horizontal"
+                        android:paddingVertical="20dp"
+                        android:text="@string/upload_photos"
+                        android:textAlignment="center"
+                        android:textColor="#434343"
+                        android:textSize="@dimen/name_size_17"
+                        android:textStyle="normal" />
+                </RelativeLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/add_product_scroll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/upload_photo"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="13dp"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:listitem="@layout/multiple_images" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/product_category"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/add_product_scroll"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/euclid_circular_medium"
+                    android:text="@string/filter_product_category"
+                    android:textColor="@color/black"
+                    android:textSize="19sp" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/spinner2"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_height_75"
+                    android:layout_below="@id/product_category"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/ededed_border"
+                    android:drawableEnd="@drawable/vector__11_"
+                    android:elevation="5dp"
+                    android:fontFamily="@font/euclid_circular_medium"
+                    android:gravity="center_vertical|start"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="22dp"
+                    android:text="@string/select_category"
+                    android:textAlignment="viewStart"
+                    android:textColor="#434343"
+                    android:textSize="17sp" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/product_sub_category"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/spinner2"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/euclid_circular_medium"
+                    android:text="@string/product_sub_category"
+                    android:textColor="@color/black"
+                    android:textSize="19sp" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/spinner3"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_height_75"
+                    android:layout_below="@id/product_sub_category"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/ededed_border"
+                    android:drawableEnd="@drawable/vector__11_"
+                    android:elevation="5dp"
+                    android:fontFamily="@font/euclid_circular_medium"
+                    android:gravity="center_vertical|start"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="22dp"
+                    android:text="@string/select_sub_category"
+                    android:textAlignment="viewStart"
+                    android:textColor="#434343"
+                    android:textSize="17sp" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/product_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/spinner3"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/product_description"
+                    android:textColor="@color/black"
+                    android:textSize="19sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/productDescriptionText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/product_description"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/ededed_border"
+                    android:elevation="@dimen/elevation_5"
+                    android:hint="@string/write_here"
+                    android:inputType="textMultiLine|textCapSentences"
+                    android:lines="8"
+                    android:maxLength="200"
+                    android:maxLines="10"
+                    android:minLines="1"
+                    android:paddingHorizontal="15dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="50dp"
+                    android:textAlignment="viewStart"
+                    android:textColor="#565656"
+                    android:textColorHint="@color/hint_color"
+                    android:textSize="17sp"
+                    android:textStyle="normal" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/quantity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/productDescriptionText"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/euclid_circular_medium"
+                    android:text="@string/quantity"
+                    android:textColor="@color/black"
+                    android:textSize="19sp" />
+
+                <RelativeLayout
+                    android:id="@+id/weight"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_height_75"
+                    android:layout_below="@id/quantity"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/ebebeb_border"
+                    android:elevation="5dp">
+
+                    <EditText
+                        android:id="@+id/text_quantity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_toStartOf="@id/view"
+                        android:background="@color/white"
+                        android:hint="@string/enter_here"
+                        android:inputType="number"
+                        android:maxLength="3"
+                        android:maxLines="1"
+                        android:paddingHorizontal="10dp"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/hint_color"
+                        android:textSize="@dimen/name_size_17" />
+
+                    <View
+                        android:id="@+id/view"
+                        android:layout_width="1dp"
+                        android:layout_height="44dp"
+                        android:layout_centerInParent="true"
+                        android:layout_marginVertical="5dp"
+                        android:layout_marginEnd="18dp"
+                        android:layout_toStartOf="@id/kg"
+                        android:background="#F1F1F1" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/kg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="19dp"
+                        android:drawableEnd="@drawable/vector__11_"
+                        android:drawablePadding="16dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/kg"
+                        android:textColor="@color/black"
+                        android:textSize="19sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/totalPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/weight"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="31dp"
+                    android:drawableEnd="@drawable/union__10_"
+                    android:drawablePadding="5dp"
+                    android:fontFamily="@font/euclid_circular_medium"
+                    android:text="@string/base_price"
+                    android:textColor="@color/black"
+                    android:textSize="19sp"
+                    android:textStyle="normal" />
+
+                <EditText
+                    android:id="@+id/enterTotalPrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/totalPrice"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/ebebeb_border"
+                    android:elevation="5dp"
+                    android:hint="@string/enter_base_price"
+                    android:inputType="numberDecimal"
+                    android:maxLength="5"
+                    android:maxLines="1"
+                    android:paddingVertical="21dp"
+                    android:paddingStart="15dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/hint_color"
+                    android:textSize="17sp"
+                    android:textStyle="normal"
+                    tools:ignore="RtlSymmetry" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/product_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/enterTotalPrice"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="27dp"
+                    android:fontFamily="@font/euclid_circular_medium"
+                    android:text="@string/product_location"
+                    android:textColor="@color/black"
+                    android:textSize="19sp" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/select_location"
+                    android:layout_width="match_parent"
+                    android:layout_height="65dp"
+                    android:layout_below="@id/product_location"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/ebebeb_border"
+                    android:drawableEnd="@drawable/ic_map_pin_green"
+                    android:elevation="@dimen/elevation_5"
+                    android:gravity="center_vertical"
+                    android:hint="@string/enter_the_location"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="30dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/hint_color"
+                    android:textSize="17sp" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/contact_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/select_location"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="27dp"
+                    android:fontFamily="@font/euclid_circular_medium"
+                    android:text="@string/contact_number"
+                    android:textColor="@color/black"
+                    android:textSize="19sp" />
+
+
+                <RelativeLayout
+                    android:id="@+id/text_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edit_field_65"
+                    android:layout_below="@id/contact_number"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/ebebeb_border"
+                    android:elevation="@dimen/elevation_5">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_marginTop="15dp"
+                        android:elevation="5dp"
+                        android:text="@string/_966"
+                        android:textColor="#434343"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:id="@+id/view1"
+                        android:layout_width="1dp"
+                        android:layout_height="44dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginVertical="9dp"
+                        android:layout_toEndOf="@id/number"
+                        android:background="#F1F1F1" />
+
+                    <EditText
+                        android:id="@+id/mobileNumberText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="1dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_toEndOf="@id/view1"
+                        android:background="@color/white"
+                        android:fontFamily="@font/euclid_circular_medium"
+                        android:hint="@string/ex_245_256_2569"
+                        android:inputType="number"
+                        android:maxLength="9"
+                        android:paddingHorizontal="10dp"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/hint_color"
+                        android:textSize="19sp" />
+                </RelativeLayout>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/edit_auction"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text_number"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="24dp"
+                    android:fontFamily="@font/euclid_circular_medium"
+                    android:text="@string/auction_time"
+                    android:textColor="@color/black"
+                    android:textSize="19sp" />
+
+                <LinearLayout
+                    android:id="@+id/headingDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/edit_auction"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="24dp"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/start_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/euclid_circular_medium"
+                        android:text="@string/start_date"
+                        android:textColor="#434343"
+                        android:textSize="@dimen/text_size_15_desc" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/end_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/euclid_circular_medium"
+                        android:text="@string/end_date"
+                        android:textColor="#434343"
+                        android:textSize="@dimen/text_size_15_desc" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/date_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/headingDate"
+                    android:layout_centerHorizontal="true">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/start_date_text"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/edit_field_65"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="14dp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/ededed_border"
+                        android:drawableEnd="@drawable/ic_calendar_black_20"
+                        android:elevation="@dimen/elevation_5"
+                        android:fontFamily="@font/euclid_circular_medium"
+                        android:gravity="center_vertical"
+                        android:paddingHorizontal="15dp"
+                        android:text="@string/select_date"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/number_size_15" />
+
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/end_date_text"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/edit_field_65"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="14dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/ededed_border"
+                        android:drawableEnd="@drawable/ic_calendar_black_20"
+                        android:elevation="@dimen/elevation_5"
+                        android:fontFamily="@font/euclid_circular_medium"
+                        android:gravity="center_vertical"
+                        android:paddingHorizontal="15dp"
+                        android:text="@string/select_date"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/number_size_15" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/headingTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/date_layout"
+                    android:orientation="horizontal">
+
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/start_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/euclid_circular_medium"
+                        android:text="@string/start_time"
+                        android:textColor="#434343"
+                        android:textSize="@dimen/text_size_15_desc" />
+
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/end_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dimen_15"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/euclid_circular_medium"
+                        android:text="@string/end_time"
+                        android:textColor="#434343"
+                        android:textSize="@dimen/text_size_15_desc" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/time_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/headingTime">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/start_time_text"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/edit_field_65"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="14dp"
+                        android:layout_marginBottom="27dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/ededed_border"
+                        android:drawableEnd="@drawable/ic_clock_black_20"
+                        android:elevation="@dimen/elevation_5"
+                        android:fontFamily="@font/euclid_circular_medium"
+                        android:gravity="center_vertical"
+                        android:paddingHorizontal="15dp"
+                        android:text="@string/select_time"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/number_size_15" />
+
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/end_time_text"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/edit_field_65"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="14dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginBottom="27dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/ededed_border"
+                        android:drawableEnd="@drawable/ic_clock_black_20"
+                        android:elevation="@dimen/elevation_5"
+                        android:fontFamily="@font/euclid_circular_medium"
+                        android:gravity="center_vertical"
+                        android:paddingHorizontal="15dp"
+                        android:text="@string/select_time"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/number_size_15" />
+                </LinearLayout>
+            </RelativeLayout>
+        </ScrollView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_add"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height_75"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="@color/greenhousetheme"
+            android:elevation="@dimen/elevation_5"
+            android:fontFamily="@font/euclid_circular_medium"
+            android:text="@string/add_only"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/button_text_size_17"
+            app:cornerRadius="10dp" />
+    </RelativeLayout>
+</layout>

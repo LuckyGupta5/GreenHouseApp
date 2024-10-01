@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_lang_selection"
+        tools:context=".fragment.sellerfragemnt.MarkAsFeature">
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="85dp"
+            android:layout_height="5dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/view_top_verify_num" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/view"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="26dp"
+            android:lineSpacingExtra="6sp"
+            android:layout_centerHorizontal="true"
+            android:text="@string/to_feature_your_product_on_the_chosen_date_your_bid_must_rank_within_the_top_10"
+            android:textAlignment="viewStart"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/date_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="21dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="8dp"
+            android:text="@string/select_date"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/date_text"
+            android:layout_centerHorizontal="true"
+            android:layout_marginHorizontal="15dp"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/date_layout" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/proceed_to_bid"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height_75"
+            android:layout_below="@id/recycler"
+            android:layout_centerHorizontal="true"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="20dp"
+            android:textAllCaps="false"
+            android:fontFamily="@font/euclid_circular_medium"
+            android:backgroundTint="#28B17B"
+            android:text="@string/proceed_to_bid"
+            android:textColor="@color/white"
+            app:cornerRadius="8dp" />
+
+        <View
+            android:layout_width="115dp"
+            android:layout_height="4dp"
+            android:layout_below="@id/proceed_to_bid"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/bottom_black_view_3dp" />
+    </RelativeLayout>
+</layout>

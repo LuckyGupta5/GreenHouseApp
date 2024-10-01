@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Document</title>
+</head>
+
+<body>
+
+<script crossorigin="anonymous"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+        src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.4/socket.io.js"></script>
+<script>
+    var socket = io('http://localhost:6002', {
+       transport: ['websocket']
+    });
+
+    // user to provider
+    // let chatData = {
+    //    senderId: '6579f0ff59c41aa5bf790eb1', //mukesh
+    //    receiverId: '657d9bc7c5216d0d51413f87', //test
+    // };
+
+   //provider to user
+    //  let chatData = {
+    //      userId: '65f979c7e81be33e6a29a827',
+    //      receiverId: '65cbedee19ae0d44843c7ae6',
+    //       senderType:"user",
+    //       receiverType:"admin"
+
+
+    //  };
+    // socket.emit('initiateChat', chatData);
+    // socket.on('getRoomId', (data) => {
+    //    console.log("data ",data);
+    // })
+
+   // let authUserId = "65118feec68694eff42c5957"
+   //  socket.emit('updateChatList', authUserId);
+   //  socket.on('chatUserList', (data) => {
+   //     console.log("data ",data);
+   //  })
+
+
+
+     socket.emit('chatMessage', {
+       roomId: 1712751401551.0,
+       userId:"65f979c7e81be33e6a29a827",
+       senderType:"user", // provider | user
+
+    });
+
+     socket.on('receiveMessages', (data) => {
+       console.log("receiveMessages ",data);
+    })
+
+
+  // socket.emit('sendMessage', {
+  //       roomId: 1712751401551.0,
+  //       senderType:"user",
+  //        userId: '65f979c7e81be33e6a29a827',
+  //        receiverId: '65cbedee19ae0d44843c7ae6',
+  //        message:"Helo siri",
+  //        messageType:1
+
+  //   })
+
+    // socket.on('receiveMessage',(data)=>{
+    //    console.log(data,'receive message11');
+    // })
+    // socket.on('lastSeen',(data)=>{
+    //    console.log(data,'last seen');
+    // })
+
+    // let data = {
+    //    userId: '65f979c7e81be33e6a29a827'
+    // };
+    // socket.emit('chatList', data);
+    // socket.on('chatUserList', (data) => {
+    //    console.log(data);
+    // })
+
+
+  // navigation chat list
+   // let data1 ={
+   //  userId : "65f979c7e81be33e6a29a827",
+   //  requestType:"user"
+   // }
+   //  socket.emit('navigationChatList', data1);
+   //  socket.on('getNavigationChatList', (data) => {
+   //     console.log("data ",data);
+   //  })
+
+socket.emit('getUnreadMessageCount', { authUserId: '65a4cec8a6c45869ee97f598' });
+
+// Client-side code to listen for the response
+socket.on('unreadMessageCount', (data) => {
+ console.log("done")
+ console.log("unreadMessageCount",data)
+});
+
+
+// socket.emit('cancelMessage', { roomId: '1703078499691', messageId: '6582eb135ef6aa23943732b0',authUserId:'65252b02ea8c88e9847df328' });
+// socket.on('messageCancelled', (data) => {
+//   const { messageId, status } = data;
+//   console.log(data)
+// });
+
+
+</script>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="sellerSelectAddressModel"
+            type="com.ripenapps.greenhouse.datamodels.sellermodel.SellerMyAddressModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp">
+
+        <ImageView
+            android:id="@+id/ic_map_pin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_map_pin" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/id_user_address_line1"
+            android:layout_width="175dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="34dp"
+            android:maxLines="2"
+            android:text="@{sellerSelectAddressModel.userAddress}"
+            android:textAlignment="viewStart"
+            android:textColor="#515151"
+            android:textSize="@dimen/address_size_14"
+            android:textStyle="normal"
+            tools:text="@string/address_line1" />
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/id_user_address_line1"
+            android:background="#D9D9D9"
+            android:layout_marginTop="30dp"
+          />
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".screen.bidder.AddMoneyInWallet">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/backgroundimage" />
+
+        <ImageView
+            android:id="@+id/auction_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/green_house_logo" />
+
+        <ImageView
+            android:id="@+id/cross_add_money_wallet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="26dp"
+            android:layout_marginEnd="23dp"
+            android:src="@drawable/ic_cross_add_money" />
+
+        <LinearLayout
+            android:id="@+id/available_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/auction_img"
+            android:layout_centerHorizontal="true"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="36dp"
+            android:background="@drawable/avaiable_balance_add_moeny_border">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="17dp"
+                android:layout_weight="1"
+                android:text="@string/available_balance"
+                android:textAlignment="viewStart"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/avail_balance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="17dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/euclid_circular_medium"
+                android:textAlignment="viewEnd"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                tools:text="@string/aed_0_00" />
+
+        </LinearLayout>
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/add_money_to_wallet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/available_layout"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="71dp"
+            android:fontFamily="@font/euclid_circular_medium"
+            android:text="@string/add_money_to_wallet"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="21sp" />
+
+
+        <RelativeLayout
+            android:id="@+id/aed_money_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/add_money_to_wallet"
+            android:layout_centerHorizontal="true"
+            android:layout_marginHorizontal="95dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/b8bbbba_border">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/aed_add_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/euclid_circular_medium"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="14dp"
+                android:text="@string/aed"
+                android:textAlignment="viewStart"
+                android:textColor="@color/black"
+                android:textSize="17sp" />
+
+            <View
+                android:id="@+id/view_add_money"
+                android:layout_width="1dp"
+                android:layout_height="55dp"
+                android:layout_toEndOf="@id/aed_add_money"
+                android:background="#B8BBBA" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/enter_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="20dp"
+                android:layout_toEndOf="@id/view_add_money"
+                android:background="@color/white"
+                android:fontFamily="@font/euclid_circular_medium"
+                android:hint="@string/_0_00"
+                android:imeOptions="actionDone"
+                android:inputType="numberDecimal"
+                android:maxLength="7"
+                android:maxLines="1"
+                android:textColor="@color/black"
+                android:textSize="21sp" />
+
+        </RelativeLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/proceed_to_add"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height_75"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginBottom="15dp"
+            android:elevation="5dp"
+            android:text="@string/btn_proceed_to_add"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:enabled="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/button_text_size_17"
+            android:backgroundTint="@color/inactive"
+            android:fontFamily="@font/euclid_circular_medium"
+            app:cornerRadius="@dimen/dimen10dp"/>
+    </RelativeLayout>
+</layout>

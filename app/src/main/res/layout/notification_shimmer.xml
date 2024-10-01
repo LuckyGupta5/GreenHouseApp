@@ -1,0 +1,619 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/notificationMainShimmer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp">
+
+                <TextView
+                    android:id="@+id/notificationDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:fontFamily="@font/euclid_circular_medium"
+                    android:text="30 june 2024"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@color/gray"
+                    android:textSize="13sp" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/notificationDate"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/dimen_20">
+
+                    <ImageView
+                        android:id="@+id/notificationIcon"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:background="@drawable/ebebeb_border"
+                        android:backgroundTint="@color/gray"
+                        android:textColor="@color/gray" />
+
+                    <TextView
+                        android:id="@+id/notification"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_toEndOf="@id/notificationIcon"
+                        android:background="@drawable/ebebeb_border"
+                        android:backgroundTint="@color/gray"
+                        android:fontFamily="@font/euclid_circular_medium"
+                        android:lineSpacingExtra="3sp"
+                        android:text="@string/notification_title"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/text_size_15_desc" />
+
+                    <TextView
+                        android:id="@+id/notificationDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/notification"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_toEndOf="@id/notificationIcon"
+                        android:background="@drawable/ebebeb_border"
+                        android:backgroundTint="@color/gray"
+                        android:lineSpacingExtra="3sp"
+                        android:text="@string/notification_desc"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/gray"
+                        android:textSize="13sp" />
+
+
+                    <TextView
+                        android:id="@+id/time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/notificationDescription"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="@dimen/dimen_15"
+                        android:layout_toEndOf="@id/notificationIcon"
+                        android:background="@drawable/ebebeb_border"
+                        android:backgroundTint="@color/gray"
+                        android:text="12:50 PM"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/gray"
+                        android:textSize="11sp"
+                        android:textStyle="normal" />
+
+                    <View
+                        android:id="@+id/view"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/time"
+                        android:layout_marginStart="64dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="15dp"
+                        android:background="#1C707070" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp">
+
+                <TextView
+                    android:id="@+id/notificationDate1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:fontFamily="@font/euclid_circular_medium"
+                    android:text="30 june 2024"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@color/gray"
+                    android:textSize="13sp" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/notificationDate1"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/dimen_20">
+
+                    <ImageView
+                        android:id="@+id/notificationIcon1"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:background="@drawable/ebebeb_border"
+                        android:backgroundTint="@color/gray"
+                        android:textColor="@color/gray" />
+
+                    <TextView
+                        android:id="@+id/notification1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_toEndOf="@id/notificationIcon1"
+                        android:background="@drawable/ebebeb_border"
+                        android:backgroundTint="@color/gray"
+                        android:fontFamily="@font/euclid_circular_medium"
+                        android:lineSpacingExtra="3sp"
+                        android:text="@string/notification_title"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/text_size_15_desc" />
+
+                    <TextView
+                        android:id="@+id/notificationDescription1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/notification1"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_toEndOf="@id/notificationIcon1"
+                        android:background="@drawable/ebebeb_border"
+                        android:backgroundTint="@color/gray"
+                        android:lineSpacingExtra="3sp"
+                        android:text="@string/notification_desc"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/gray"
+                        android:textSize="13sp" />
+
+
+                    <TextView
+                        android:id="@+id/time1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/notificationDescription1"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="@dimen/dimen_15"
+                        android:layout_toEndOf="@id/notificationIcon1"
+                        android:background="@drawable/ebebeb_border"
+                        android:backgroundTint="@color/gray"
+                        android:text="12:50 PM"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/gray"
+                        android:textSize="11sp"
+                        android:textStyle="normal" />
+
+                    <View
+                        android:id="@+id/view1"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/time1"
+                        android:layout_marginStart="64dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="15dp"
+                        android:background="#1C707070" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp">
+
+                <TextView
+                    android:id="@+id/notificationDate2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:fontFamily="@font/euclid_circular_medium"
+                    android:text="30 june 2024"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@color/gray"
+                    android:textSize="13sp" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/notificationDate2"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/dimen_20">
+
+                    <ImageView
+                        android:id="@+id/notificationIcon2"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:background="@drawable/ebebeb_border"
+                        android:backgroundTint="@color/gray"
+                        android:textColor="@color/gray" />
+
+                    <TextView
+                        android:id="@+id/notification2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_toEndOf="@id/notificationIcon2"
+                        android:background="@drawable/ebebeb_border"
+                        android:backgroundTint="@color/gray"
+                        android:fontFamily="@font/euclid_circular_medium"
+                        android:lineSpacingExtra="3sp"
+                        android:text="@string/notification_title"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/text_size_15_desc" />
+
+                    <TextView
+                        android:id="@+id/notificationDescription2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/notification2"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_toEndOf="@id/notificationIcon2"
+                        android:background="@drawable/ebebeb_border"
+                        android:backgroundTint="@color/gray"
+                        android:lineSpacingExtra="3sp"
+                        android:text="@string/notification_desc"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/gray"
+                        android:textSize="13sp" />
+
+
+                    <TextView
+                        android:id="@+id/time2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/notificationDescription2"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="@dimen/dimen_15"
+                        android:layout_toEndOf="@id/notificationIcon2"
+                        android:background="@drawable/ebebeb_border"
+                        android:backgroundTint="@color/gray"
+                        android:text="12:50 PM"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/gray"
+                        android:textSize="11sp"
+                        android:textStyle="normal" />
+
+                    <View
+                        android:id="@+id/view2"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/time2"
+                        android:layout_marginStart="64dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="15dp"
+                        android:background="#1C707070" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp">
+
+                <TextView
+                    android:id="@+id/notificationDate3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:fontFamily="@font/euclid_circular_medium"
+                    android:text="30 june 2024"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@color/gray"
+                    android:textSize="13sp" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/notificationDate3"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/dimen_20">
+
+                    <ImageView
+                        android:id="@+id/notificationIcon3"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:background="@drawable/ebebeb_border"
+                        android:backgroundTint="@color/gray"
+                        android:textColor="@color/gray" />
+
+                    <TextView
+                        android:id="@+id/notification3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_toEndOf="@id/notificationIcon3"
+                        android:background="@drawable/ebebeb_border"
+                        android:backgroundTint="@color/gray"
+                        android:fontFamily="@font/euclid_circular_medium"
+                        android:lineSpacingExtra="3sp"
+                        android:text="@string/notification_title"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/text_size_15_desc" />
+
+                    <TextView
+                        android:id="@+id/notificationDescription3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/notification3"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_toEndOf="@id/notificationIcon3"
+                        android:background="@drawable/ebebeb_border"
+                        android:backgroundTint="@color/gray"
+                        android:lineSpacingExtra="3sp"
+                        android:text="@string/notification_desc"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/gray"
+                        android:textSize="13sp" />
+
+
+                    <TextView
+                        android:id="@+id/time3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/notificationDescription3"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="@dimen/dimen_15"
+                        android:layout_toEndOf="@id/notificationIcon3"
+                        android:background="@drawable/ebebeb_border"
+                        android:backgroundTint="@color/gray"
+                        android:text="12:50 PM"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/gray"
+                        android:textSize="11sp"
+                        android:textStyle="normal" />
+
+                    <View
+                        android:id="@+id/view3"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/time3"
+                        android:layout_marginStart="64dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="15dp"
+                        android:background="#1C707070" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp">
+
+                <TextView
+                    android:id="@+id/notificationDate4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:fontFamily="@font/euclid_circular_medium"
+                    android:text="30 june 2024"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@color/gray"
+                    android:textSize="13sp" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/notificationDate4"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/dimen_20">
+
+                    <ImageView
+                        android:id="@+id/notificationIcon4"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:background="@drawable/ebebeb_border"
+                        android:backgroundTint="@color/gray"
+                        android:textColor="@color/gray" />
+
+                    <TextView
+                        android:id="@+id/notification4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_toEndOf="@id/notificationIcon4"
+                        android:background="@drawable/ebebeb_border"
+                        android:backgroundTint="@color/gray"
+                        android:fontFamily="@font/euclid_circular_medium"
+                        android:lineSpacingExtra="3sp"
+                        android:text="@string/notification_title"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/text_size_15_desc" />
+
+                    <TextView
+                        android:id="@+id/notificationDescription4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/notification4"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_toEndOf="@id/notificationIcon4"
+                        android:background="@drawable/ebebeb_border"
+                        android:backgroundTint="@color/gray"
+                        android:lineSpacingExtra="3sp"
+                        android:text="@string/notification_desc"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/gray"
+                        android:textSize="13sp" />
+
+
+                    <TextView
+                        android:id="@+id/time4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/notificationDescription4"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="@dimen/dimen_15"
+                        android:layout_toEndOf="@id/notificationIcon4"
+                        android:background="@drawable/ebebeb_border"
+                        android:backgroundTint="@color/gray"
+                        android:text="12:50 PM"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/gray"
+                        android:textSize="11sp"
+                        android:textStyle="normal" />
+
+                    <View
+                        android:id="@+id/view4"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/time4"
+                        android:layout_marginStart="64dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="15dp"
+                        android:background="#1C707070" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp">
+
+                <TextView
+                    android:id="@+id/notificationDate5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:fontFamily="@font/euclid_circular_medium"
+                    android:text="30 june 2024"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@color/gray"
+                    android:textSize="13sp" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/notificationDate5"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/dimen_20">
+
+                    <ImageView
+                        android:id="@+id/notificationIcon5"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:background="@drawable/ebebeb_border"
+                        android:backgroundTint="@color/gray"
+                        android:textColor="@color/gray" />
+
+                    <TextView
+                        android:id="@+id/notification5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_toEndOf="@id/notificationIcon5"
+                        android:background="@drawable/ebebeb_border"
+                        android:backgroundTint="@color/gray"
+                        android:fontFamily="@font/euclid_circular_medium"
+                        android:lineSpacingExtra="3sp"
+                        android:text="@string/notification_title"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/text_size_15_desc" />
+
+                    <TextView
+                        android:id="@+id/notificationDescription5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/notification5"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_toEndOf="@id/notificationIcon5"
+                        android:background="@drawable/ebebeb_border"
+                        android:backgroundTint="@color/gray"
+                        android:lineSpacingExtra="3sp"
+                        android:text="@string/notification_desc"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/gray"
+                        android:textSize="13sp" />
+
+
+                    <TextView
+                        android:id="@+id/time5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/notificationDescription5"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="@dimen/dimen_15"
+                        android:layout_toEndOf="@id/notificationIcon5"
+                        android:background="@drawable/ebebeb_border"
+                        android:backgroundTint="@color/gray"
+                        android:text="12:50 PM"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/gray"
+                        android:textSize="11sp"
+                        android:textStyle="normal" />
+
+                    <View
+                        android:id="@+id/view5"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/time5"
+                        android:layout_marginStart="64dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="15dp"
+                        android:background="#1C707070" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </com.facebook.shimmer.ShimmerFrameLayout>
+</layout>

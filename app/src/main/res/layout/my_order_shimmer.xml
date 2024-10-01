@@ -1,0 +1,833 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/myOrderMainShimmer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/ebebeb_border"
+                android:elevation="@dimen/elevation_5">
+
+                <ImageView
+                    android:id="@+id/orderStatusImage"
+                    android:layout_width="19dp"
+                    android:layout_height="19dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="18dp"
+                    android:background="@color/gray"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/orderStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toEndOf="@id/orderStatusImage"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:fontFamily="@font/euclid_circular_medium"
+                    android:text="@string/order_confirmed"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/text_size_15_desc"
+                    app:layout_constraintEnd_toStartOf="@+id/arrow"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/orderStatusImage"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/orderDayTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/orderStatus"
+                    android:layout_marginTop="5dp"
+                    android:layout_toEndOf="@id/orderStatusImage"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:text="3_dec_2023_11_00_am"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/gray"
+                    android:textSize="12sp"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toStartOf="@+id/arrow"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/orderStatus"
+                    app:layout_constraintTop_toBottomOf="@+id/orderStatus" />
+
+                <ImageView
+                    android:id="@+id/arrow"
+                    android:layout_width="@dimen/dimen10dp"
+                    android:layout_height="@dimen/dimen10dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:textColor="@color/gray"
+                    app:layout_constraintBottom_toBottomOf="@+id/orderDayTime"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/orderStatus" />
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/orderDayTime"
+                    android:layout_marginTop="12dp"
+                    android:background="#EBEBEB"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/orderDayTime" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/productImage"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_below="@id/view"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:scaleType="fitXY"
+                    android:textColor="@color/gray"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view"
+                    app:shapeAppearanceOverlay="@style/vegetableImageBid" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="5dp"
+                    app:layout_constraintGuide_percent="0.7486911" />
+
+                <TextView
+                    android:id="@+id/orderId"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/view"
+                    android:layout_marginStart="11dp"
+                    android:layout_marginEnd="6dp"
+                    android:layout_toEndOf="@id/productImage"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:includeFontPadding="false"
+                    android:maxLines="1"
+                    android:text="order_id_252655 order_id_252655"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/gray"
+                    android:textSize="12sp"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline"
+                    app:layout_constraintStart_toEndOf="@+id/productImage"
+                    app:layout_constraintTop_toTopOf="@+id/productImage" />
+
+                <TextView
+                    android:id="@+id/productName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/orderId"
+                    android:layout_marginStart="11dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="6dp"
+                    android:layout_toEndOf="@id/productImage"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/euclid_circular_medium"
+                    android:includeFontPadding="false"
+                    android:maxLines="1"
+                    android:text="@string/cauliflower"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/name_size_17"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline"
+                    app:layout_constraintStart_toEndOf="@+id/productImage"
+                    app:layout_constraintTop_toBottomOf="@+id/orderId" />
+
+                <TextView
+                    android:id="@+id/productWeight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/productName"
+                    android:layout_marginTop="6dp"
+                    android:layout_toEndOf="@id/productImage"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:includeFontPadding="false"
+                    android:maxLength="10"
+                    android:maxLines="1"
+                    android:text="1kg"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/text_size_15_desc"
+                    android:textStyle="normal"
+                    app:layout_constraintBottom_toBottomOf="@+id/productImage"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/productName"
+                    app:layout_constraintTop_toBottomOf="@+id/productName"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/sar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/view"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:text="@string/sar"
+                    android:textAlignment="viewEnd"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/resend_code_size13"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/productImage"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="@+id/guideline"
+                    app:layout_constraintTop_toTopOf="@+id/productImage"
+                    app:layout_constraintVertical_bias="0.25" />
+
+                <TextView
+                    android:id="@+id/product_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/sar"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:fontFamily="@font/euclid_circular_medium"
+                    android:maxLength="10"
+                    android:maxLines="1"
+                    android:text="25_99"
+                    android:textAlignment="viewEnd"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/name_size_17"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="@+id/guideline"
+                    app:layout_constraintTop_toBottomOf="@+id/sar" />
+
+                <View
+                    android:id="@+id/view10"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/productImage"
+                    android:layout_marginTop="15dp"
+                    android:background="#EBEBEB"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/productImage" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/shippingMethod"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/view10"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="13dp"
+                    android:layout_marginBottom="19dp"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:fontFamily="@font/euclid_circular_medium"
+                    android:gravity="center_vertical"
+                    android:text="@string/i_will_pick_by_myself"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/address_size_14"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/timeLeft"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view10" />
+
+                <TextView
+                    android:id="@+id/timeLeft"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/view10"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:fontFamily="@font/euclid_circular_medium"
+                    android:text="48:00 hr. left"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/number_size_15"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view10" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/ebebeb_border"
+                android:elevation="@dimen/elevation_5">
+
+                <ImageView
+                    android:id="@+id/orderStatusImage1"
+                    android:layout_width="19dp"
+                    android:layout_height="19dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="18dp"
+                    android:background="@color/gray"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/orderStatus1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toEndOf="@id/orderStatusImage1"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:fontFamily="@font/euclid_circular_medium"
+                    android:text="@string/order_confirmed"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/text_size_15_desc"
+                    app:layout_constraintEnd_toStartOf="@+id/arrow1"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/orderStatusImage1"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/orderDayTime1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/orderStatus1"
+                    android:layout_marginTop="5dp"
+                    android:layout_toEndOf="@id/orderStatusImage1"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:text="3_dec_2023_11_00_am"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/gray"
+                    android:textSize="12sp"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toStartOf="@+id/arrow1"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/orderStatus1"
+                    app:layout_constraintTop_toBottomOf="@+id/orderStatus1" />
+
+                <ImageView
+                    android:id="@+id/arrow1"
+                    android:layout_width="@dimen/dimen10dp"
+                    android:layout_height="@dimen/dimen10dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:textColor="@color/gray"
+                    app:layout_constraintBottom_toBottomOf="@+id/orderDayTime1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/orderStatus1" />
+
+                <View
+                    android:id="@+id/view1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/orderDayTime1"
+                    android:layout_marginTop="12dp"
+                    android:background="#EBEBEB"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/orderDayTime1" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/productImage1"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_below="@id/view1"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:scaleType="fitXY"
+                    android:textColor="@color/gray"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view1"
+                    app:shapeAppearanceOverlay="@style/vegetableImageBid" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="5dp"
+                    app:layout_constraintGuide_percent="0.7486911" />
+
+                <TextView
+                    android:id="@+id/orderId1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/view1"
+                    android:layout_marginStart="11dp"
+                    android:layout_marginEnd="6dp"
+                    android:layout_toEndOf="@id/productImage1"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:includeFontPadding="false"
+                    android:maxLines="1"
+                    android:text="order_id_252655 order_id_252655"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/gray"
+                    android:textSize="12sp"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline1"
+                    app:layout_constraintStart_toEndOf="@+id/productImage1"
+                    app:layout_constraintTop_toTopOf="@+id/productImage1" />
+
+                <TextView
+                    android:id="@+id/productName1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/orderId1"
+                    android:layout_marginStart="11dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="6dp"
+                    android:layout_toEndOf="@id/productImage1"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/euclid_circular_medium"
+                    android:includeFontPadding="false"
+                    android:maxLines="1"
+                    android:text="@string/cauliflower"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/name_size_17"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline1"
+                    app:layout_constraintStart_toEndOf="@+id/productImage1"
+                    app:layout_constraintTop_toBottomOf="@+id/orderId1" />
+
+                <TextView
+                    android:id="@+id/productWeight1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/productName1"
+                    android:layout_marginTop="6dp"
+                    android:layout_toEndOf="@id/productImage1"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:includeFontPadding="false"
+                    android:maxLength="10"
+                    android:maxLines="1"
+                    android:text="1kg"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/text_size_15_desc"
+                    android:textStyle="normal"
+                    app:layout_constraintBottom_toBottomOf="@+id/productImage1"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline1"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/productName1"
+                    app:layout_constraintTop_toBottomOf="@+id/productName1"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/sar1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/view1"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:text="@string/sar"
+                    android:textAlignment="viewEnd"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/resend_code_size13"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/productImage1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="@+id/guideline1"
+                    app:layout_constraintTop_toTopOf="@+id/productImage1"
+                    app:layout_constraintVertical_bias="0.25" />
+
+                <TextView
+                    android:id="@+id/product_amount1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/sar1"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:fontFamily="@font/euclid_circular_medium"
+                    android:maxLength="10"
+                    android:maxLines="1"
+                    android:text="25_99"
+                    android:textAlignment="viewEnd"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/name_size_17"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="@+id/guideline1"
+                    app:layout_constraintTop_toBottomOf="@+id/sar1" />
+
+                <View
+                    android:id="@+id/view11"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/productImage1"
+                    android:layout_marginTop="15dp"
+                    android:background="#EBEBEB"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/productImage1" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/shippingMethod1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/view11"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="13dp"
+                    android:layout_marginBottom="19dp"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:fontFamily="@font/euclid_circular_medium"
+                    android:gravity="center_vertical"
+                    android:text="@string/i_will_pick_by_myself"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/address_size_14"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/timeLeft1"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view11" />
+
+                <TextView
+                    android:id="@+id/timeLeft1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/view11"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:fontFamily="@font/euclid_circular_medium"
+                    android:text="48:00 hr. left"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/number_size_15"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view11" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/ebebeb_border"
+                android:elevation="@dimen/elevation_5">
+
+                <ImageView
+                    android:id="@+id/orderStatusImage11"
+                    android:layout_width="19dp"
+                    android:layout_height="19dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="18dp"
+                    android:background="@color/gray"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/orderStatus11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toEndOf="@id/orderStatusImage11"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:fontFamily="@font/euclid_circular_medium"
+                    android:text="@string/order_confirmed"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/text_size_15_desc"
+                    app:layout_constraintEnd_toStartOf="@+id/arrow11"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/orderStatusImage11"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/orderDayTime11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/orderStatus11"
+                    android:layout_marginTop="5dp"
+                    android:layout_toEndOf="@id/orderStatusImage11"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:text="3_dec_2023_11_00_am"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/gray"
+                    android:textSize="12sp"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toStartOf="@+id/arrow11"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/orderStatus11"
+                    app:layout_constraintTop_toBottomOf="@+id/orderStatus11" />
+
+                <ImageView
+                    android:id="@+id/arrow11"
+                    android:layout_width="@dimen/dimen10dp"
+                    android:layout_height="@dimen/dimen10dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:textColor="@color/gray"
+                    app:layout_constraintBottom_toBottomOf="@+id/orderDayTime11"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/orderStatus11" />
+
+                <View
+                    android:id="@+id/view110"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/orderDayTime11"
+                    android:layout_marginTop="12dp"
+                    android:background="#EBEBEB"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/orderDayTime11" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/productImage11"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_below="@id/view110"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:scaleType="fitXY"
+                    android:textColor="@color/gray"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view110"
+                    app:shapeAppearanceOverlay="@style/vegetableImageBid" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="5dp"
+                    app:layout_constraintGuide_percent="0.7486911" />
+
+                <TextView
+                    android:id="@+id/orderId11"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/view110"
+                    android:layout_marginStart="11dp"
+                    android:layout_marginEnd="6dp"
+                    android:layout_toEndOf="@id/productImage11"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:includeFontPadding="false"
+                    android:maxLines="1"
+                    android:text="order_id_252655 order_id_252655"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/gray"
+                    android:textSize="12sp"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline11"
+                    app:layout_constraintStart_toEndOf="@+id/productImage11"
+                    app:layout_constraintTop_toTopOf="@+id/productImage11" />
+
+                <TextView
+                    android:id="@+id/productName11"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/orderId11"
+                    android:layout_marginStart="11dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="6dp"
+                    android:layout_toEndOf="@id/productImage11"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/euclid_circular_medium"
+                    android:includeFontPadding="false"
+                    android:maxLines="1"
+                    android:text="@string/cauliflower"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/name_size_17"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline11"
+                    app:layout_constraintStart_toEndOf="@+id/productImage11"
+                    app:layout_constraintTop_toBottomOf="@+id/orderId11" />
+
+                <TextView
+                    android:id="@+id/productWeight11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/productName11"
+                    android:layout_marginTop="6dp"
+                    android:layout_toEndOf="@id/productImage11"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:includeFontPadding="false"
+                    android:maxLength="10"
+                    android:maxLines="1"
+                    android:text="1kg"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/text_size_15_desc"
+                    android:textStyle="normal"
+                    app:layout_constraintBottom_toBottomOf="@+id/productImage11"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline11"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/productName11"
+                    app:layout_constraintTop_toBottomOf="@+id/productName11"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/sar11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/view110"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:text="@string/sar"
+                    android:textAlignment="viewEnd"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/resend_code_size13"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/productImage11"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="@+id/guideline11"
+                    app:layout_constraintTop_toTopOf="@+id/productImage11"
+                    app:layout_constraintVertical_bias="0.25" />
+
+                <TextView
+                    android:id="@+id/product_amount11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/sar11"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:fontFamily="@font/euclid_circular_medium"
+                    android:maxLength="10"
+                    android:maxLines="1"
+                    android:text="25_99"
+                    android:textAlignment="viewEnd"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/name_size_17"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="@+id/guideline11"
+                    app:layout_constraintTop_toBottomOf="@+id/sar11" />
+
+                <View
+                    android:id="@+id/view111"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/productImage11"
+                    android:layout_marginTop="15dp"
+                    android:background="#EBEBEB"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/productImage11" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/shippingMethod11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/view110"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="13dp"
+                    android:layout_marginBottom="19dp"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:fontFamily="@font/euclid_circular_medium"
+                    android:gravity="center_vertical"
+                    android:text="@string/i_will_pick_by_myself"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/address_size_14"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/timeLeft11"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view111" />
+
+                <TextView
+                    android:id="@+id/timeLeft11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/view110"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:fontFamily="@font/euclid_circular_medium"
+                    android:text="48:00 hr. left"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/number_size_15"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view111" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+</layout>

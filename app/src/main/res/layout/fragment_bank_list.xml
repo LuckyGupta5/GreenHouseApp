@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_lang_selection"
+        tools:context=".fragment.sellerfragemnt.BankList">
+
+        <View
+            android:id="@+id/topView"
+            android:layout_width="85dp"
+            android:layout_height="4dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/view_top_verify_num" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/bankListHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/topView"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp"
+            android:text="@string/bank_name"
+            android:textAlignment="viewStart"
+            android:textColor="@color/black"
+            android:textSize="@dimen/profile_heading_21"
+            android:textStyle="bold" />
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/bankListHeading"
+            android:layout_marginTop="25dp"
+            android:background="#D9D9D9" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/bankListRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/view2"
+            android:layout_marginTop="6dp"
+            android:orientation="vertical"
+            tools:listitem="@layout/bank_list_layout"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+        <View
+            android:layout_width="115dp"
+            android:layout_height="4dp"
+            android:layout_below="@id/bankListRecycler"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="35dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/bottom_black_view_3dp" />
+
+
+    </RelativeLayout>
+</layout>

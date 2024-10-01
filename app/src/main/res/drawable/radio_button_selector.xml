@@ -1,0 +1,18 @@
+<!-- res/drawable/radio_button_selector.xml -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Selected state -->
+    <item android:state_checked="true">
+        <shape android:shape="oval">
+            <!-- Change the background color when selected -->
+            <solid android:color="#28B17B" /> <!-- Change to your desired color -->
+        </shape>
+    </item>
+    <!-- Default state -->
+    <item>
+        <shape android:shape="oval">
+            <!-- Change the default background color -->
+            <solid android:color="#C9C9C9" /> <!-- Change to your desired color -->
+        </shape>
+    </item>
+</selector>
+

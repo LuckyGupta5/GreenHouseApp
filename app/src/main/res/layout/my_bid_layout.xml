@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="productModel"
+            type="com.ripenapps.greenhouse.datamodels.sellermodel.MyBidsSellerModel" />
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/seller_my_bids"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginVertical="7dp"
+        android:background="@drawable/ebebeb_border">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/veg_img"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginVertical="15dp"
+            android:layout_marginStart="15dp"
+            android:scaleType="centerCrop"
+            app:shapeAppearanceOverlay="@style/vegetableImageBid"
+            tools:src="@drawable/cauliflowermybids" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/veg_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="18dp"
+            android:layout_toEndOf="@id/veg_img"
+            android:fontFamily="@font/euclid_circular_semi_bold"
+            android:text="@{productModel.name}"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/name_size_17"
+            tools:text="@string/cauliflower" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/veg_text"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="6dp"
+            android:layout_toStartOf="@id/sar"
+            android:layout_toEndOf="@id/veg_img"
+            android:drawableStart="@drawable/map_pin"
+            android:drawablePadding="3dp"
+            android:ellipsize="end"
+            android:maxLength="25"
+            android:maxLines="2"
+            android:text="@{productModel.location}"
+            android:textColor="#5B5B5B"
+            android:textSize="@dimen/resend_code_size13"
+            android:textStyle="normal"
+            tools:text="riyadh_sa" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/item_weight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/location"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@id/veg_img"
+            android:text="@{productModel.weight}"
+            android:textAlignment="center"
+            android:textColor="#5F5F5F"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            tools:text="100_kg" />
+
+        <ImageView
+            android:id="@+id/view_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/location"
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="12dp"
+            android:layout_toEndOf="@id/item_weight"
+            android:src="@drawable/ellipse_18"
+            android:visibility="@{productModel.time == null ? View.GONE : View.VISIBLE}" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/location"
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toEndOf="@id/view_img"
+            android:fontFamily="@font/euclid_circular_medium"
+            android:maxLength="20"
+            android:maxLines="2"
+            android:text="@{productModel.time}"
+            android:textColor="@color/red"
+            android:textSize="14sp"
+            tools:text="1_h_30_m_left" />
+
+        <TextView
+            android:id="@+id/sar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="35dp"
+            android:layout_marginEnd="15dp"
+            android:fontFamily="@font/euclid_circular_medium"
+            android:text="@string/sar"
+            android:textAlignment="center"
+            android:textColor="#707070"
+            android:textSize="@dimen/resend_code_size13" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/sar"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="15dp"
+            android:fontFamily="@font/euclid_circular_medium"
+            android:maxLength="15"
+            android:maxLines="1"
+            android:text="@{productModel.aedPrice}"
+            android:textAlignment="viewEnd"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            tools:text="25_99" />
+
+
+        <View
+            android:id="@+id/view_ebebeb"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/veg_img"
+            android:layout_marginTop="10dp"
+            android:background="#EBEBEB" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/view_ebebeb"
+            android:layout_marginVertical="13dp"
+            android:layout_marginStart="12dp"
+            android:fontFamily="@font/euclid_circular_medium"
+            android:text="@string/highest_bid"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_15_desc" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/view_ebebeb"
+            android:layout_alignParentEnd="true"
+            android:layout_marginVertical="13dp"
+            android:layout_marginEnd="15dp"
+            android:fontFamily="@font/euclid_circular_medium"
+            android:maxLength="15"
+            android:maxLines="1"
+            android:text="@{productModel.highestPriceBid}"
+            android:textColor="#28B17B"
+            android:textSize="@dimen/text_size_15_desc"
+            tools:text="30_15" />
+    </RelativeLayout>
+</layout>

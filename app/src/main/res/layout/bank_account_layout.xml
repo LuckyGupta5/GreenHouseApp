@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="bankAccountModel"
+            type="com.ripenapps.greenhouse.datamodels.sellermodel.BankAccountModel" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/ebebeb_border"
+        android:elevation="@dimen/elevation_5">
+
+        <ImageView
+            android:id="@+id/bankImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="18dp"
+            tools:src="@drawable/ic_bank1" />
+
+        <TextView
+            android:id="@+id/bankName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="19dp"
+            android:layout_marginTop="15dp"
+            android:layout_toEndOf="@id/bankImage"
+            android:text="@{bankAccountModel.bankName}"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/name_size_17"
+            android:textStyle="bold"
+            tools:text="@string/riyad_bank" />
+
+        <TextView
+            android:id="@+id/accountNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bankName"
+            android:layout_marginStart="59dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginBottom="15dp"
+            android:text="@{bankAccountModel.accountNumber}"
+            android:textAlignment="center"
+            android:textColor="#5B5B5B"
+            android:textSize="@dimen/name_size_17"
+            android:textStyle="normal"
+            tools:text="256212345678" />
+
+        <ImageView
+            android:id="@+id/btnDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:paddingHorizontal="21dp"
+            android:paddingVertical="10dp"
+            tools:ignore="ContentDescription"
+            android:src="@drawable/ic_delete_bin" />
+
+    </RelativeLayout>
+</layout>

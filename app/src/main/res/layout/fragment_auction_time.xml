@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_lang_selection"
+        tools:context=".fragment.sellerfragemnt.AuctionTime">
+
+        <View
+            android:id="@+id/start_view"
+            android:layout_width="85dp"
+            android:layout_height="5dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/view_top_verify_num" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/edit_auction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/start_view"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:text="@string/edit_auction_time"
+            android:textColor="@color/black"
+            android:textSize="19sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/headingDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/edit_auction"
+            android:layout_marginTop="24dp"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/start_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_weight="1"
+                android:text="@string/start_date"
+                android:textColor="#434343"
+                android:textSize="@dimen/text_size_15_desc"
+                android:textStyle="bold" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/end_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/end_date"
+                android:textColor="#434343"
+                android:textSize="@dimen/text_size_15_desc"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/date_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/headingDate">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/start_date_text"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edit_field_65"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/ededed_border"
+                android:drawableEnd="@drawable/ic_calendar_black_20"
+                android:elevation="@dimen/elevation_5"
+                android:focusable="true"
+                android:focusableInTouchMode="false"
+                android:fontFamily="@font/euclid_circular_medium"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="15dp"
+                android:text="@string/select_date"
+                android:textColor="@color/black"
+                android:textSize="@dimen/number_size_15"
+                android:textStyle="bold" />
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/end_date_text"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edit_field_65"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/ededed_border"
+                android:drawableEnd="@drawable/ic_calendar_black_20"
+                android:elevation="@dimen/elevation_5"
+                android:fontFamily="@font/euclid_circular_medium"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="15dp"
+                android:text="@string/select_date"
+                android:textColor="@color/black"
+                android:textSize="@dimen/number_size_15"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/headingTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/date_layout"
+            android:orientation="horizontal">
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/start_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_weight="1"
+                android:text="@string/start_time"
+                android:textColor="#434343"
+                android:textSize="@dimen/text_size_15_desc"
+                android:textStyle="bold" />
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/end_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/end_time"
+                android:textColor="#434343"
+                android:textSize="@dimen/text_size_15_desc"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/time_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/headingTime">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/start_time_text"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edit_field_65"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginBottom="27dp"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/ededed_border"
+                android:drawableEnd="@drawable/ic_clock_black_20"
+                android:elevation="@dimen/elevation_5"
+                android:enabled="true"
+                android:fontFamily="@font/euclid_circular_medium"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="15dp"
+                android:text="@string/select_time"
+                android:textColor="@color/black"
+                android:textSize="@dimen/number_size_15"
+                android:textStyle="bold" />
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/end_time_text"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edit_field_65"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="27dp"
+                android:layout_weight="1"
+                android:background="@drawable/ededed_border"
+                android:drawableEnd="@drawable/ic_clock_black_20"
+                android:elevation="@dimen/elevation_5"
+                android:fontFamily="@font/euclid_circular_medium"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="15dp"
+                android:text="@string/select_time"
+                android:textColor="@color/black"
+                android:textSize="@dimen/number_size_15"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_update"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height_75"
+            android:layout_below="@id/time_layout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="15dp"
+            android:backgroundTint="#28B17B"
+            android:fontFamily="@font/euclid_circular_medium"
+            android:text="@string/update"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/button_text_size_17"
+            app:cornerRadius="8dp" />
+
+        <View
+            android:layout_width="115dp"
+            android:layout_height="4dp"
+            android:layout_below="@id/btn_update"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="9dp"
+            android:background="@drawable/bottom_black_view_3dp" />
+
+    </RelativeLayout>
+</layout>

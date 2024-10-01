@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.ripenapps.greenhouse.datamodels.sellermodel.DateClass" />
+
+        <variable
+            name="click"
+            type="com.ripenapps.greenhouse.adapter.seller.RecyclerDateAdapter.ClickAction" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/dateLayout"
+        android:layout_width="50dp"
+        android:layout_height="73dp"
+        android:layout_marginVertical="3dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginEnd="@dimen/dimen10dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:onClick="@{click.onDate}"
+        android:orientation="vertical"
+        android:paddingVertical="10dp">
+
+        <View
+            android:layout_width="16dp"
+            android:layout_height="2dp"
+            android:background="@drawable/date_view_top" />
+
+        <TextView
+            android:id="@+id/weekDay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/euclid_circular_regular"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            tools:text="mon" />
+
+        <TextView
+            android:id="@+id/weekDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/euclid_circular_regular"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            tools:text="5" />
+    </LinearLayout>
+
+</layout>

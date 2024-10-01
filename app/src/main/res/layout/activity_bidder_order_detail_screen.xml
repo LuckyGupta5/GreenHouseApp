@@ -1,0 +1,1259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".screen.bidder.BidderOrderDetailScreen">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/backgroundimage" />
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="25dp"
+            android:padding="5dp"
+            android:src="@drawable/ic_back_black" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/orderDetailTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="27dp"
+            android:fontFamily="@font/euclid_circular_semi_bold"
+            android:text="@string/order_details"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="21sp"
+            android:textStyle="normal" />
+
+        <LinearLayout
+            android:id="@+id/helpButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="22dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/ebebeb_border">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="8dp"
+                android:drawableStart="@drawable/ic_help_black_small"
+                android:drawablePadding="5dp"
+                android:fontFamily="@font/euclid_circular_semi_bold"
+                android:text="@string/help"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/idRefreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/orderDetailTitle"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="18dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:fillViewport="true"
+                android:overScrollMode="never"
+                android:scrollbars="none">
+
+                <RelativeLayout
+                    android:id="@+id/scroll_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:id="@+id/seller_my_bids"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_marginTop="14dp"
+                        android:background="@drawable/ededed_border"
+                        android:elevation="@dimen/elevation_5">
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/veg_img"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginVertical="15dp"
+                            android:layout_marginStart="15dp"
+                            android:scaleType="centerCrop"
+                            app:shapeAppearanceOverlay="@style/vegetableImageBid"
+                            tools:src="@drawable/image_vegetables_small" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/veg_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_toEndOf="@id/veg_img"
+                            android:fontFamily="@font/euclid_circular_semi_bold"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/name_size_17"
+                            tools:text="@string/cauliflower" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/location"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/veg_text"
+                            android:layout_marginStart="7dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="20dp"
+                            android:layout_toStartOf="@+id/sar"
+                            android:layout_toEndOf="@id/veg_img"
+                            android:drawableStart="@drawable/map_pin"
+                            android:drawablePadding="3dp"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/euclid_circular_light"
+                            android:maxWidth="250dp"
+                            android:maxLines="3"
+                            android:textColor="#5B5B5B"
+                            android:textSize="@dimen/resend_code_size13"
+                            android:textStyle="normal"
+                            tools:text="@string/address_line1" />
+
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/productWeight"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/location"
+                            android:layout_marginStart="28dp"
+                            android:layout_marginTop="7dp"
+                            android:layout_toEndOf="@id/veg_img"
+                            android:fontFamily="@font/euclid_circular_medium"
+                            android:textColor="#5F5F5F"
+                            android:textStyle="normal"
+                            tools:text="100kg." />
+
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/sar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="32dp"
+                            android:layout_marginEnd="15dp"
+                            android:fontFamily="@font/euclid_circular_medium"
+                            android:text="@string/sar"
+                            android:textColor="#707070"
+                            android:textSize="13sp"
+                            android:textStyle="normal" />
+
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/productPrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/sar"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="15dp"
+                            android:fontFamily="@font/euclid_circular_medium"
+                            android:textColor="@color/black"
+                            android:textSize="17sp"
+                            android:textStyle="normal"
+                            tools:text="@string/_25" />
+
+                        <View
+                            android:id="@+id/view_ebebeb"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_below="@id/productWeight"
+                            android:layout_marginTop="10dp"
+                            android:background="#DCE0DF" />
+
+                        <RelativeLayout
+                            android:id="@+id/sellerDetailLayer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/view_ebebeb"
+                            android:layout_centerHorizontal="true"
+                            android:orientation="horizontal">
+
+                            <RelativeLayout
+                                android:id="@+id/sellerNameBg"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginVertical="11dp"
+                                android:layout_marginStart="16dp"
+                                android:background="@drawable/bg_seller_name_small"
+                                android:fontFamily="@font/euclid_circular_bold"
+                                android:text="@string/bid_count"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_15_desc"
+                                android:textStyle="normal">
+
+                                <TextView
+                                    android:id="@+id/nameInitials"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/resend_code_size13"
+                                    android:textStyle="bold"
+                                    tools:text="@string/ms" />
+                            </RelativeLayout>
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/sellerUserName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginEnd="15dp"
+                                android:layout_toEndOf="@id/sellerNameBg"
+                                android:fontFamily="@font/euclid_circular_medium"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_15_desc"
+                                tools:text="rishabh30" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginEnd="15dp"
+                                android:src="@drawable/ic_arrow_forward_646464" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/order_status_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/seller_my_bids"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/ebebeb_border">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/order_status"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="9dp"
+                            android:fontFamily="@font/euclid_circular_medium"
+                            android:text="@string/order_status"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/button_text_size_17"
+                            android:textStyle="normal" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_above="@id/view_status"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="20dp"
+                            android:src="@drawable/ic_down_arrow_646464" />
+
+                        <TextView
+                            android:id="@+id/orderId"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/order_status"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginStart="17dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="10dp"
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/greenhousetheme"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            tools:text="ORDER ID #252655" />
+
+                        <View
+                            android:id="@+id/view_status"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_below="@id/orderId"
+                            android:background="#EBEBEB" />
+
+                        <ImageView
+                            android:id="@+id/orderConfirmedStatus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/view_status"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginStart="19dp"
+                            android:layout_marginTop="27dp"
+                            android:src="@drawable/ic_green_bg_tick" />
+
+                        <LinearLayout
+                            android:id="@+id/recievedStatus"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/view_status"
+                            android:layout_marginStart="17dp"
+                            android:layout_marginTop="25dp"
+                            android:layout_toEndOf="@id/orderConfirmedStatus"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/order_receive"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/euclid_circular_medium"
+                                android:text="@string/order_confirmed"
+                                android:textColor="@color/black"
+                                android:textSize="15sp"
+                                android:textStyle="normal" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/confirmedDateTime"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="#737373"
+                                android:textSize="11sp"
+                                android:textStyle="normal"
+                                tools:text="Expected by Sat, 06 Dec 2023, 7:00 PM" />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/dot_img"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/orderConfirmedStatus"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginStart="27dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="2dp"
+                            android:src="@drawable/gray_dotes" />
+
+                        <LinearLayout
+                            android:id="@+id/packedStatus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/recievedStatus"
+                            android:layout_marginStart="17dp"
+                            android:layout_marginTop="35dp"
+                            android:layout_toEndOf="@id/packedStatusImage"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/packed"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/euclid_circular_medium"
+                                android:text="@string/packed"
+                                android:textColor="@color/black"
+                                android:textSize="15sp"
+                                android:textStyle="normal" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/packedDateTime"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dp"
+                                android:textColor="#737373"
+                                android:textSize="11sp"
+                                android:textStyle="normal"
+                                android:visibility="visible"
+                                tools:text="Expected by Sat, 06 Dec 2023, 7:00 PM" />
+                        </LinearLayout>
+
+
+                        <ImageView
+                            android:id="@+id/packedStatusImage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/dot_img"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginStart="19dp"
+                            android:src="@drawable/ic_gray_bg_tick" />
+
+                        <ImageView
+                            android:id="@+id/dot_img2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/packedStatusImage"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginStart="27dp"
+                            android:layout_marginTop="5dp"
+                            android:src="@drawable/gray_dotes" />
+
+                        <LinearLayout
+                            android:id="@+id/deliveredLayer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/packedStatus"
+                            android:layout_marginStart="17dp"
+                            android:layout_marginTop="30dp"
+                            android:layout_toEndOf="@id/deliverdStatusImage"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/delivered"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/euclid_circular_medium"
+                                android:text="@string/delivered"
+                                android:textColor="@color/black"
+                                android:textSize="15sp"
+                                android:textStyle="normal" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/deliveredDateTime"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="#737373"
+                                android:textSize="11sp"
+                                android:textStyle="normal"
+                                tools:text="Expected by Sat, 06 Dec 2023, 7:00 PM" />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/deliverdStatusImage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/dot_img2"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginStart="19dp"
+                            android:layout_marginTop="5dp"
+                            android:src="@drawable/ic_gray_bg_tick" />
+
+                        <ImageView
+                            android:id="@+id/dot_img3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/deliverdStatusImage"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginStart="27dp"
+                            android:src="@drawable/gray_dotes"
+                            android:visibility="gone" />
+
+                        <LinearLayout
+                            android:id="@+id/pickupSuccessfulLayer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/deliveredLayer"
+                            android:layout_marginStart="17dp"
+                            android:layout_marginTop="35dp"
+                            android:layout_toEndOf="@id/deliverdStatusImage"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/pickedSuccessfully"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/euclid_circular_medium"
+                                android:text="@string/pickup_successful"
+                                android:textColor="@color/black"
+                                android:textSize="15sp"
+                                android:textStyle="normal" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/pickedDateTime"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="#737373"
+                                android:textSize="11sp"
+                                android:textStyle="normal"
+                                tools:text="Expected by Sat, 06 Dec 2023, 7:00 PM" />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/pickedStatusImage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/dot_img3"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginStart="19dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="19dp"
+                            android:src="@drawable/ic_gray_bg_tick"
+                            android:visibility="gone" />
+
+                        <LinearLayout
+                            android:id="@+id/orderCo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/pickedStatusImage"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="31dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/cancelOrderPacked"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="@dimen/dimen_20"
+                                android:layout_marginBottom="13dp"
+                                android:text="@string/cancel_order_its_packed"
+                                android:textAlignment="center"
+                                android:textColor="#515151"
+                                android:textSize="@dimen/resend_code_size13" />
+
+                            <LinearLayout
+                                android:id="@+id/buttonLayer"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="17dp"
+                                android:orientation="horizontal">
+
+                                <com.google.android.material.button.MaterialButton
+                                    android:id="@+id/cancle_button"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/button_height_75"
+                                    android:layout_marginStart="20dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:layout_weight="1"
+                                    android:backgroundTint="@color/white"
+                                    android:fontFamily="@font/euclid_circular_medium"
+                                    android:text="@string/cancel_order"
+                                    android:textAllCaps="false"
+                                    android:textColor="@color/red"
+                                    android:textSize="@dimen/button_text_size_17"
+                                    app:cornerRadius="10dp"
+                                    app:strokeColor="#EBEBEB"
+                                    app:strokeWidth="1dp" />
+
+                                <com.google.android.material.button.MaterialButton
+                                    android:id="@+id/receivedButton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/button_height_75"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:layout_weight="1"
+                                    android:backgroundTint="@color/white"
+                                    android:fontFamily="@font/euclid_circular_medium"
+                                    android:text="@string/order_received"
+                                    android:textAllCaps="false"
+                                    android:textColor="@color/greenhousetheme"
+                                    android:textSize="@dimen/button_text_size_17"
+                                    app:cornerRadius="10dp"
+                                    app:strokeColor="@color/greenhousetheme"
+                                    app:strokeWidth="1dp" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/raingLayer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/order_status_layout"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_marginTop="19dp"
+                        android:background="@drawable/ebebeb_border"
+                        android:visibility="gone">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/ratingStar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginVertical="15dp"
+                            android:layout_marginStart="15dp"
+                            android:drawableStart="@drawable/ic_star_yellow"
+                            android:drawablePadding="13dp"
+                            android:fontFamily="@font/euclid_circular_medium"
+                            android:text="@string/you_rated"
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/name_size_17" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/refuncDetailLayer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/raingLayer"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_marginTop="19dp"
+                        android:background="@drawable/ebebeb_border"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/refundDetailTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="13dp"
+                            android:fontFamily="@font/euclid_circular_medium"
+                            android:text="@string/refund_details"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/button_text_size_17"
+                            android:textStyle="normal" />
+
+                        <View
+                            android:id="@+id/view_refund_detail"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="12dp"
+                            android:background="#1C707070" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="15dp"
+                            android:layout_marginTop="13dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/cancellation_charges"
+                                android:textAlignment="viewStart"
+                                android:textColor="@color/black"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:id="@+id/cancellationCharges"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:textAlignment="viewEnd"
+                                android:textColor="@color/red"
+                                android:textSize="@dimen/button_text_size_17"
+                                tools:text="SAR 45.69" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="15dp"
+                            android:layout_marginTop="19dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/euclid_circular_medium"
+                                android:text="@string/total_amount_refund"
+                                android:textAlignment="viewStart"
+                                android:textColor="@color/black"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:id="@+id/totalRefund"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:textAlignment="viewEnd"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/button_text_size_17"
+                                tools:text="SAR 45.69" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginBottom="15dp"
+                            android:text="@string/added_to_your_source_account"
+                            android:textAlignment="viewStart"
+                            android:textColor="#737373"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/shipping_details_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/refuncDetailLayer"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_marginTop="19dp"
+                        android:background="@drawable/ebebeb_border"
+                        android:visibility="visible">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/shipping"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="13dp"
+                            android:fontFamily="@font/euclid_circular_medium"
+                            android:text="@string/shipping_details"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/button_text_size_17"
+                            android:textStyle="normal" />
+
+                        <View
+                            android:id="@+id/View_details"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_below="@id/shipping"
+                            android:layout_marginTop="12dp"
+                            android:background="#1C707070" />
+
+                        <ImageView
+                            android:id="@+id/bus_deliver"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/View_details"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="27dp"
+                            android:src="@drawable/ic_truck" />
+
+                        <LinearLayout
+                            android:id="@+id/shippingMethodLayer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/View_details"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_toEndOf="@id/bus_deliver"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:id="@+id/shippingType"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    android:id="@+id/ship_method"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/euclid_circular_medium"
+                                    android:text="@string/shipping_method_title"
+                                    android:textColor="@color/black"
+                                    android:textSize="15sp"
+                                    android:textStyle="normal" />
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    android:id="@+id/shippingMethodType"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="3dp"
+                                    android:textColor="#515151"
+                                    android:textSize="14sp"
+                                    android:textStyle="normal"
+                                    tools:text="@string/i_will_pick_by_myself" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/pickupTime"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="end"
+                                android:layout_marginEnd="15dp"
+                                android:layout_weight="1"
+                                android:gravity="end"
+                                android:orientation="vertical">
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    android:id="@+id/timeLeft"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/euclid_circular_medium"
+                                    android:textColor="@color/greenhousetheme"
+                                    android:textSize="17sp"
+                                    android:textStyle="normal"
+                                    tools:text="@string/_48_00" />
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    android:id="@+id/pickupTimeLeft"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="3dp"
+                                    android:text="@string/pickup_hr_left"
+                                    android:textColor="#515151"
+                                    android:textSize="12sp"
+                                    android:textStyle="normal" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/map"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/bus_deliver"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="49dp"
+                            android:src="@drawable/map_pin" />
+
+                        <RelativeLayout
+                            android:id="@+id/addressLayer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/shippingMethodLayer"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="26dp"
+                            android:layout_marginBottom="6dp"
+                            android:layout_toEndOf="@id/map"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:id="@+id/linearAddress"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:layout_toStartOf="@id/mapView"
+                                android:orientation="vertical">
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    android:id="@+id/deliver_address"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/euclid_circular_medium"
+                                    android:text="@string/pickup_address"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/number_size_15"
+                                    android:textStyle="normal" />
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    android:id="@+id/address"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="3dp"
+                                    android:layout_marginEnd="8dp"
+                                    android:ellipsize="end"
+                                    android:lineSpacingExtra="5dp"
+                                    android:maxLines="3"
+                                    android:textColor="#515151"
+                                    android:textSize="14sp"
+                                    android:textStyle="normal"
+                                    tools:text="Ula ya Dist., P.O.Box: 64214 Ula ya Dist., P.O.Box: 64214" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/mapView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginEnd="15dp"
+                                android:fontFamily="@font/euclid_circular_medium"
+                                android:gravity="end"
+                                android:maxLines="1"
+                                android:paddingVertical="3dp"
+                                android:text="@string/map_view"
+                                android:textAlignment="textEnd"
+                                android:textColor="@color/greenhousetheme"
+                                android:textSize="15sp"
+                                android:visibility="visible" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/phoneCallLayer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/addressLayer"
+                            android:layout_marginHorizontal="10dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginBottom="15dp">
+
+                            <ImageView
+                                android:id="@+id/phoneIcon"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_marginTop="3dp"
+                                android:src="@drawable/ic_phone" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/phoneNumber"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:layout_marginStart="10dp"
+                                android:layout_toStartOf="@id/callButton"
+                                android:layout_toEndOf="@id/phoneIcon"
+                                android:fontFamily="@font/euclid_circular_medium"
+                                android:text="@string/phone_number"
+                                android:textAlignment="viewStart"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/number_size_15"
+                                android:textStyle="normal" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/number"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/phoneNumber"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="3dp"
+                                android:layout_toStartOf="@id/callButton"
+                                android:layout_toEndOf="@id/phoneIcon"
+                                android:lineSpacingExtra="5dp"
+                                android:maxLines="2"
+                                android:textAlignment="viewStart"
+                                android:textColor="#515151"
+                                android:textSize="14sp"
+                                tools:text="@string/_919999999999" />
+
+                            <Button
+                                android:id="@+id/callButton"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginEnd="5dp"
+                                android:backgroundTint="@color/greenhousetheme"
+                                android:text="@string/call_now"
+                                android:textAllCaps="false"
+                                android:textColor="@color/white"
+                                app:cornerRadius="6dp" />
+
+                        </RelativeLayout>
+
+
+                        <RelativeLayout
+                            android:id="@+id/boxDetailsLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/phoneCallLayer"
+                            android:layout_marginHorizontal="11dp"
+                            android:layout_marginBottom="13dp"
+                            android:background="@drawable/f9f9f9_border"
+                            android:visibility="visible">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/boxCountTitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_marginVertical="15dp"
+                                android:layout_marginStart="14dp"
+                                android:fontFamily="@font/euclid_circular_medium"
+                                android:text="@string/box_count"
+                                android:textColor="@color/black"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:id="@+id/boxCount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginEnd="15dp"
+                                android:fontFamily="@font/euclid_circular_medium"
+                                android:textAlignment="center"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_15_desc"
+                                tools:text="5" />
+
+                            <View
+                                android:id="@+id/details_view"
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_below="@id/boxCountTitle"
+                                android:background="#1C707070" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/details_view"
+                                android:layout_marginHorizontal="15dp"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:id="@+id/measurementsHeading"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="17dp"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/box_length_title"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:fontFamily="@font/euclid_circular_medium"
+                                        android:text="@string/box_length"
+                                        android:textColor="@color/black"
+                                        android:textSize="15sp"
+                                        android:textStyle="normal" />
+
+                                    <TextView
+                                        android:id="@+id/box_height_title"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:fontFamily="@font/euclid_circular_medium"
+                                        android:text="@string/box_height"
+                                        android:textColor="@color/black"
+                                        android:textSize="15sp"
+                                        android:textStyle="normal" />
+
+                                    <TextView
+                                        android:id="@+id/box_width_tile"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:fontFamily="@font/euclid_circular_medium"
+                                        android:text="@string/box_width"
+                                        android:textColor="@color/black"
+                                        android:textSize="15sp"
+                                        android:textStyle="normal" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/boxMeasurementsLayer"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginVertical="10dp"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/boxLength"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:fontFamily="@font/euclid_circular_light"
+                                        android:textColor="#5B5B5B"
+                                        android:textSize="14sp"
+                                        android:textStyle="normal"
+                                        tools:text="@string/_4_5" />
+
+                                    <TextView
+                                        android:id="@+id/boxHeight"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:fontFamily="@font/euclid_circular_light"
+                                        android:textColor="#5B5B5B"
+                                        android:textSize="14sp"
+                                        android:textStyle="normal"
+                                        tools:text="@string/_4_5" />
+
+                                    <TextView
+                                        android:id="@+id/boxWidth"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:fontFamily="@font/euclid_circular_light"
+                                        android:textColor="#5B5B5B"
+                                        android:textSize="14sp"
+                                        android:textStyle="normal"
+                                        tools:text="@string/_4_5" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/priceDetailsLayer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/shipping_details_layout"
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="40dp"
+                        android:background="@drawable/ebebeb_border"
+                        android:visibility="visible">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/price_details"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="13dp"
+                            android:fontFamily="@font/euclid_circular_medium"
+                            android:text="@string/price_details"
+                            android:textColor="@color/black"
+                            android:textSize="17sp"
+                            android:textStyle="normal" />
+
+                        <View
+                            android:id="@+id/view_price_details"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_below="@id/price_details"
+                            android:layout_marginTop="12dp"
+                            android:background="#1C707070" />
+
+                        <LinearLayout
+                            android:id="@+id/subTotal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/view_price_details"
+                            android:layout_marginHorizontal="15dp"
+                            android:layout_marginTop="12dp"
+                            android:orientation="horizontal">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/subTotalTile"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/subtotal"
+                                android:textColor="#2E2E2E"
+                                android:textSize="@dimen/number_size_15"
+                                android:textStyle="normal" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/subtotalPriceText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="end"
+                                android:textColor="#2E2E2E"
+                                android:textSize="15sp"
+                                android:textStyle="normal"
+                                tools:text="SAR 45.69" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/deliveryFee"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/subTotal"
+                            android:layout_marginHorizontal="15dp"
+                            android:layout_marginTop="17dp"
+                            android:orientation="horizontal">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/deliveryFeeTitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/delivery_fees"
+                                android:textColor="#2E2E2E"
+                                android:textSize="@dimen/number_size_15"
+                                android:textStyle="normal" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/deliveryFeePrice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="end"
+                                android:textColor="#2E2E2E"
+                                android:textSize="15sp"
+                                android:textStyle="normal"
+                                tools:text="SAR 45.69" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/vat"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/deliveryFee"
+                            android:layout_marginHorizontal="15dp"
+                            android:layout_marginTop="17dp"
+                            android:orientation="horizontal">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/vatTitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/vat"
+                                android:textColor="#2E2E2E"
+                                android:textSize="@dimen/number_size_15"
+                                android:textStyle="normal" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/vatPrice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="end"
+                                android:textColor="#2E2E2E"
+                                android:textSize="15sp"
+                                android:textStyle="normal"
+                                tools:text="SAR 45.69" />
+                        </LinearLayout>
+
+
+                        <View
+                            android:id="@+id/view_price_details_2"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_below="@id/vat"
+                            android:layout_marginTop="12dp"
+                            android:background="#1C707070" />
+
+                        <LinearLayout
+                            android:id="@+id/amountPaid"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/view_price_details_2"
+                            android:layout_marginHorizontal="15dp"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginBottom="16dp"
+                            android:orientation="horizontal">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/euclid_circular_medium"
+                                android:text="@string/amount_paid"
+                                android:textColor="#2E2E2E"
+                                android:textSize="@dimen/number_size_15" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/amountPaidPrice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/euclid_circular_medium"
+                                android:gravity="end"
+                                android:textColor="#2E2E2E"
+                                android:textSize="15sp"
+                                tools:text="SAR 45.69" />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                </RelativeLayout>
+            </ScrollView>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <include
+            android:id="@+id/orderDetailShimmer"
+            layout="@layout/order_detail_shimmer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/orderDetailTitle"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="18dp" />
+    </RelativeLayout>
+</layout>

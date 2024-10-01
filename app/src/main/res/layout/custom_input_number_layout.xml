@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/numberEditTextLayer"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edit_field_65"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="7dp"
+        android:background="@drawable/ebebeb_border"
+        android:elevation="@dimen/elevation_5">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:background="@android:color/transparent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/ccp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:fontFamily="@font/euclid_circular_medium"
+                android:text="+966"
+                android:textAlignment="viewStart"
+                android:textColor="@color/black"
+                android:textDirection="ltr"
+                android:textSize="@dimen/text_size_19_subheading" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="37dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginHorizontal="15dp"
+                android:background="#D9D9D9" />
+
+            <EditText
+                android:id="@+id/number"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edit_field_65"
+                android:autofilledHighlight="@android:color/transparent"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/euclid_circular_medium"
+                android:imeOptions="actionNext"
+                android:inputType="phone"
+                android:maxLength="14"
+                android:maxLines="1"
+                android:textAlignment="viewStart"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_19_subheading"
+                tools:hint="@string/enter_mobil"
+                tools:text="@string/_9999999999" />
+        </LinearLayout>
+
+        <!-- Input Field -->
+
+        <TextView
+            android:id="@+id/numberWhiteBackground"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="14dp"
+            android:background="@color/white"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:visibility="gone" />
+
+        <!-- Title -->
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/numberError"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/numberEditTextLayer"
+        android:layout_centerHorizontal="true"
+        android:layout_marginHorizontal="25dp"
+        android:text="error"
+        android:textAlignment="viewStart"
+        android:textColor="@color/red"
+        android:textSize="13sp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/numberTitleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="34dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:translationZ="@dimen/elevation_5"
+        android:visibility="gone"
+        tools:text="Title" />
+
+</RelativeLayout>

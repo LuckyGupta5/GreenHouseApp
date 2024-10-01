@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".fragment.bidderfragment.MyProductFilter">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_lang_selection">
+
+            <View
+                android:id="@+id/topView"
+                android:layout_width="85dp"
+                android:layout_height="4dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="7dp"
+                android:background="@drawable/view_top_verify_num" />
+
+            <TextView
+                android:id="@+id/filter_by_heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/topView"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="19dp"
+                android:text="@string/filter_by"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/profile_heading_21"
+                android:textStyle="bold" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/filter_by_heading"
+                android:layout_marginTop="16dp"
+                android:background="#D9D9D9" />
+
+            <TextView
+                android:id="@+id/priceRange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="31dp"
+                android:text="@string/price_range"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_19_subheading"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/range"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="35dp"
+                android:layout_marginEnd="15dp"
+                android:text="@string/_0_65"
+                android:textAlignment="center"
+                android:textColor="@color/greenhousetheme"
+                android:textSize="@dimen/name_size_17"
+                android:textStyle="bold" />
+
+            <com.google.android.material.slider.Slider
+                android:id="@+id/priceSlider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/priceRange"
+                android:layout_centerHorizontal="true"
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginTop="5dp"
+                android:stepSize="1"
+                android:valueFrom="0"
+                android:valueTo="250"
+                app:labelBehavior="gone"
+                app:thumbColor="@color/greenhousetheme"
+                app:tickVisible="false"
+                app:trackColorActive="@color/greenhousetheme"
+                app:trackColorInactive="#D9D9D9" />
+
+            <TextView
+                android:id="@+id/priceStartingRange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/priceSlider"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="3dp"
+                android:text="@string/_0"
+                android:textAlignment="viewStart"
+                android:textColor="#575757"
+                android:textSize="@dimen/text_size_15_desc"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/highestRangePrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/priceSlider"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="15dp"
+                android:text="@string/_250"
+                android:textAlignment="viewStart"
+                android:textColor="#575757"
+                android:textSize="@dimen/text_size_15_desc"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/timeRangeHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/priceStartingRange"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="46dp"
+                android:text="@string/bid_closing_time_range"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_19_subheading"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/timeRange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/priceStartingRange"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="15dp"
+                android:text="@string/_0_7_hr"
+                android:textAlignment="center"
+                android:textColor="@color/greenhousetheme"
+                android:textSize="@dimen/name_size_17"
+                android:textStyle="bold" />
+
+            <com.google.android.material.slider.Slider
+                android:id="@+id/timeSlider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/timeRangeHeading"
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginTop="5dp"
+                android:stepSize="1"
+                android:valueFrom="0"
+                android:valueTo="24"
+                app:labelBehavior="gone"
+                app:thumbColor="@color/greenhousetheme"
+                app:tickVisible="false"
+                app:trackColorActive="@color/greenhousetheme"
+                app:trackColorInactive="#D9D9D9" />
+
+            <TextView
+                android:id="@+id/timeStartingRange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/timeSlider"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="3dp"
+                android:text="@string/_0_hr"
+                android:textAlignment="center"
+                android:textColor="#575757"
+                android:textSize="@dimen/text_size_15_desc"
+                android:textStyle="normal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/timeSlider"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="15dp"
+                android:text="@string/_24hr"
+                android:textAlignment="center"
+                android:textColor="#575757"
+                android:textSize="@dimen/text_size_15_desc"
+                android:textStyle="normal" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/timeStartingRange"
+                android:layout_marginTop="40dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/clearAllBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/button_height_75"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginBottom="18dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/white"
+                        android:fontFamily="@font/euclid_circular_medium"
+                        android:text="@string/clear_all"
+                        android:textAlignment="center"
+                        android:textAllCaps="false"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/button_text_size_17"
+                        app:cornerRadius="10dp"
+                        app:strokeColor="#CFCFCF"
+                        app:strokeWidth="1dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/applyBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/button_height_75"
+                        android:layout_marginStart="22dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginBottom="18dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/greenhousetheme"
+                        android:elevation="@dimen/elevation_5"
+                        android:fontFamily="@font/euclid_circular_medium"
+                        android:paddingHorizontal="70dp"
+                        android:text="@string/apply"
+                        android:textAlignment="center"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/button_text_size_17"
+                        app:cornerRadius="10dp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="115dp"
+                    android:layout_height="4dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/bottom_black_view_3dp" />
+            </LinearLayout>
+
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="click"
+            type="com.ripenapps.greenhouse.view_models.VerifyOtpViewModel.ClickAction" />
+
+        <variable
+            name="viewModel"
+            type="com.ripenapps.greenhouse.view_models.VerifyOtpViewModel" />
+    </data>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_lang_selection"
+        android:fillViewport="true"
+        android:fitsSystemWindows="true"
+        android:scrollbars="none"
+        tools:context=".adapter.seller.com.ripenapps.greenhouse.fragment.SignupMobileVerification">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <View
+                android:id="@+id/topViewSignup"
+                android:layout_width="85dp"
+                android:layout_height="4dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="6dp"
+                android:background="@drawable/view_top_verify_num" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/number_verification_title_signup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/topViewSignup"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="30dp"
+                android:text="@string/mobil_verify"
+                android:textAlignment="viewStart"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_23_title"
+                android:textStyle="bold" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/number_verify_desc_signup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/number_verification_title_signup"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/mobil_verify_desc"
+                android:textAlignment="viewStart"
+                android:textColor="#434343"
+                android:textSize="@dimen/text_size_15_desc"
+                android:textStyle="normal" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/id_mobile_number_signup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/number_verify_desc_signup"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="24dp"
+                android:drawableEnd="@drawable/ic_edit_num"
+                android:drawablePadding="31.91dp"
+                android:text="@string/_966_256_859_7859"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_23_title"
+                android:textStyle="bold" />
+
+            <com.chaos.view.PinView
+                android:id="@+id/idPinView"
+                style="@style/PinWidget.PinView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/id_mobile_number_signup"
+                android:layout_centerHorizontal="true"
+                android:layout_marginHorizontal="@dimen/dimen_15"
+                android:layout_marginTop="20dp"
+                android:afterTextChanged="@{(text)->click.otpPin(text)}"
+                android:cursorVisible="true"
+                android:gravity="center_horizontal"
+                android:inputType="number"
+                android:itemBackground="@color/white"
+                android:layoutDirection="rtl"
+                android:textDirection="rtl"
+                android:textStyle="bold"
+                app:itemCount="4"
+                app:itemHeight="65dp"
+                app:itemRadius="8dp"
+                app:itemSpacing="15dp"
+                app:itemWidth="65dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:lineColor="#EBEBEB" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/resend_code_signup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/idPinView"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="34dp"
+                android:text="@string/resend_code"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/resend_code_size13"
+                android:textStyle="normal" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_verify_signup"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height_75"
+                android:layout_below="@id/resend_code_signup"
+                android:layout_centerHorizontal="true"
+                android:layout_marginHorizontal="@dimen/dimen_20"
+                android:layout_marginTop="33dp"
+                android:background="@drawable/button_selector"
+                android:backgroundTint="@null"
+                android:enabled="@{viewModel.otpPinText==true?true:false}"
+                android:fontFamily="@font/euclid_circular_medium"
+                android:text="@string/forgot_verify"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/button_text_size_17"
+                app:backgroundTint="@null"
+                app:cornerRadius="10dp" />
+
+            <View
+                android:layout_width="115dp"
+                android:layout_height="4dp"
+                android:layout_below="@id/btn_verify_signup"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="19dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/bottom_black_view_3dp" />
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</layout>

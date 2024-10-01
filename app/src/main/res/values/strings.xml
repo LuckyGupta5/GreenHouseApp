@@ -1,0 +1,923 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="price_range_format">%1\$d - %2\$d</string>
+    <string name="app_name">Green House</string>
+    <string name="select_language">Select Language</string>
+    <string name="title_activity_base">BaseActivity</string>
+
+
+    <!-- Bidder Flow-->
+
+    <!-- Select Language -->
+    <string name="select_lang">Select Language</string>
+    <string name="english">English</string>
+    <string name="english_desc">Hello, I am John Doe!</string>
+    <string name="arabic">Arabic</string>
+    <string name="arabic_desc">مرحبًا، أنا جون دو!</string>
+    <string name="btn_continue">Continue</string>
+
+    <!--OnBoarding Screen1-->
+    <string name="auction">Auction</string>
+    <string name="auction_title">Discover, Connect,\n Exchange Now</string>
+    <string name="auction_desc">Unleash the Power of Dynamic Auctions \n Today!</string>
+
+    <!-- OnBoarding Screen2-->
+    <string name="onBoard2_title2">Unlock Fair Market\n Opportunities</string>
+    <string name="onBoard2_desc2">Empower Your Bids, Unlock Limitless\n Opportunities in Fair Market.
+    </string>
+
+    <!-- OnBoarding Screen3-->
+    <string name="onBoard3_title3">Your Money, Our First\n Priority</string>
+    <string name="onBoard3_desc3">Where Your Wealth Finds Its \nBest Value.</string>
+
+    <!--  Sign InActive Screen-->
+    <string name="green_house">Green House</string>
+    <string name="mobil_num_show">Mobile number</string>
+    <string name="enter_mobil">Enter mobile number</string>
+    <string name="password">Password</string>
+    <string name="sign_in_forgot_pass">Forgot Password?</string>
+    <string name="btn_sign_in">Sign In</string>
+    <string name="new_user">New User?</string>
+    <string name="register_here"><u>Register here</u></string>
+
+    <!-- Forgot password InActive-->
+    <string name="forgot_pass">Forgot Password?</string>
+    <string name="forgot_desc">Enter your mobile number to reset your password</string>
+    <string name="send_verify_code">Send Verification Code</string>
+    <string name="mobil_verify">Mobile number Verification</string>
+    <string name="mobil_verify_desc">We have sent a code sent to</string>
+    <string name="resend_code">Resend Code in </string>
+    <string name="forgot_verify">Verify</string>
+
+    <!-- SignUp Mobile Verification  -->
+    <string name="reset_pass">Reset Password</string>
+    <string name="reset_desc">Your new password must different from previous used passwords</string>
+    <string name="new_pass">New password</string>
+    <string name="confirm_new_pass">Confirm new password</string>
+    <string name="btn_save">Save</string>
+    <string name="signup_layout_title">Are you a</string>
+    <string name="bidder">Bidder</string>
+    <string name="seller">Seller</string>
+    <string name="signup_mobile_num">Mobile number</string>
+    <string name="signup_mobile_num_desc">We will send the one time code on this mobile number
+    </string>
+    <string name="already_hav_account">Already have an account?</string>
+
+    <!-- SignUp Mobile Verification Screen2  -->
+    <string name="signup_screen2_title2">Are you a Seller?</string>
+    <string name="complete_profile">Complete Profile</string>
+    <string name="enter_personal_detail">Enter your personal details</string>
+    <string name="full_name">Full name</string>
+    <string name="email_address">Email address(Optional)</string>
+    <string name="profile_pass">Password</string>
+    <string name="profile_confirm_pass">Confirm password</string>
+    <string name="terms_and_condition_privacy_policy">By Continuing, you agree our all <u><b>Terms &amp; Conditions</b></u> and <u><b>Privacy Policy.</b></u></string>
+    <string name="privacy_policy1"><u>Privacy Policy</u></string>
+    <string name="continue_word">Continue</string>
+
+    <!-- Home -->
+    <string name="vegetables">Vegetables</string>
+    <string name="dates">Dates</string>
+    <string name="fruits">Fruits</string>
+    <string name="featured_products">Featured products</string>
+    <string name="viewall">View All</string>/ /show the view all of Featured Products
+
+    <!-- Notifications   -->
+    <string name="home">Home</string>
+    <string name="notifications">Notifications</string>
+    <string name="accept">Accept</string>
+    <string name="reject">Reject</string>
+
+
+    <!-- Search -->
+    <string name="search">Search</string>
+    <string name="search_desc">Explore our new categories to find auctioned fruits, vegetables, and dates from various sellers.
+    </string>
+    <string name="top_search">Top Searches</string>
+    <string name="top_search_cauliflower">Cauliflower</string>
+    <string name="new_listing">New Listings</string>
+    <string name="top_search_spinach">Spinach</string>
+    <string name="top_search_view_more">View more</string>
+    <string name="show_result_fruit">Showing results for Fruits</string>
+    <string name="all">All</string>
+
+    <!-- Product Details -->
+    <string name="products">Products</string>
+    <string name="product_details_desc">Explore our new categories to find auctioned
+        fruits, vegetables, and dates
+    </string>
+    <string name="product_from_same_sellers">Product from Same Sellers</string>
+    <string name="place_a_bid">Place a Bid</string>
+    <string name="highest_bid">Highest Bid</string>
+
+    <!-- Account Blocked -->
+    <string name="account_blocked">Account Blocked!</string>
+    <string name="account_blocked_desc">Account blocked due to exploiting
+        cancellation policy. Contact Help &amp; Support.
+    </string>
+    <string name="ok_got_it">OK, Got it!</string>
+
+    <!-- Place a Bid -->
+
+    <string name="place_Bid_title">Place your Bid</string>
+    <string name="your_max_bid">Your Max Bid</string>
+    <string name="btn_confirm_bid">Confirm Bid</string>
+
+
+    <!-- Confirm place a Bid -->
+    <string name="confirm_bid_title">Your bid has been placed successfully</string>
+    <string name="confirm_bid_desc">SAR xxx has been freezed from your wallet.
+        It will be deducted once your won the auction
+        else it will be unfreezed
+    </string>
+    <string name="change_bid">Change Bid</string>
+
+    <!-- About Seller -->
+    <string name="about_seller">About Seller</string>
+    <string name="reviews"> Reviews</string>
+    <string name="rating_reviews">Rating &amp; Reviews</string>
+    <string name="view">View All Reviews</string>
+
+    <!-- Best Sellers All -->
+
+    <string name="best_sellers">Best Sellers</string>
+
+    <!-- Sellers listing Sorting -->
+
+    <string name="sort_by">Sort by</string>
+    <string name="most_favourite">Most Favourite</string>
+    <string name="most_selling">Most Selling</string>
+    <string name="nearest_seller">Nearest Seller</string>
+    <string name="highest_rating">Highest Rating</string>
+    <string name="lowest_rating">Lowest Rating</string>
+    <string name="newly_listed">Newly Listed</string>
+
+    <!-- My Bids -->
+    <string name="my_bids">My Bids</string>
+    <string name="bids">Bids</string>
+    <string name="bid_in_process">Bidding In-process</string>
+    <string name="bid_in_process_desc">In-process auction will be shown here</string>
+    <string name="you_won">You won this auction</string>
+    <string name="you_lost">You lost this auction</string>
+
+    <!-- My Bids Filter -->
+    <string name="filter_by">Filter by</string>
+    <string name="filter_Status">Status</string>
+    <string name="status_won_auction">Won Auction</string>
+    <string name="status_loss_auction">Lost Auction</string>
+    <string name="filter_product_category">Products Category</string>
+    <string name="reset">Reset</string>
+    <string name="apply">Apply</string>
+
+    <!-- Biding Details Won -->
+    <string name="congrats_won_auction">Congrats! You won this auction.</string>
+    <string name="order_time_remain">Ordering Time Remaining</string>
+    <string name="your_bid">Your Bid</string>
+    <string name="quantity">Quantity</string>
+    <string name="box_count">Box Count</string>
+    <string name="box_height"> Height</string>
+    <string name="box_length"> Length</string>
+    <string name="box_width">Width</string>
+    <string name="process_to_deliver">Process to Deliver</string>
+    <string name="bid_details_winning_bid">Winning Bid</string>
+
+
+    <!-- Process to Deliver Inactive -->
+    <string name="shipping_method_title">Shipping Method</string>
+    <string name="shipping_method_desc">You have 20 mins. to place this order otherwise
+        it will be auto-cancelled.
+    </string>
+    <string name="select_shipping_method">Select Shipping Method</string>
+    <string name="price_details">Price Details</string>
+    <string name="product_price">Product Price</string>
+    <string name="value_add_tax">VAT</string>
+    <string name="total_price">Total Price</string>
+    <string name="remaining_amount">Remaining amount to be paid is SAR </string>
+    <string name="please_click_place_order">Please click to placeholder button to
+        pay remaining amount and place your order.
+    </string>
+    <string name="btn_place_order">Place order</string>
+    <string name="select_ship_method_pick_myself">I will pick by myself</string>
+
+
+    <!-- Order Placed Successfully -->
+    <string name="order_place_success">Order Placed Successfully!</string>
+    <string name="track_your_order">Congratulations! Your orders has been placed
+        You can track your order number()
+    </string>
+    <string name="btn_ok_continue">OK, Continue</string>
+
+
+    <!-- Order not Placed  -->
+    <string name="order_not_placed">Oops! Order not Placed!</string>
+    <string name="order_not_placed_desc">We\'re sorry, your order could not be processed.
+        Please try again later.</string>
+    <string name="btn_please_try_again">Please try again!</string>
+
+
+    <!-- Bidding Details Won Pick Myself  -->
+    <string name="view_all_details">View order details</string>
+
+
+    <!-- Bidding Details Lost -->
+    <string name="bidding_details_loss">Oops! You lost this auction.</string>
+
+
+    <!-- Bidding Details in Progress -->
+    <string name="your_bidding_in_progress">Your Bidding is in Progress.</string>
+
+
+    <!-- Bidding Details Seller Request -->
+
+    <string name="unfilled_seller_request">Unfilled top bid seller request</string>
+
+    <!-- Products Filter -->
+    <string name="products_filter_price_range">Price range</string>
+    <string name="products_filter_bid_clos_time_range">Bid Closing Time Range</string>
+    <string name="seller_rating">Seller Ratings</string>
+    <string name="clear_all">Clear All</string>
+
+    <!-- My Profile -->
+    <string name="profile">Profile</string>
+    <string name="my_profile">My Profile</string>
+    <string name="switch_to_seller">Switch to Seller</string>
+    <string name="wallet">Wallet</string>
+    <string name="seller_wallet">Wallet\nBalance</string>
+    <string name="my_orders">My Orders</string>
+    <string name="favourites">Favourites</string>
+    <string name="account_setting">Account Settings</string>
+    <string name="about_green_house">About Green house</string>
+    <string name="change_password">Change Password</string>
+    <string name="my_wishlist">My Wishlist</string>
+    <string name="my_address">My Addresses</string>
+    <string name="change_language">Change Language</string>
+    <string name="refer_and_earn">Refer &amp; Earn</string>
+
+    <!-- Wallet  -->
+    <string name="total_balance">Total Balance</string>
+    <string name="wallet_term_condition">Wallets money will be used as per its <b><u>Terms &amp; Conditions</u></b></string>
+    <string name="freezed_balance">Freezed balance</string>
+    <string name="available_balance">Available Balance</string>
+    <string name="transaction_history">Transaction History</string>
+
+    <!-- Place a Bid -->
+    <string name="add_money_to_wallet">Add Money to Wallet</string>
+    <string name="aed_price">SAR </string>
+    <string name="btn_proceed_to_add">Proceed to Add</string>
+
+    <!-- Favourite Sellers -->
+    <string name="favourite_seller">Favourite Sellers</string>
+    <string name="about_us">About us</string>
+
+    <!-- Change Password -->
+    <string name="change_password_change_desc">Your new password must different from\nprevious used passwords</string>
+    <string name="update">Update</string>
+
+
+    <!-- My Address -->
+    <string name="add_new_address">+ Add New Address</string>
+
+    <!-- Change Language -->
+    <string name="hindi_lang">Hindi</string>
+    <string name="urdu_lang">Urdu</string>
+    <string name="urdu_desc">ہیلو، میں جان ڈو ہوں!</string>
+
+    <!-- FAQ -->
+    <string name="faq">Frequently asked\nQuestions</string>
+    <string name="question_about">Questions about</string>
+    <string name="getting_start">Getting Started</string>
+    <string name="how_to_bidding">How to Bidding</string>
+    <string name="top_questions">Top Questions</string>
+    <string name="faq_view_all">View all</string>
+
+    <!-- Help & Support -->
+    <string name="help_and_support">Help &amp; Support</string>
+    <string name="help_and_support_desc">We are happy to hear from you. we are\navailable from 9AM to 7PM on Monday to Friday.</string>
+    <string name="call_us">Call us</string>
+    <string name="email_us">Email us</string>
+    <string name="view_ticket_history">View Ticket History</string>
+    <string name="any_ques_or_remark">Any question or remarks ? Just write us a message</string>
+    <string name="select_topic">Select Topic</string>
+    <string name="write_here">Write here&#8230;</string>
+    <string name="submit">Submit</string>
+
+    <!-- Ticket History All -->
+    <string name="ticket_history">Tickets History</string>
+    <string name="open">Open</string>
+    <string name="solved">Solved</string>
+
+    <!-- Ticket Card Details -->
+    <string name="case_details">Case Details</string>
+
+    <!-- Privacy Policy  and Term and Conditions -->
+    <string name="please_read_privacy_policy">Please read these Privacy Policy carefully \nbefore using app operated by Auction.</string>
+    <string name="privacy_policy_main">Privacy Policy</string>
+    <string name="term_condition_main">Terms &amp; Conditions</string>
+    <string name="please_read_carefully">Please read these Terms &amp; Conditons
+carefully before using app operated by
+Auction.</string>
+
+    <!-- LogOut Popup -->
+    <string name="are_u_sure_want_logout">Are you sure you want to Log out?</string>
+    <string name="no_cancel">No, Cancel</string>
+    <string name="yes_logout">Yes, Logout</string>
+
+    <!-- My Orders Cancellation Reason -->
+    <string name="cancellation_reason">Cancellation Reason</string>
+
+    <string name="cancellation_reason_desc1">If you cancel this order, SAR</string>
+    <string name="cancellation_reason_desc2">will be charged as cancellation fees.</string>
+    <string name="change_mind">Changed Mind/No Longer Needed</string>
+    <string name="delivery_delay">Delivery delay</string>
+    <string name="shipping_cost_too_high">Shipping cost too high</string>
+    <string name="delivery_issues">Address or delivery issues</string>
+    <string name="others">Others</string>
+    <string name="others_write_reason_here">Write reason here &#8230;</string>
+    <string name="go_back">Go Back</string>
+    <string name="yes_cancel">Yes, Cancel</string>
+
+    <!-- Order Details -->
+    <string name="order_details">Order Details</string>
+    <string name="order_status">Order Status</string>
+    <string name="order_id_placeholder">ORDER ID #%1$d</string>
+    <string name="order_confirmed">Order Confirmed</string>
+    <string name="packed">Packed</string>
+    <string name="delivery">Delivered</string>
+    <string name="cancel_order">Cancel order</string>
+    <string name="shipping_details">Shipping Details</string>
+    <string name="order_pickup_address">Pickup Address</string>
+    <string name="phone_number">Phone number</string>
+    <string name="call_now">Call now</string>
+    <string name="subtotal">Subtotal</string>
+    <string name="delivery_fees">Delivery fee</string>
+    <string name="amount_paid">Amount Paid</string>
+    <string name="order_received">Order Received</string>
+    <string name="returned_order">Return order</string>
+    <string name="map_view"><u>Map View</u></string>
+    <string name="track">Track</string>
+    <string name="order_cancelled">Order Cancelled</string>
+    <!-- Order Details Help -->
+    <string name="active_conversations">Active Conversations</string>
+    <string name="help_with">Help with</string>
+    <string name="chat_with_us">Chat with us</string>
+    <string name="chat_with_green_house">Chat with Green house</string>
+
+    <!--  Order Received Or Not Order Details  -->
+    <string name="are_u_confirm_receive_order">Are you sure that you have
+received this order?</string>
+    <string name="yes_received">Yes, Received</string>
+    <string name="no_order_received">NO</string>
+
+    <!-- Why you want to return this order -->
+
+    <string name="why_u_want_return_order">Why you want to return this order?</string>
+    <string name="why_u_want_return_order_desc">Choose your reason to return the order if it is
+valid then you will get full refund else the cancellation fees will be charged.</string>
+    <string name="yes_return">Yes, Return</string>
+
+
+    <!--  Order Details Cancelled -->
+    <string name="refund_details">Refund Details</string>
+    <string name="cancellation_charges">Cancellation Charges</string>
+    <string name="total_amount_refund">Total Refund Amount</string>
+    <string name="added_to_your_source_account">Added to your source account</string>
+
+    <!-- Order Details Returned -->
+    <string name="return_requested">Return Requested</string>
+    <string name="out_for_pickup">Out for pickup</string>
+    <string name="pickup_successful">Pickup Successful</string>
+    <string name="refund_initiated">Refund Initiated</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="_966_256_859_7859">+966 256 859 7859</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="sign_in"><u>Sign In</u></string>
+    <string name="email_tax_registration_number">Enter Tax registration number</string>
+    <string name="last_updated_on_3_dec_2023">Last updated on 3 Dec 2023</string>
+    <string name="old_password">Old password</string>
+    <string name="albert_flores">Albert Flores</string>
+    <string name="_919999999999">+91 9999999999</string>
+    <string name="address_line1">Ulaya Dist., P.O.Box: 64214</string>
+    <string name="address_line2">Riyadh, Saudi Arabia 64214</string>
+    <string name="edit">Edit</string>
+    <string name="mark_as_default">Mark as default</string>
+    <string name="are_you_delete_address">Are you sure you want to delete\n this address?</string>
+    <string name="yes_delete">Yes, Delete</string>
+    <string name="confirm_address">Confirm Address</string>
+    <string name="ulaya_dist_p_o_box_64214_riyadh">Ulaya Dist. P.O.Box: 64214, Riyadh..</string>
+    <string name="username">Username</string>
+    <string name="albfl21">albfl21</string>
+    <string name="albertflores12_gmail_com">albertflores12@gmail.com</string>
+    <string name="tax_registration_number">Tax Registration number(Optional)</string>
+    <string name="gg5849262kl2562d">GG5849262KL2562D</string>
+    <string name="search_on_auction">Search for products &amp; sellers</string>
+    <string name="logout">Logout</string>
+    <string name="faq_s">FAQ\'s</string>
+    <string name="support_legal"><![CDATA[Support & Legal]]></string>
+    <string name="_000">000</string>
+    <string name="_0_00">0.00</string>
+    <string name="aed">SAR</string>
+    <string name="filter">Filter</string>
+    <string name="add_money">Add Money</string>
+    <string name="resend_code_green"><u><b>Resend Code</b></u></string>
+    <string name="_9999999999">9999999999</string>
+    <string name="search_questions">Search questions…</string>
+    <string name="how_to_create_a_account">How to create a account?</string>
+    <string name="answer1">Open the Tradebase app to get started and follow the steps. Tradebase doesn’t charge a fee to create or maintain your Tradebase account.</string>
+    <string name="is_the_stock_market_open_on_weekends">Is The Stock Market Open on\nWeekends?</string>
+    <string name="what_time_does_the_stock_market_open">What Time Does The Stock Market\nOpen?</string>
+    <string name="how_to_add_a_payment_method_by_this_app">How to add a payment method by\nthis app?</string>
+    <string name="base_price">Total Price</string>
+    <string name="bid">Bid</string>
+    <string name="ms">MS</string>
+    <string name="_4_5">4.5</string>
+    <string name="mclar52">mclar52</string>
+    <string name="_25">25</string>
+    <string name="aed_100">SAR 100</string>
+    <string name="aed_75">SAR 75</string>
+    <string name="aed_50">SAR 50</string>
+
+    <!-- Seller Flow -->
+
+    <!-- Seller Flow  Signup Mobile Verification  -->
+    <string name="seller_confirm_Password">Confirm Password</string>
+    <string name="we_will_send_one_time_code_email">We will send the one time code on this email
+address. </string>
+    <string name="next">Next</string>
+    <string name="green_house_requires_this_permission">Green House requires this permission</string>
+
+    <!--  Complete Profile -->
+    <string name="enter_personal_details" tools:ignore="TypographyFractions">Enter your personal details (1/2)</string>
+    <string name="enter_personal_details2">Enter your personal details (2/2)</string>
+    <string name="enter_full_name">Enter Full name</string>
+    <string name="enter_email_address">Enter Email address</string>
+    <string name="national_id_card">Trade License Document 🪪</string>
+    <string name="national_id_card_desc">It require you to upload a trade license document.</string>
+
+    <!-- Seller Flow Business Details -->
+
+    <string name="enter_business_details">Enter your business details (2/2)</string>
+    <string name="enter_business_name">Enter Business name</string>
+    <string name="select_location">Select Location</string>
+    <string name="select_category">Select Category</string>
+    <string name="email_trade_license_number">Enter Trade license number</string>
+    <string name="select_license_expiry">Select License Expiry Date</string>
+    <string name="email_tax_registration">Email Tax registration number</string>
+    <string name="Verification_request_sent">Verification Request sent\nto Admin</string>
+    <string name="Verification_request_sent_desc">We have sent your registration request to
+admin, once he approves it you will be\nable to list your products.</string>
+    <string name="continue_to_login">Continue to Login</string>
+
+
+    <!-- Seller Flow Home -->
+    <string name="start_date">Start Date</string>
+    <string name="end_date">End Date</string>
+    <string name="revenue_chart">Revenue Chart</string>
+    <string name="booking_chart">Booking Chart</string>
+    <string name="production_comparison">Product Comparison</string>
+    <string name="bidding_details">Bidding Details</string>
+    <string name="time_left">Time Left</string>
+    <string name="bid_count">Bid Count</string>
+    <string name="bidding_history">Bidding History</string>
+    <string name="no_bid_placed">No Bid Placed!</string>
+    <string name="no_bid_placed_desc">Once a bidder bid on your product,\n
+it will appear on this section.</string>
+    <string name="there_is_no_bid_placed_for_product">There is no bids placed for this product.\n
+If you want to sell this product so kindly\n
+update the auction end time.</string>
+    <string name="change_auction_time">Change Auction Time</string>
+    <string name="select_date">Select date</string>
+    <string name="start_time">Start time</string>
+    <string name="end_time">End time</string>
+    <string name="select_time">Select time</string>
+
+    <!-- Seller Flow My Orders -->
+    <string name="order_received_capital">Order Received</string>
+    <string name="shipping_company_1">Shipping Company 1</string>
+
+    <!-- Seller Flow  My Orders Filter -->
+    <string name="filter_received">Received</string>
+    <string name="filter_cancelled">Cancelled</string>
+    <string name="delivered">Delivered</string>
+    <string name="mark_as_packed">Mark as Packed</string>
+
+
+    <!-- Order Details self pickup add package   -->
+
+    <string name="add_package_details">Add Package Details</string>
+    <string name="boxes">Boxes</string>
+    <string name="enter_box_count">Enter box count</string>
+    <string name="boxes_dimension">Boxes Dimension</string>
+    <string name="l">L.</string>
+    <string name="h">H.</string>
+    <string name="w">W.</string>
+    <string name="pick_up_person_is_notified">Pick up person is notified about this
+ order status. Now, they will reach at
+the product location and pick it up.</string>
+    <string name="download_invoiceOk">Download Invoice</string>
+    <string name="ok">OK</string>
+    <string name="commission">Commission</string>
+    <string name="you_earned">You Earned</string>
+    <string name="vat">VAT</string>
+    <string name="shipping_cost">Shipping Cost</string>
+    <string name="generate_label">Generate Label</string>
+
+
+    <!-- Order Details Shipping Company -->
+    <string name="order_is_cancelled_y_user">Order is cancelled by user, please choose
+your decision for this product.</string>
+    <string name="award_product">Award product to second highest bidder</string>
+    <string name="open_auction_for_this">Open auction for this product</string>
+    <string name="the_order_request_has">The order request has been sent to
+the bidder, once he accepts we
+will place a new order and
+notify you about it.</string>
+    <string name="restart_auction">Restart Auction</string>
+
+    <!-- Products All -->
+    <string name="my_products">My Products</string>
+    <string name="sold_products">Sold Products</string>
+    <string name="all_sold_products">All sold products listings here</string>
+
+    <!--  Seller Flow  Products Filter   -->
+    <string name="address_only">Address</string>
+    <string name="select_address">Select Address</string>
+
+    <!-- Seller Flow  My Profile -->
+    <string name="business_details">Business Details</string>
+    <string name="switch_to_bidder">Switch to Bidder</string>
+    <string name="bank_accounts">Bank\nAccounts</string>
+    <string name="bio">Bio</string>
+
+    <!-- Seller Flow Wallet -->
+    <string name="total_wallet">Total</string>
+    <string name="freezed">Freezed</string>
+    <string name="available">Available</string>
+    <string name="add_money_seller">Add Money</string>
+    <string name="withdraw">Withdraw</string>
+
+    <!--  Seller Flow Place a Bid   -->
+    <string name="amount_">Amount</string>
+    <string name="withdraw_money_to">Withdraw money to</string>
+    <string name="add_bank">+ Add Bank</string>
+
+    <!--  Seller Flow Business Details -->
+    <string name="add_bank_account">+Add Bank Account</string>
+    <string name="select_bank_name">Select Bank name</string>
+    <string name="enter_account_holder">Enter Account holder name</string>
+    <string name="enter_iban_number">Enter IBAN number</string>
+    <string name="enter_address_line">Enter address line</string>
+    <string name="select_country">Select Country</string>
+    <string name="enter_city">Enter city</string>
+    <string name="add_only">Add</string>
+    <string name="business_name_only">Business name</string>
+    <string name="location">Location</string>
+    <string name="trade_license_number">Trade License number</string>
+    <string name="license_expiry_date">License Expiry Date</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="support_amp_legal"><![CDATA[Support & Legal]]></string>
+    <string name="terms_and_conditions">Terms and Conditions</string>
+    <string name="title_activity_add_money">AddMoney</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="previous">Previous</string>
+
+    <string name="title_activity_view_all_featured_product">ViewAllFeaturedProduct</string>
+    <string name="_4_5sp">4.5</string>
+    <string name="available_balance_format"> %.2f</string>
+    <string name="upload_id_proof">Upload ID Proof</string>
+    <string name="upload_size_max_5_mb">(Upload size max 5 MB)</string>
+    <string name="aed_0_00">SAR 0.00</string>
+    <string name="wallet_add_money">Wallet - Add Money</string>
+    <string name="tax_number">55261234ASDF23</string>
+    <string name="bank_accounts_heading">Bank Accounts</string>
+    <string name="riyad_bank">Riyad Bank</string>
+    <string name="price_range">Price range</string>
+    <string name="_0_65">SAR 0 - SAR 0</string>
+    <string name="_0">SAR 0</string>
+    <string name="_250">SAR 250</string>
+    <string name="bid_closing_time_range">Bid Closing Time Range</string>
+    <string name="_0_7_hr" tools:ignore="TypographyDashes">0 - 0 hr.</string>
+    <string name="_0_hr">0 hr.</string>
+    <string name="seller_ratings">Seller Ratings</string>
+    <string name="_1">1+</string>
+    <string name="_2">2+</string>
+    <string name="_3">3+</string>
+    <string name="_4">4+</string>
+    <string name="address">Address</string>
+    <string name="featured_biddings">Featured Biddings</string>
+    <string name="add_bank_account_title">Add Bank Account</string>
+    <string name="remove_this_bank_account">Are you sure you want to remove this bank account?</string>
+    <string name="yes_remove">Yes, Remove</string>
+    <string name="total">Total</string>
+    <string name="confirm_withdraw">Confirm Withdraw</string>
+    <string name="actual_price">Actual Price</string>
+    <string name="box_details">Box Details</string>
+    <string name="none">none</string>
+    <string name="_12_00">12:00</string>
+    <string name="delivery_address">Delivery Address</string>
+    <string name="length_mtr">Length (mtr)</string>
+    <string name="height_mtr">Height (mtr)</string>
+    <string name="width_mtr">Width (mtr)</string>
+    <string name="download_invoice">Download Invoice</string>
+    <string name="edit_auction_time">Edit Auction time</string>
+    <string name="are_you_sure_you_want_to_remove_this_product">Are you sure you want to remove\n this product?</string>
+    <string name="to_feature_your_product_on_the_chosen_date_your_bid_must_rank_within_the_top_10">To feature your product on the chosen date, your bid must rank within the top 10.</string>
+    <string name="proceed_to_bid">Proceed to Bid</string>
+    <string name="featured_bidding_details">Featured Bidding Details</string>
+    <string name="the_products_of_top_10_rankers_will_be_marked_as_featured_and_product_ranking_will_be_same_as_their_bidding">The Products of Top 10 rankers will be marked as featured and product ranking will be same as their bidding.</string>
+    <string name="bid_ranking">Bid Ranking</string>
+    <string name="_1_">1</string>
+    <string name="add_product">Add Product</string>
+    <string name="add_photos">Add photos</string>
+    <string name="product_sub_category">Product Sub-category</string>
+    <string name="explore_our_new_categories_to_find_auctioned_fruits_vegetables_and_dates">Explore our new categories to find auctioned fruits, vegetables, and dates</string>
+    <string name="kg">kg</string>
+    <string name="enter_base_price">Enter total price</string>
+    <string name="the_price_includes_the_15_of_commission">The price includes the of commission</string>
+    <string name="that_will_be_deducted_when_product_is_awarded_to_someone">% that will be deducted when the product is awarded to someone.</string>
+    <string name="product_location">Product location</string>
+    <string name="ex_245_256_2569">(Ex: 245 256 256)</string>
+    <string name="auction_time">Auction time</string>
+    <string name="resend_request">Resend Request</string>
+    <string name="successful_bid_desc">SAR xx has been freezed from your wallet.\nIt will be deducted once your won the auction\nelse it will be unfreezed</string>
+    <string name="your_bid_has_been_placed_successfully">Your bid has been placed successfully</string>
+    <string name="cauliflower">Cauliflower</string>
+    <string name="green_peas">Green Peas</string>
+    <string name="add">Add</string>
+    <string name="bank_name">Bank Name</string>
+    <string name="_100_user_s_favourite">100 user’s favourite</string>
+    <string name="view_all">View All</string>
+    <string name="place_your_bid">Place your Bid</string>
+    <string name="continue_bid">Continue Bid</string>
+    <string name="view_all_reviews">View All Reviews</string>
+    <string name="today">Today</string>
+    <string name="bidding_in_process">Bidding In-process</string>
+    <string name="desc_mybid">In-process auction will be shown here</string>
+    <string name="sar">SAR </string>
+    <string name="congrats_you_won_this_auction">Congrats! You won this auction.</string>
+    <string name="ordering_time_remaining">Ordering Time Remaining</string>
+    <string name="bid_won_desc">“The other charges are pending and need to be paid. Kindly proceed to place the order successfully.”</string>
+    <string name="winning_bid">Winning Bid</string>
+    <string name="pickup_desc">Please ensure pickup of this order within 48 hours; otherwise, it will be automatically canceled, and cancellation fees may apply</string>
+    <string name="remaining_amount_desc">Please click to placeholder button to pay remaining amount and place your order.</string>
+    <string name="i_will_pick_by_myself">I will pick by myself</string>
+    <string name="will_pick_up">will pickup this order </string>
+    <string name="order_success_desc">Congratulations! Your orders has been placed\nYou can track your order number</string>
+    <string name="search_orders">Search orders…</string>
+    <string name="changed_mind_no_longer_needed">Changed Mind/No Longer Needed</string>
+    <string name="address_or_delivery_issues">Address or delivery issues</string>
+    <string name="order_received_desc">Are you sure that you have\nreceived this order?</string>
+    <string name="packed_received_desc">Are you sure that you have\n
+received this package?</string>
+    <string name="no">No</string>
+    <string name="rate_your_experience">Rate your Experience</string>
+    <string name="rating_desc">How would you rate the overall experience\nof this auction?</string>
+    <string name="review">Review</string>
+    <string name="describe_your_experience">Describe your experience…</string>
+    <string name="item_not_as_described">Item Not as Described</string>
+    <string name="received_damaged_or_defective">Received Damaged or Defective</string>
+    <string name="wrong_item_received">Wrong Item Received</string>
+    <string name="size_dimensions_mismatch">Size/Dimensions Mismatch</string>
+    <string name="quality_concerns">Quality Concerns</string>
+    <string name="quantity_mismatch">Quantity Mismatch</string>
+    <string name="help">Help</string>
+    <string name="few_items_are_missing">Few items are missing in this order</string>
+    <string name="question1">I did not receive this order</string>
+    <string name="answer01">We are really sorry for the experience. You can try reaching out to our delivery executive or us and we will try to resolve this as soon as possible.</string>
+    <string name="question2">Items portion size is not adequate</string>
+    <string name="question3">Few items are missing in this order</string>
+    <string name="question5">Items delivered are incorrect or wrong</string>
+    <string name="question4">Item quality is poor</string>
+    <string name="where_is_my_order">Where is my order?</string>
+    <string name="forward">for</string>
+    <string name="about_product">About Product</string>
+    <string name="about_product_desc">Explore our new categories to find auctioned fruits, vegetables, and dates</string>
+    <string name="product_qty">Product Qty.</string>
+    <string name="mark_as_feature">Mark as feature</string>
+    <string name="time_duration">Time Duration</string>
+    <string name="_24hr">24 hr.</string>
+    <string name="_966">+966</string>
+    <string name="enter_email_address_optional">Email address (Optional)</string>
+    <string name="enter_tax_registration_number_optional">Enter Tax registration number (Optional)</string>
+    <string name="shipping_method">Shipping Method</string>
+    <string name="view_order_details">View order details</string>
+    <string name="status">Status</string>
+    <string name="returned">Returned</string>
+    <string name="cancelled">Cancelled</string>
+    <string name="upcoming">Upcoming</string>
+    <string name="hr_left">hr. left</string>
+    <string name="_48_00">48:00</string>
+    <string name="pickup_address">Pickup Address</string>
+    <string name="you_may_cancel_this_order_until_it_s_packed">You may cancel this order until it’s packed.</string>
+    <string name="select_unit">Select Unit</string>
+    <string name="kilogram">Kilogram</string>
+    <string name="gram">Gram</string>
+    <string name="tonne">Tonne</string>
+    <string name="edit_bid_time"><b>Edit Bid Time</b></string>
+    <string name="remove_product"><b>Remove Product</b></string>
+    <string name="re_submit_information">Re-submit Information</string>
+    <string name="admin_has_declined_your_seller_registration_request_please_update_your_details_and_reapply">Admin has declined your seller registration request. Please update your details and reapply.</string>
+    <string name="bank_accounts2">Bank Accounts</string>
+    <string name="no_bank_account_found">No Bank Account Found!</string>
+    <string name="please_add_your_bank_account_to_add_withdraw_money">Please add your bank account to add/ \nwithdraw money.</string>
+    <string name="delete">delete</string>
+    <string name="_0_00_">0.00</string>
+    <string name="delete_">Delete</string>
+    <string name="delete_upper">Delete</string>
+    <string name="upper_delete">Delete</string>
+    <string name="oops_you_lost_this_auction">Oops! You lost this auction.</string>
+    <string name="missed_the_chance">Missed the Chance!</string>
+    <string name="missed_chance_desc">Your opportunity in this auction slipped away because you didn\'t place an order in time. Ensure to place your order promptly for the next successful bid.</string>
+    <string name="verification_request_failed">Verification Request Failed!</string>
+    <string name="rejected_desc">Admin has declined your seller registration request. Please update your details and reapply.</string>
+    <string-array name="Languages">
+        <item>Bank of Baroda</item>
+        <item>Canara Bank</item>
+        <item>H d f c bank</item>
+        <item>Axis Bank</item>
+        <item>State Bank of India</item>
+        <item>Punjab National Bank</item>
+    </string-array>
+    <string name="title_activity_rejected3_times">Rejected3Times</string>
+    <string name="back_to_sign_up">Back to Sign Up</string>
+    <string name="time3rejection">You are not eligible to register as a seller with this mobile number anymore.</string>
+    <string name="email_tax_registration_number_bidder">Enter Tax registration number (Optional)</string>
+    <string name="back_to_sign_in">Back to sign in</string>
+    <!--    <string name="confirm_address">Confirm Address</string>-->
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="choose_from_sold_products">Choose from Sold Products</string>
+    <string name="upload_photos">Upload Photos</string>
+    <string name="select_sub_category">Select sub-category</string>
+    <string name="product_description">Product Description</string>
+    <string name="enter_here">Enter here</string>
+    <string name="select_sold_product">Select Sold Product</string>
+    <string name="contact_number">Contact Number</string>
+    <string name="no_product_found_description">Oops! No products yet. Stay tuned for exciting listings ahead!</string>
+    <string name="no_product_featured">Oops! No products featured yet. Stay tuned for exciting listings ahead!</string>
+    <string name="wishlist_placeholder">Your Wishlist is empty. Start adding products to see them here!</string>
+    <string name="no_wishlist_products">No Wishlist Products!</string>
+    <string name="no_products_found">No Products Found!</string>
+    <string name="no_favourite_sellers_yet">No Favourite Sellers Yet!</string>
+    <string name="favorite_seller_placeholder">Oops! No favorite seller found. Start adding to favourite for personalized recommendations here.</string>
+    <string name="continue_as_bidder">Continue as a bidder</string>
+    <string name="no_addresses_found">No Addresses Found!</string>
+    <string name="your_address_list_is_empty_start_adding_addresses_to_see_them_here">Your Address List is empty. Start adding Addresses to see them here!</string>
+    <string name="no_data_found">No data found!</string>
+    <string name="no_data_placeholder_desc">Oops! No data yet. Stay tuned for exciting data ahead!</string>
+    <string name="delete_account">Delete Account</string>
+    <string name="cancel">Cancel</string>
+    <string name="your_bid_caps">YOUR BID</string>
+    <string name="no_featured_bidding_yet">No Featured Bidding Yet!</string>
+    <string name="your_bid_">Your Bid</string>
+    <string name="password_must_be_at_least_8_characters_containing_uppercase_letters_lowercase_letters_numbers_and_symbols">Password must contain one uppercase letters, one lowercase letters, one special character and one number</string>
+    <string name="no_bids_found">No Bids Found!</string>
+    <string name="no_bids_placed_desc">Start bidding now! No bids placed yet. Your auctions await.</string>
+    <string name="there_is_no_bids_placed_for_this_product_if_you_want_to_sell_this_product_so_kindly_update_the_auction_end_time">There is no bids placed for this product. If you want to sell this product so kindly update the auction end time.</string>
+    <string name="no_orders_found">No Orders Found!</string>
+    <string name="looks_like_you_haven_t_placed_any_orders_yet_start_shopping">Looks like you haven\'t placed any orders yet. Start shopping!</string>
+    <string name="are_you_sure_you_want_to_delete_account">Are you sure you want to Delete Account?</string>
+    <string name="yes_delete_1">Yes,Delete</string>
+    <string name="are_you_sure_you_want_to_delete_your_account">Are you sure you want to Delete your account?</string>
+    <string name="description">description\n</string>
+    <string name="featured_biddings_1">Featured Biddings</string>
+    <string name="no_order_found_desc">Looks like you haven\'t placed any orders yet. Start shopping!</string>
+    <string name="cancel_order_its_packed">You may cancel this order until it\'s packed</string>
+    <string name="pickup_hr_left">Pickup hr. left</string>
+    <string name="received">Received</string>
+    <string name="order_is_cancelled_by_user_please_choose_your_decision_for_this_product">Order is cancelled by user, please choose your decision for this product.</string>
+    <string name="reason_for_cancellation">Reason for cancellation</string>
+    <string name="award_product_to_second_highest_bidder">Award product to second highest bidder</string>
+    <string name="open_auction_for_this_product">Open auction for this product</string>
+    <string name="end_this_auction">End this auction</string>
+    <string name="add_description">add description</string>
+    <string name="no_notifications_found">No Notifications Found!</string>
+    <string name="notification_placeholder">Quiet here! No notifications received yet. Stay tuned for updates.</string>
+    <string name="are_you_sure_you_want_to_end_this_auction">Are you sure you want to End this auction?</string>
+    <string name="yes">Yes</string>
+    <string name="return_received">Return Received</string>
+    <string name="order_picked">Order Picked</string>
+    <string name="package_received">Package Received</string>
+    <string name="rate_us">Rate us</string>
+    <string name="please_enter_quantity">Please Enter Quantity</string>
+    <string name="please_enter_valid_quantity">  Quantity Should be More than Zero</string>
+    <string name="please_enter_more_than_zero_enter_price"> Base Price Should be more than Zero </string>
+
+    <string name="view_product_detail">View product details</string>
+
+    <string name="type_message_here">Type a message here…</string>
+    <string name="please_enter_price">Please Enter Price</string>
+    <string name="please_enter_location">Please Enter Location</string>
+    <string name="please_enter_a_mobile_number">Please Enter a Mobile Number</string>
+    <string name="please_select_start_date">Please Select Start Date</string>
+    <string name="please_select_end_date">Please Select End Date</string>
+    <string name="please_select_start_time">Please Select Start Time</string>
+    <string name="please_select_end_time">Please Select End Time</string>
+
+    <string name="you_rated">"You rated "</string>
+    <string name="return_accepted">Return Accepted</string>
+    <string name="return_desciption">Your return request has been sent to the admin. The team will reach out shortly.</string>
+    <string name="add_another_address">Add Another Address</string>
+    <string name="no_history_found">No History Found!</string>
+    <string name="left"> left</string>
+    <string name="no_data_available">No data available</string>
+    <string name="search_on_product">Search a product…</string>
+    <string name="ticket">Ticket Id #</string>
+    <string name="did_not_find_activity">Did not find any application</string>
+    <string name="enter_the_location">Enter the Location</string>
+    <string name="help_question_1">I did not receive this order</string>
+    <string name="help_question_2">Items portion size is not adequate</string>
+    <string name="help_question_3">Few items are missing in this order</string>
+    <string name="help_question_4">Items delivered are incorrect or wrong</string>
+    <string name="help_question_5">Item quality is poor</string>
+    <string name="highest">HIGHEST</string>
+    <string name="please_select_a_category">Please select a category</string>
+    <string name="please_select_a_subcategory">Please select a subcategory</string>
+    <string name="please_enter_a_product_description">Please enter a product description</string>
+    <string name="minimum_length_of_number_is_6_to_14_digits">Minimum Length Of Number is 6 to 14 Digits</string>
+    <string name="please_turn_on_location">Please turn on location</string>
+    <string name="you_need_to_enable_the_location_permission">You need to enable the location permission.!</string>
+    <string name="rating">Ratings</string>
+    <string name="return_desc">Your return request has been sent to the admin. The team will reach out shortly.</string>
+    <string name="cannot_feature">You can not feature this product.</string>
+    <string name="enter_sar">Enter SAR </string>
+    <string name="or_more">or more</string>
+    <string name="enter_your_business_details">Enter your business details</string>
+    <string name="ticket_id">Ticket ID #</string>
+    <string name="product_expired">Product Expired</string>
+    <string name="order_id">Order Id #</string>
+    <string name="mark_as_received">Mark as Received</string>
+    <string name="something_went_wrong">Something went wrong,Please try again later!</string>
+    <string name="joinedUs">"Joined us on "</string>
+    <string name="order_delivered">Order Delivered</string>
+    <string name="order_packed">Order Packed</string>
+    <string name="order_returned">Order Returned</string>
+    <string name="order_id_hash">ORDER ID #</string>
+    <string name="expired">expired</string>
+    <string name="business_name">Business name</string>
+    <string name="enter_trade_license_number">Enter trade license number</string>
+    <string name="tax_registration_number_optional">Tax Registration number (Optional)</string>
+    <string name="email">Email</string>
+    <string name="email_address_optional">Email address (Optional)</string>
+    <string name="fill_all_the_fields">Fill all the fields</string>
+    <string name="enter_address">Enter Address</string>
+    <string name="address_edit_successfully">Address Edit Successfully</string>
+    <string name="please_fill_all_fields">Please Fill All Fields</string>
+    <string name="enter_password">Enter password</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="enter_confirm_password">Enter confirm password</string>
+    <string name="password_does_not_match">Password does not match</string>
+    <string name="few_seconds">Few seconds</string>
+    <string name="for_bidding">" for bidding"</string>
+    <string name="place_bid">Place Bid</string>
+    <string name="wishlist_removed">Product removed from wishlist</string>
+    <string name="wishlist_added">Product added to wishlist successfully</string>
+    <string name="search_for_products">Search for Products…</string>
+    <string name="search_for_sellers">Search for sellers…</string>
+    <string name="enter_old_password">Enter old password</string>
+    <string name="enter_new_password">Enter new password</string>
+    <string name="confirm_pass">Confirm new password</string>
+    <string name="confirm_new_password">Enter confirm new password</string>
+    <string name="get_started">Get Started</string>
+    <string name="how_to_bid">How to Bidding</string>
+    <string name="payment_method">Payment Method</string>
+    <string name="conformpassword">Confirm Password</string>
+    <string name="enter_conformpassword">Enter confirm password</string>
+    <string name="seconds">seconds</string>
+    <string name="password_changed_successfully">Password changed successfully.</string>
+    <string name="error_message">Password should contain min 8 characters with at least one uppercase letter, one lowercase letter, one special character and one number.</string>
+    <string name="enter_valid_email">Enter valid email</string>
+    <string name="enter">Enter</string>
+    <string name="location_permission">Location Permission</string>
+    <string name="location_permission_is_required_please_allow_location_permission_from_setting">%1$s Location permission is required, Please allow Location permission from setting</string>
+    <string name="image_permission">Image Permission</string>
+    <string name="image_permission_is_required_please_allow_image_permission_from_setting">%1$s Image permission is required, Please allow Image permission from setting</string>
+    <string name="media">Media</string>
+    <string name="settings">Settings</string>
+    <string name="cancel_1">Cancel</string>
+    <string name="kg_1">kg</string>
+    <string name="gm_1">gm</string>
+    <string name="ton_1">ton</string>
+    <string name="kilogram_1">Kilogram</string>
+    <string name="gram_1">Gram</string>
+    <string name="enter_valid">Enter Valid</string>
+    <string name="notification_desc">Order awarded to you; please accept and place it successfully</string>
+    <string name="search_on_green_house">Search on green house...</string>
+    <string name="user_fav">user\'s favourite</string>
+    <string name="showing_results_for">Showing results for</string>
+    <string name="notification_title">Congratulation! You won the Auction.</string>
+    <string name="sar_has_been_freezed_from_your_wallet_it_will_be_deducted_once_you_won_the_auction_else_it_will_be_unfreezed">SAR %1$s has been freezed from your wallet. It will be deducted once you won the auction else it will be unfreezed</string>
+    <string name="search_a_seller">Search a seller...</string>
+    <string name="search_for_orders">Search for orders...</string>
+    <string name="the_order_request_has_been_sent_to_the_bidder_once_he_accepts_we_will_place_a_new_order_and_notify_you_about_it">The order request has been sent to the bidder, once he accepts we will place a new order and notify you about it.</string>
+    <string name="we_are_awaiting_the_user_s_acceptance_of_your_order_request_upon_their_confirmation_we_will_proceed_to_create_a_new_order">We are awaiting the user\'s acceptance of your order request. Upon their confirmation, we will proceed to create a new order.</string>
+    <string name="admin_message">The admin has solved your problem. Thank you for your patience.</string>
+    <string name="trade_license_number_desc">Enter a trade license number or Agricultural registration license if you want to register as business, or you can register as individual by entering your ID number</string>
+    <string name="invalid_number">Invalid Number</string>
+    <string name="lowest_first">Lowest first</string>
+    <string name="highest_first">Highest first</string>
+    <string name="most_recent">Most recent</string>
+
+</resources>
+

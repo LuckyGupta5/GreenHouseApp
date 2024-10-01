@@ -1,0 +1,868 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/addressMainShimmer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="@dimen/dimen_20"
+            android:layout_marginTop="@dimen/dimen_20"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp">
+
+                <ImageView
+                    android:id="@+id/ic_map_pin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:src="@drawable/ic_map_pin" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/id_user_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/ic_map_pin"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/euclid_circular_medium"
+                    android:maxLength="15"
+                    android:text="@string/albert_flores"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/name_size_17" />
+
+                <View
+                    android:id="@+id/view_2dp"
+                    android:layout_width="2dp"
+                    android:layout_height="15dp"
+                    android:layout_marginHorizontal="4dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toEndOf="@id/id_user_name"
+                    android:background="@color/black" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/countryCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:layout_toEndOf="@id/view_2dp"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:text="@string/_966"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/number_size_15" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/id_user_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_toEndOf="@id/countryCode"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:maxLength="14"
+                    android:text="@string/_9999999999"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/number_size_15" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/id_user_address_line1"
+                    android:layout_width="175dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/id_user_name"
+                    android:layout_marginStart="34dp"
+                    android:layout_marginTop="6dp"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:maxLines="2"
+                    android:text="@string/address_line1"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/address_size_14" />
+
+                <RelativeLayout
+                    android:id="@+id/btn_delete_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/id_user_address_line1"
+                    android:layout_marginStart="34dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:paddingHorizontal="17dp"
+                    android:paddingVertical="8dp"
+                    android:textColor="@color/gray">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:paddingHorizontal="20dp"
+                        android:text="@string/upper_delete"
+                        android:textAlignment="center"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/address_size_14" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/btn_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/id_user_address_line1"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_toEndOf="@id/btn_delete_address"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:paddingHorizontal="17dp"
+                    android:paddingVertical="8dp"
+                    android:textColor="@color/gray">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/text_edit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ebebeb_border"
+                        android:backgroundTint="@color/gray"
+                        android:paddingHorizontal="20dp"
+                        android:text="@string/edit"
+                        android:textAlignment="center"
+                        android:textColor="@color/gray"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/lastView"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/btn_edit"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="15dp"
+                    android:background="#EDEDED" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp">
+
+                <ImageView
+                    android:id="@+id/ic_map_pin1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:src="@drawable/ic_map_pin" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/id_user_name1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/ic_map_pin1"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/euclid_circular_medium"
+                    android:maxLength="15"
+                    android:text="@string/albert_flores"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/name_size_17" />
+
+                <View
+                    android:id="@+id/view_2dp1"
+                    android:layout_width="2dp"
+                    android:layout_height="15dp"
+                    android:layout_marginHorizontal="4dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toEndOf="@id/id_user_name1"
+                    android:background="@color/black" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/countryCode1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:layout_toEndOf="@id/view_2dp1"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:text="@string/_966"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/number_size_15" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/id_user_number1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_toEndOf="@id/countryCode1"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:maxLength="14"
+                    android:text="@string/_9999999999"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/number_size_15" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/id_user_address_line11"
+                    android:layout_width="175dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/id_user_name1"
+                    android:layout_marginStart="34dp"
+                    android:layout_marginTop="6dp"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:maxLines="2"
+                    android:text="@string/address_line1"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/address_size_14" />
+
+                <RelativeLayout
+                    android:id="@+id/btn_delete_address1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/id_user_address_line11"
+                    android:layout_marginStart="34dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:paddingHorizontal="17dp"
+                    android:paddingVertical="8dp"
+                    android:textColor="@color/gray">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:paddingHorizontal="20dp"
+                        android:text="@string/upper_delete"
+                        android:textAlignment="center"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/address_size_14" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/btn_edit1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/id_user_address_line11"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_toEndOf="@id/btn_delete_address1"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:paddingHorizontal="17dp"
+                    android:paddingVertical="8dp"
+                    android:textColor="@color/gray">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/text_edit1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ebebeb_border"
+                        android:backgroundTint="@color/gray"
+                        android:paddingHorizontal="20dp"
+                        android:text="@string/edit"
+                        android:textAlignment="center"
+                        android:textColor="@color/gray"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/lastView1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/btn_edit1"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="15dp"
+                    android:background="#EDEDED" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp">
+
+                <ImageView
+                    android:id="@+id/ic_map_pin2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:src="@drawable/ic_map_pin" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/id_user_name2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/ic_map_pin2"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/euclid_circular_medium"
+                    android:maxLength="15"
+                    android:text="@string/albert_flores"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/name_size_17" />
+
+                <View
+                    android:id="@+id/view_2dp2"
+                    android:layout_width="2dp"
+                    android:layout_height="15dp"
+                    android:layout_marginHorizontal="4dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toEndOf="@id/id_user_name2"
+                    android:background="@color/black" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/countryCode2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:layout_toEndOf="@id/view_2dp2"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:text="@string/_966"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/number_size_15" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/id_user_number2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_toEndOf="@id/countryCode2"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:maxLength="14"
+                    android:text="@string/_9999999999"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/number_size_15" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/id_user_address_line12"
+                    android:layout_width="175dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/id_user_name2"
+                    android:layout_marginStart="34dp"
+                    android:layout_marginTop="6dp"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:maxLines="2"
+                    android:text="@string/address_line1"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/address_size_14" />
+
+                <RelativeLayout
+                    android:id="@+id/btn_delete_address2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/id_user_address_line12"
+                    android:layout_marginStart="34dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:paddingHorizontal="17dp"
+                    android:paddingVertical="8dp"
+                    android:textColor="@color/gray">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:paddingHorizontal="20dp"
+                        android:text="@string/upper_delete"
+                        android:textAlignment="center"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/address_size_14" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/btn_edit2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/id_user_address_line12"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_toEndOf="@id/btn_delete_address2"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:paddingHorizontal="17dp"
+                    android:paddingVertical="8dp"
+                    android:textColor="@color/gray">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/text_edit2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ebebeb_border"
+                        android:backgroundTint="@color/gray"
+                        android:paddingHorizontal="20dp"
+                        android:text="@string/edit"
+                        android:textAlignment="center"
+                        android:textColor="@color/gray"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/lastView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/btn_edit2"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="15dp"
+                    android:background="#EDEDED" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp">
+
+                <ImageView
+                    android:id="@+id/ic_map_pin3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:src="@drawable/ic_map_pin" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/id_user_name3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/ic_map_pin3"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/euclid_circular_medium"
+                    android:maxLength="15"
+                    android:text="@string/albert_flores"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/name_size_17" />
+
+                <View
+                    android:id="@+id/view_2dp3"
+                    android:layout_width="2dp"
+                    android:layout_height="15dp"
+                    android:layout_marginHorizontal="4dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toEndOf="@id/id_user_name3"
+                    android:background="@color/black" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/countryCode3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:layout_toEndOf="@id/view_2dp3"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:text="@string/_966"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/number_size_15" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/id_user_number3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_toEndOf="@id/countryCode3"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:maxLength="14"
+                    android:text="@string/_9999999999"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/number_size_15" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/id_user_address_line13"
+                    android:layout_width="175dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/id_user_name3"
+                    android:layout_marginStart="34dp"
+                    android:layout_marginTop="6dp"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:maxLines="2"
+                    android:text="@string/address_line1"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/address_size_14" />
+
+                <RelativeLayout
+                    android:id="@+id/btn_delete_address3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/id_user_address_line13"
+                    android:layout_marginStart="34dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:paddingHorizontal="17dp"
+                    android:paddingVertical="8dp"
+                    android:textColor="@color/gray">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:paddingHorizontal="20dp"
+                        android:text="@string/upper_delete"
+                        android:textAlignment="center"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/address_size_14" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/btn_edit3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/id_user_address_line13"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_toEndOf="@id/btn_delete_address3"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:paddingHorizontal="17dp"
+                    android:paddingVertical="8dp"
+                    android:textColor="@color/gray">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/text_edit3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ebebeb_border"
+                        android:backgroundTint="@color/gray"
+                        android:paddingHorizontal="20dp"
+                        android:text="@string/edit"
+                        android:textAlignment="center"
+                        android:textColor="@color/gray"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/lastView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/btn_edit3"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="15dp"
+                    android:background="#EDEDED" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp">
+
+                <ImageView
+                    android:id="@+id/ic_map_pin4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:src="@drawable/ic_map_pin" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/id_user_name4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/ic_map_pin4"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/euclid_circular_medium"
+                    android:maxLength="15"
+                    android:text="@string/albert_flores"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/name_size_17" />
+
+                <View
+                    android:id="@+id/view_2dp4"
+                    android:layout_width="2dp"
+                    android:layout_height="15dp"
+                    android:layout_marginHorizontal="4dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toEndOf="@id/id_user_name4"
+                    android:background="@color/black" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/countryCode4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:layout_toEndOf="@id/view_2dp4"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:text="@string/_966"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/number_size_15" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/id_user_number4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_toEndOf="@id/countryCode4"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:maxLength="14"
+                    android:text="@string/_9999999999"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/number_size_15" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/id_user_address_line14"
+                    android:layout_width="175dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/id_user_name4"
+                    android:layout_marginStart="34dp"
+                    android:layout_marginTop="6dp"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:maxLines="2"
+                    android:text="@string/address_line1"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/address_size_14" />
+
+                <RelativeLayout
+                    android:id="@+id/btn_delete_address4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/id_user_address_line14"
+                    android:layout_marginStart="34dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:paddingHorizontal="17dp"
+                    android:paddingVertical="8dp"
+                    android:textColor="@color/gray">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:paddingHorizontal="20dp"
+                        android:text="@string/upper_delete"
+                        android:textAlignment="center"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/address_size_14" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/btn_edit4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/id_user_address_line14"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_toEndOf="@id/btn_delete_address4"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:paddingHorizontal="17dp"
+                    android:paddingVertical="8dp"
+                    android:textColor="@color/gray">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/text_edit4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ebebeb_border"
+                        android:backgroundTint="@color/gray"
+                        android:paddingHorizontal="20dp"
+                        android:text="@string/edit"
+                        android:textAlignment="center"
+                        android:textColor="@color/gray"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/lastView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/btn_edit4"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="15dp"
+                    android:background="#EDEDED" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp">
+
+                <ImageView
+                    android:id="@+id/ic_map_pin5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:src="@drawable/ic_map_pin" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/id_user_name5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/ic_map_pin5"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/euclid_circular_medium"
+                    android:maxLength="15"
+                    android:text="@string/albert_flores"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/name_size_17" />
+
+                <View
+                    android:id="@+id/view_2dp5"
+                    android:layout_width="2dp"
+                    android:layout_height="15dp"
+                    android:layout_marginHorizontal="4dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toEndOf="@id/id_user_name5"
+                    android:background="@color/black" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/countryCode5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:layout_toEndOf="@id/view_2dp5"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:text="@string/_966"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/number_size_15" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/id_user_number5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_toEndOf="@id/countryCode5"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:maxLength="14"
+                    android:text="@string/_9999999999"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/number_size_15" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/id_user_address_line15"
+                    android:layout_width="175dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/id_user_name5"
+                    android:layout_marginStart="34dp"
+                    android:layout_marginTop="6dp"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:maxLines="2"
+                    android:text="@string/address_line1"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/address_size_14" />
+
+                <RelativeLayout
+                    android:id="@+id/btn_delete_address5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/id_user_address_line15"
+                    android:layout_marginStart="34dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:paddingHorizontal="17dp"
+                    android:paddingVertical="8dp"
+                    android:textColor="@color/gray">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:paddingHorizontal="20dp"
+                        android:text="@string/upper_delete"
+                        android:textAlignment="center"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/address_size_14" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/btn_edit5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/id_user_address_line15"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_toEndOf="@id/btn_delete_address5"
+                    android:background="@drawable/ebebeb_border"
+                    android:backgroundTint="@color/gray"
+                    android:paddingHorizontal="17dp"
+                    android:paddingVertical="8dp"
+                    android:textColor="@color/gray">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/text_edit5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ebebeb_border"
+                        android:backgroundTint="@color/gray"
+                        android:paddingHorizontal="20dp"
+                        android:text="@string/edit"
+                        android:textAlignment="center"
+                        android:textColor="@color/gray"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/lastView5"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/btn_edit5"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="15dp"
+                    android:background="#EDEDED" />
+            </RelativeLayout>
+        </LinearLayout>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+</layout>

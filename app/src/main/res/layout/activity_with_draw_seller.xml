@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".screen.seller.WithDrawSeller">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/backgroundimage" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/auction_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:text="Withdraw"
+            android:textAlignment="viewStart"
+            android:textColor="@color/black"
+            android:textSize="21sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/cross_add_withdraw_wallet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="26dp"
+            android:layout_marginEnd="23dp"
+            android:src="@drawable/ic_cross_add_money" />
+
+        <RelativeLayout
+            android:id="@+id/available_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/auction_img"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="36dp"
+            android:background="@drawable/avaiable_balance_add_moeny_border">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="17dp"
+                android:text="@string/available_balance"
+                android:textAlignment="viewStart"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/avail_balance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="17dp"
+                android:text="@string/aed_0_00"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/withdraw_to_wallet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/available_layout"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="71dp"
+            android:text="@string/amount_"
+            android:textColor="@color/black"
+            android:textSize="21sp"
+            android:textStyle="bold" />
+
+
+        <RelativeLayout
+            android:id="@+id/aed_money_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/withdraw_to_wallet"
+            android:layout_marginHorizontal="95dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/b8bbbba_border">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/aed_add_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="14dp"
+                android:text="@string/aed"
+                android:textAlignment="viewStart"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <View
+                android:id="@+id/view_add_money"
+                android:layout_width="1dp"
+                android:layout_height="55dp"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@id/aed_add_money"
+                android:background="#B8BBBA" />
+
+            <EditText
+                android:id="@+id/enter_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="20dp"
+                android:layout_toEndOf="@id/view_add_money"
+                android:background="@color/white"
+                android:hint="@string/_0_00"
+                android:imeOptions="actionDone"
+                android:inputType="numberDecimal"
+                android:paddingHorizontal="10.5dp"
+                android:paddingVertical="3dp"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/view_add_to_wallet"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/aed_money_layout"
+            android:layout_marginTop="76dp"
+            android:background="#F3F3F3" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/withdraw_money_to"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view_add_to_wallet"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:text="@string/withdraw_money_to"
+            android:textAlignment="viewStart"
+            android:textColor="@color/black"
+            android:textSize="21sp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/view_add_to_wallet"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:text="@string/add_bank"
+            android:textAlignment="viewEnd"
+            android:textColor="@color/greenhousetheme"
+            android:textSize="21sp"
+            android:textStyle="bold" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/proceed_to_add"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/btn_border"
+            android:elevation="5dp"
+            android:text="@string/confirm_withdraw"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:textStyle="normal"
+            app:backgroundTint="#28B17B" />
+
+        <View
+            android:layout_width="105dp"
+            android:layout_height="3dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="9dp"
+            android:background="@color/black" />
+
+    </RelativeLayout>
+</layout>

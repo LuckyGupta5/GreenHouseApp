@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:context=".fragment.bidderfragment.OrderPlacedSuccessful">
+
+        <View
+            android:layout_width="85dp"
+            android:layout_height="5dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/view_top_verify_num" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="56dp"
+            android:src="@drawable/ic_order_placed_success" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="44dp"
+            android:fontFamily="@font/euclid_circular_semi_bold"
+            android:text="@string/order_place_success"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/profile_heading_21" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="@dimen/dimen_20"
+            android:layout_marginTop="28dp"
+            android:lineSpacingExtra="6sp"
+            android:text="@string/order_success_desc"
+            android:textAlignment="center"
+            android:textColor="#5B5B5B"
+            android:textSize="@dimen/number_size_15"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/orderId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="6dp"
+            android:fontFamily="@font/euclid_circular_medium"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/number_size_15"
+            tools:text="#2425678" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/okButton"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height_75"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="@dimen/dimen_40"
+            android:backgroundTint="@color/greenhousetheme"
+            android:fontFamily="@font/euclid_circular_medium"
+            android:text="@string/btn_ok_continue"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/button_text_size_17"
+            app:cornerRadius="10dp" />
+
+        <View
+            android:layout_width="115dp"
+            android:layout_height="4dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/bottom_black_view_3dp" />
+
+    </LinearLayout>
+</layout>

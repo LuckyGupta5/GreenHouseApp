@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "200124368855",
+    "project_id": "green-house-dd3fe",
+    "storage_bucket": "green-house-dd3fe.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:200124368855:android:389eedb40093dbc8bfed92",
+        "android_client_info": {
+          "package_name": "com.ripenapps.greenhouse"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCncAl29pSZq9tRTldb-fItDYV-kcrraZo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

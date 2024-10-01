@@ -1,0 +1,34 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="548dp"
+    android:height="326dp"
+    android:viewportWidth="548"
+    android:viewportHeight="326">
+  <path
+      android:pathData="M547.5,163c0,89.9 0.1,126.7 0.2,81.7 0.2,-44.9 0.2,-118.5 0,-163.5 -0.1,-44.9 -0.2,-8.1 -0.2,81.8z"
+      android:fillColor="#000000"
+      android:strokeColor="#00000000"/>
+  <path
+      android:pathData="M254,165l0,24 3.5,-0 3.5,-0 0,-24 0,-24 -3.5,-0 -3.5,-0 0,24z"
+      android:fillColor="@color/greenhousetheme"
+      android:strokeColor="#00000000"/>
+  <path
+      android:pathData="M271,164.5l0,19.5 3.5,-0 3.5,-0 0,-19.5 0,-19.5 -3.5,-0 -3.5,-0 0,19.5z"
+      android:fillColor="@color/greenhousetheme"
+      android:strokeColor="#00000000"/>
+  <path
+      android:pathData="M237,165l0,19 3.5,-0 3.5,-0 0,-19 0,-19 -3.5,-0 -3.5,-0 0,19z"
+      android:fillColor="@color/greenhousetheme"
+      android:strokeColor="#00000000"/>
+  <path
+      android:pathData="M288,164.5l0,14.5 3.5,-0 3.5,-0 0,-14.5 0,-14.5 -3.5,-0 -3.5,-0 0,14.5z"
+      android:fillColor="@color/greenhousetheme"
+      android:strokeColor="#00000000"/>
+  <path
+      android:pathData="M220,165l0,14 3.5,-0 3.5,-0 0,-14 0,-14 -3.5,-0 -3.5,-0 0,14z"
+      android:fillColor="@color/greenhousetheme"
+      android:strokeColor="#00000000"/>
+  <path
+      android:pathData="M305,165l0,9 3.5,-0 3.5,-0 0,-9 0,-9 -3.5,-0 -3.5,-0 0,9z"
+      android:fillColor="@color/greenhousetheme"
+      android:strokeColor="#00000000"/>
+</vector>

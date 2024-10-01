@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".screen.seller.SellerCompleteProfile2">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/screen_background"
+            tools:ignore="ContentDescription" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/complete_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="33dp"
+            android:text="@string/complete_profile"
+            android:textAlignment="viewStart"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_23_title"
+            android:textStyle="bold"
+            tools:ignore="RelativeOverlap" />
+
+        <ImageView
+            android:id="@+id/cross"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="95dp"
+            android:layout_marginTop="27dp"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/ic_cross_white_bg"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/personal_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/complete_profile"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="9dp"
+            android:text="@string/enter_personal_details2"
+            android:textAlignment="viewStart"
+            android:textColor="#434343"
+            android:textSize="@dimen/button_text_size_17"
+            android:textStyle="normal" />
+
+        <ScrollView
+            android:id="@+id/complete_profile_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/continue_btn"
+            android:layout_below="@id/personal_detail"
+            android:layout_marginTop="41dp"
+            android:fillViewport="true"
+            android:overScrollMode="never">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.ripenapps.greenhouse.utills.CustomInputLayout
+                    android:id="@+id/businessName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/Businesslocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="65dp"
+                    android:layout_below="@id/businessName"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/ebebeb_border"
+                    android:drawableEnd="@drawable/ic_map_pin_green"
+                    android:elevation="@dimen/elevation_5"
+                    android:gravity="center_vertical"
+                    android:hint="@string/enter_the_location"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="30dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/hint_color"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/selectCateogoryText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/Businesslocation"
+                    android:layout_marginStart="21dp"
+                    android:layout_marginTop="13dp"
+                    android:fontFamily="@font/euclid_circular_medium"
+                    android:text="@string/select_category"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_19_subheading" />
+
+                <LinearLayout
+                    android:id="@+id/categoryLayer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/selectCateogoryText"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="20dp">
+
+                    <RelativeLayout
+                        android:id="@+id/vegetableLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/border_eoeoeo">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/vegetableText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_marginHorizontal="21dp"
+                            android:layout_marginVertical="15dp"
+                            android:text="@string/vegetables"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_15_desc"
+                            android:textStyle="normal" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/fruitsLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="15dp"
+                        android:layout_marginVertical="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/border_eoeoeo">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/fruitesText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_marginHorizontal="21dp"
+                            android:layout_marginVertical="15dp"
+                            android:text="@string/fruits"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_15_desc"
+                            android:textStyle="normal" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/datesLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/border_eoeoeo">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/datesText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_marginHorizontal="21dp"
+                            android:layout_marginVertical="15dp"
+                            android:text="@string/dates"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_15_desc"
+                            android:textStyle="normal" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tradeLicenceNumberHeading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/categoryLayer"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="@dimen/dimen10dp"
+                    android:drawableEnd="@drawable/union__10_"
+                    android:drawablePadding="5dp"
+                    android:fontFamily="@font/euclid_circular_medium"
+                    android:text="@string/trade_license_number"
+                    android:textColor="@color/black"
+                    android:textSize="17sp" />
+
+                <com.ripenapps.greenhouse.utills.CustomInputLayout
+                    android:id="@+id/tradeLicenceNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tradeLicenceNumberHeading"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp" />
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/expiryDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edit_field_65"
+                    android:layout_below="@id/tradeLicenceNumber"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/border_inactive_ededed"
+                    android:drawableEnd="@drawable/ic_calender_green"
+                    android:elevation="10dp"
+                    android:gravity="center_vertical"
+                    android:hint="@string/select_license_expiry"
+                    android:imeOptions="actionNext"
+                    android:inputType="date"
+                    android:paddingHorizontal="20dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/hint_color"
+                    android:textSize="@dimen/button_text_size_17"
+                    android:textStyle="normal"
+                    android:visibility="gone" />
+
+                <com.ripenapps.greenhouse.utills.CustomInputLayout
+                    android:id="@+id/tax"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tradeLicenceNumber"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/nationalIdTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tax"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="21dp"
+                    android:fontFamily="@font/euclid_circular_medium"
+                    android:text="@string/national_id_card"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_19_subheading" />
+
+                <TextView
+                    android:id="@+id/idCardDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/nationalIdTitle"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="5dp"
+                    android:lineSpacingExtra="6dp"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="30dp"
+                    android:text="@string/national_id_card_desc"
+                    android:textAlignment="viewStart"
+                    android:textColor="#5B5B5B"
+                    android:textSize="@dimen/address_size_14"
+                    android:textStyle="normal" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/docImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="155dp"
+                    android:layout_below="@id/idCardDesc"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginBottom="28dp"
+                    android:elevation="10dp"
+                    android:scaleType="fitXY"
+                    android:visibility="gone"
+                    app:cornerFamily="rounded"
+                    app:cornerSize="50dp" />
+
+                <ImageView
+                    android:id="@+id/deleteDoc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/idCardDesc"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="35dp"
+                    android:layout_marginEnd="30dp"
+                    android:elevation="10dp"
+                    android:src="@drawable/ic_cross_greenbg"
+                    android:visibility="gone"
+                    tools:ignore="ContentDescription" />
+
+                <RelativeLayout
+                    android:id="@+id/uploadDoc"
+                    android:layout_width="match_parent"
+                    android:layout_height="155dp"
+                    android:layout_below="@id/idCardDesc"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginBottom="28dp"
+                    android:background="@drawable/border_dashed">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        tools:ignore="UselessParent">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_upload_doc"
+                            tools:ignore="ContentDescription" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/upload_id_proof"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/address_size_14"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="@string/upload_size_max_5_mb"
+                            android:textAlignment="center"
+                            android:textColor="#868686"
+                            android:textSize="12sp"
+                            android:textStyle="normal" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+        </ScrollView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/continue_btn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height_75"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="#DCE0DF"
+            android:fontFamily="@font/euclid_circular_medium"
+            android:text="@string/btn_continue"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/button_text_size_17"
+            app:cornerRadius="10dp" />
+
+    </RelativeLayout>
+</layout>

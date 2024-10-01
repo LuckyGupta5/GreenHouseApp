@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/featuredDetailsMainShimmer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/top_ranking"
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginHorizontal="23dp"
+                android:layout_marginTop="20dp"
+                android:lines="3"
+                android:text="@string/the_products_of_top_10_rankers_will_be_marked_as_featured_and_product_ranking_will_be_same_as_their_bidding"
+                android:textAlignment="center"
+                android:textColor="@color/gray"
+                android:backgroundTint="@color/gray"
+                android:background="@drawable/ebebeb_border"
+                android:textSize="16sp"
+                android:textStyle="normal" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/bid_ranking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/top_ranking"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="18dp"
+                android:background="@color/gray"
+                android:text="@string/bid_ranking"
+                android:textAlignment="viewStart"
+                android:textColor="@color/gray"
+                android:textSize="19sp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:id="@+id/top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/bid_ranking"
+                android:layout_marginHorizontal="@dimen/dimen10dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/ededed_border"
+                android:backgroundTint="@color/gray"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_gravity="start"
+                    android:layout_marginVertical="15dp"
+                    android:layout_marginStart="15dp"
+                    android:background="@color/gray"
+                    android:maxLength="14"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/gray"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    tools:text="10 Jan 2023" />
+
+                <TextView
+                    android:id="@+id/time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginVertical="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@color/gray"
+                    android:maxLength="20"
+                    android:textAlignment="viewEnd"
+                    android:textColor="@color/gray"
+                    android:textSize="15sp"
+                    android:textStyle="normal"
+                    tools:text="1h 30m left" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/detailLayer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/top"
+                android:background="@color/white">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/idNameCard"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="50dp"
+                    app:cardCornerRadius="50dp"
+                    tools:background="@drawable/bg_highest_bid_position">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/position"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/gray"
+                        android:fontFamily="@font/euclid_circular_semi_bold"
+                        android:gravity="center"
+                        android:textAlignment="center"
+                        android:textColor="@color/gray"
+                        android:textSize="15sp"
+                        tools:text="@string/_1_" />
+
+                </androidx.cardview.widget.CardView>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/subCategoryName"
+                    android:layout_width="@dimen/dimen_120"
+                    android:layout_height="@dimen/dimen10dp"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="@dimen/dimen_30"
+                    android:layout_toEndOf="@id/idNameCard"
+                    android:background="@color/gray"
+                    android:maxLength="20"
+                    android:maxLines="1"
+                    android:textColor="@color/gray"
+                    android:textSize="17sp"
+                    tools:text="@string/cauliflower" />
+
+                <TextView
+                    android:id="@+id/userName"
+                    android:layout_width="@dimen/dimen_100"
+                    android:layout_height="@dimen/dimen10dp"
+                    android:layout_below="@id/subCategoryName"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="@dimen/dimen_15"
+                    android:layout_toEndOf="@id/idNameCard"
+                    android:background="@color/gray"
+                    android:maxLength="15"
+                    android:maxLines="1"
+                    android:textColor="@color/gray"
+                    android:textSize="13sp"
+                    android:textStyle="normal"
+                    tools:text="jdoe15" />
+
+                <TextView
+                    android:id="@+id/bid_price"
+                    android:layout_width="@dimen/dimen_80"
+                    android:layout_height="@dimen/dimen10dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/dimen10dp"
+                    android:background="@color/gray"
+                    android:textAlignment="viewStart"
+                    android:textAllCaps="false"
+                    android:textColor="@color/gray"
+                    android:textSize="15sp"
+                    tools:text="SAR 45.69" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </com.facebook.shimmer.ShimmerFrameLayout>
+</layout>

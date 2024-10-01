@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_lang_selection"
+        android:orientation="vertical"
+
+        tools:context=".fragment.sellerfragemnt.EndAuctionFragment">
+
+        <View
+            android:layout_width="85dp"
+            android:layout_height="3dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+            android:background="@drawable/view_top_verify_num" />
+
+        <ImageView
+            android:id="@+id/logout_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="26dp"
+            android:layout_marginStart="28dp"
+            android:src="@drawable/ic_auction_end" />
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="17dp"
+            android:text="@string/are_you_sure_you_want_to_end_this_auction"
+            android:textAlignment="viewStart"
+            android:layout_marginStart="28dp"
+            android:lineSpacingExtra="2dp"
+            android:textColor="@color/black"
+            android:textSize="21sp"
+            android:textStyle="bold" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="38dp"
+            android:orientation="horizontal"
+            android:paddingTop="2dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/cancle_logout_button"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/button_height_75"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="15dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/white"
+                android:text="@string/no"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/button_text_size_17"
+                android:textStyle="bold"
+                app:cornerRadius="10dp"
+                app:strokeColor="#CFCFCF"
+                app:strokeWidth="1dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/confirm_logout_button"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/button_height_75"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="15dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/greenhousetheme"
+                android:elevation="@dimen/elevation_5"
+                android:text="@string/yes"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/button_text_size_17"
+                android:textStyle="bold"
+                app:cornerRadius="10dp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="115dp"
+            android:layout_height="4dp"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="130dp"
+            android:layout_marginBottom="9dp"
+            android:background="@drawable/bottom_black_view_3dp" />
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,696 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:clickable="true"
+        android:focusable="true"
+        tools:context=".fragment.sellerfragemnt.SellerProfileFragment">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/backgroundimage"
+            tools:ignore="ContentDescription" />
+
+        <RelativeLayout
+            android:id="@+id/my_profile_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="17dp"
+            android:background="@drawable/my_profile_background_picture">
+
+            <RelativeLayout
+                android:id="@+id/picture_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/ellipse_19159__1_">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/userNameInitials"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/euclid_circular_bold"
+                    android:textColor="@color/greenhousetheme"
+                    android:textSize="21sp"
+                    tools:text="AF" />
+            </RelativeLayout>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/profile_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="9dp"
+                android:layout_marginTop="21dp"
+                android:layout_marginEnd="20dp"
+                android:layout_toEndOf="@+id/picture_img"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="@string/albert_flores"
+                android:textAlignment="viewStart"
+                android:textColor="@color/white"
+                android:textSize="19sp"
+                android:textStyle="normal" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/profile_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/profile_user_name"
+                android:layout_marginStart="9dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="9dp"
+                android:layout_toEndOf="@+id/picture_img"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="normal"
+                tools:text="1 256 856 7589" />
+
+            <RelativeLayout
+                android:id="@+id/switch_to_bidder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/picture_img"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/switch_user_background"
+                android:elevation="5dp">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/add"
+                    android:drawablePadding="11.55dp"
+                    android:paddingVertical="11dp"
+                    android:paddingStart="13.02dp"
+                    android:text="@string/switch_to_bidder"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:textStyle="normal"
+                    tools:ignore="RelativeOverlap" />
+
+                <ImageView
+                    android:id="@+id/arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="15dp"
+                    android:background="@drawable/arrow"
+                    tools:ignore="ContentDescription" />
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:id="@+id/idScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/my_profile_layout"
+            android:fillViewport="true"
+            android:overScrollMode="never"
+            android:scrollbars="none">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/myProfile_box_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    tools:ignore="DisableBaselineAlignment">
+
+                    <RelativeLayout
+                        android:id="@+id/btn_wallet"
+                        android:layout_width="match_parent"
+                        android:layout_height="72dp"
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="21dp"
+                        android:background="@drawable/background_my_profile_items"
+                        android:elevation="@dimen/elevation_5">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/imgWallet"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginHorizontal="15dp"
+                            android:layout_toStartOf="@id/balanceAmount"
+                            android:drawableStart="@drawable/ic_wallet_profile"
+                            android:drawablePadding="14dp"
+                            android:fontFamily="@font/euclid_circular_medium"
+                            android:gravity="center|start"
+                            android:text="@string/seller_wallet"
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_15_desc" />
+
+                        <TextView
+                            android:id="@+id/balanceAmount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toStartOf="@id/arrow0"
+                            android:layout_centerVertical="true"
+                            android:fontFamily="@font/euclid_circular_semi_bold"
+                            android:gravity="center|end"
+                            android:textAlignment="viewEnd"
+                            android:textColor="@color/black"
+                            android:textSize="23sp"
+                            tools:text="356" />
+
+                        <ImageView
+                            android:id="@+id/arrow0"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginHorizontal="15dp"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_arrow_forward" />
+                    </RelativeLayout>
+
+                    <!--                    <RelativeLayout-->
+                    <!--                        android:id="@+id/bankAccount"-->
+                    <!--                        android:layout_width="wrap_content"-->
+                    <!--                        android:layout_height="72dp"-->
+                    <!--                        android:layout_marginStart="20dp"-->
+                    <!--                        android:layout_marginTop="15dp"-->
+                    <!--                        android:layout_marginEnd="20dp"-->
+                    <!--                        android:layout_marginBottom="21dp"-->
+                    <!--                        android:layout_weight="1"-->
+                    <!--                        android:background="@drawable/background_my_profile_items"-->
+                    <!--                        android:elevation="@dimen/elevation_5">-->
+
+                    <!--                        <com.google.android.material.textview.MaterialTextView-->
+                    <!--                            android:layout_width="wrap_content"-->
+                    <!--                            android:layout_height="wrap_content"-->
+                    <!--                            android:layout_centerVertical="true"-->
+                    <!--                            android:layout_marginStart="15dp"-->
+                    <!--                            android:drawableStart="@drawable/ic_bank_building"-->
+                    <!--                            android:drawablePadding="14dp"-->
+                    <!--                            android:gravity="center"-->
+                    <!--                            android:text="@string/bank_accounts"-->
+                    <!--                            android:textAlignment="viewStart"-->
+                    <!--                            android:textColor="@color/black"-->
+                    <!--                            android:textSize="@dimen/text_size_15_desc"-->
+                    <!--                            android:textStyle="bold"-->
+                    <!--                            tools:ignore="RtlCompat" />-->
+                    <!--                    </RelativeLayout>-->
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/account_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/myProfile_box_layout"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:id="@+id/account_settings"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:fontFamily="@font/euclid_circular_medium"
+                        android:text="@string/account_setting"
+                        android:textAlignment="viewStart"
+                        android:textColor="#656565"
+                        android:textSize="17sp" />
+
+                    <RelativeLayout
+                        android:id="@+id/business_details_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/account_settings"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="31dp"
+                        android:layout_marginEnd="25dp"
+                        android:background="@color/white">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/business_details"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:drawableStart="@drawable/ic_business_details"
+                            android:drawablePadding="20dp"
+                            android:text="@string/business_details"
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/black"
+                            android:textSize="17sp"
+                            android:textStyle="normal" />
+
+                        <ImageView
+                            android:id="@+id/arrow1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:src="@drawable/ic_arrow_forward" />
+
+                        <View
+                            android:id="@+id/view0"
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:layout_below="@id/business_details"
+                            android:layout_marginTop="20dp"
+                            android:background="@drawable/view_background" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/featured_bidding_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/business_details_layout"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="25dp"
+                        android:background="@color/white">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/featured_bidding"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:drawableStart="@drawable/ic_featured_bidding"
+                            android:drawablePadding="20dp"
+                            android:text="@string/featured_biddings"
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/black"
+                            android:textSize="17sp"
+                            android:textStyle="normal" />
+
+                        <ImageView
+                            android:id="@+id/arrow2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:src="@drawable/ic_arrow_forward" />
+
+                        <View
+                            android:id="@+id/views"
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:layout_below="@id/featured_bidding"
+                            android:layout_marginTop="20dp"
+                            android:background="@drawable/view_background" />
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/about_green_house_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/featured_bidding_layout"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="25dp"
+                        android:background="@color/white">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/about_green_house"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:drawableStart="@drawable/ic_about_green_house"
+                            android:drawablePadding="20dp"
+                            android:text="@string/about_green_house"
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/black"
+                            android:textSize="17sp"
+                            android:textStyle="normal" />
+
+                        <ImageView
+                            android:id="@+id/arrow3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:src="@drawable/ic_arrow_forward" />
+
+                        <View
+                            android:id="@+id/view1"
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:layout_below="@id/about_green_house"
+                            android:layout_marginTop="20dp"
+                            android:background="@drawable/view_background" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/change_password_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/about_green_house_layout"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="25dp"
+                        android:background="@color/white">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/change_password"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:drawableStart="@drawable/ic_password"
+                            android:drawablePadding="20dp"
+                            android:text="@string/change_password"
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/black"
+                            android:textSize="17sp"
+                            android:textStyle="normal" />
+
+                        <ImageView
+                            android:id="@+id/arrow4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:src="@drawable/ic_arrow_forward" />
+
+                        <View
+                            android:id="@+id/view2"
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:layout_below="@id/change_password"
+                            android:layout_marginTop="20dp"
+                            android:background="@drawable/view_background" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/myAddress_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/change_password_layout"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="25dp"
+                        android:background="@color/white">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/my_address"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:drawableStart="@drawable/ic_location"
+                            android:drawablePadding="20dp"
+                            android:text="@string/my_address"
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/black"
+                            android:textSize="17sp"
+                            android:textStyle="normal" />
+
+                        <ImageView
+                            android:id="@+id/arrow5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:src="@drawable/ic_arrow_forward" />
+
+                        <View
+                            android:id="@+id/view4"
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:layout_below="@id/my_address"
+                            android:layout_marginTop="20dp"
+                            android:background="@drawable/view_background" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/change_language_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/myAddress_layout"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="25dp"
+                        android:background="@color/white">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/change_language"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:drawableStart="@drawable/ic_changelanguage"
+                            android:drawablePadding="20dp"
+                            android:text="@string/change_language"
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/black"
+                            android:textSize="17sp"
+                            android:textStyle="normal" />
+
+                        <ImageView
+                            android:id="@+id/arrow6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:src="@drawable/ic_arrow_forward" />
+
+                        <View
+                            android:id="@+id/view5"
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:layout_below="@id/change_language"
+                            android:layout_marginTop="20dp"
+                            android:background="@color/white" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/support_legel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/change_language_layout"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/support_legal"
+                        android:textColor="#656565"
+                        android:textSize="17sp"
+                        android:textStyle="normal" />
+
+                    <RelativeLayout
+                        android:id="@+id/FAQ_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/support_legel"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="31dp"
+                        android:layout_marginEnd="25dp"
+                        android:background="@color/white">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/faq"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:drawableStart="@drawable/ic_faq_20_20"
+                            android:drawablePadding="20dp"
+                            android:text="@string/faq_s"
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/black"
+                            android:textSize="17sp"
+                            android:textStyle="normal" />
+
+                        <ImageView
+                            android:id="@+id/arrow7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:src="@drawable/ic_arrow_forward" />
+
+                        <View
+                            android:id="@+id/view7"
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:layout_below="@id/faq"
+                            android:layout_marginTop="20dp"
+                            android:background="@drawable/view_background" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/helpSupport_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/FAQ_layout"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="25dp"
+                        android:background="@color/white">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/help_support"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:drawableStart="@drawable/ic_help_support"
+                            android:drawablePadding="20dp"
+                            android:text="@string/help_and_support"
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/black"
+                            android:textSize="17sp"
+                            android:textStyle="normal" />
+
+                        <ImageView
+                            android:id="@+id/arrow8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:src="@drawable/ic_arrow_forward" />
+
+                        <View
+                            android:id="@+id/view8"
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:layout_below="@id/help_support"
+                            android:layout_marginTop="20dp"
+                            android:background="@drawable/view_background" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/privacyPolicy_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/helpSupport_layout"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="25dp"
+                        android:background="@color/white">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/privacy_policy"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:drawableStart="@drawable/ic_privacy_policy_18_20"
+                            android:drawablePadding="20dp"
+                            android:text="@string/privacy_policy_main"
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/black"
+                            android:textSize="17sp"
+                            android:textStyle="normal" />
+
+                        <ImageView
+                            android:id="@+id/arrow9"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:src="@drawable/ic_arrow_forward" />
+
+                        <View
+                            android:id="@+id/view9"
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:layout_below="@id/privacy_policy"
+                            android:layout_marginTop="20dp"
+                            android:background="@drawable/view_background" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/termscondition_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/privacyPolicy_layout"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="25dp"
+                        android:background="@color/white">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/termCondition"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:drawableStart="@drawable/ic_term_condition_18_22"
+                            android:drawablePadding="20dp"
+                            android:text="@string/term_condition_main"
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/black"
+                            android:textSize="17sp"
+                            android:textStyle="normal" />
+
+                        <ImageView
+                            android:id="@+id/arrow10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:src="@drawable/ic_arrow_forward" />
+
+                        <View
+                            android:id="@+id/view10"
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:layout_below="@id/termCondition"
+                            android:layout_marginTop="20dp"
+                            android:background="@drawable/view_background" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/delete_account_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/termscondition_layout"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="25dp"
+                        android:background="@color/white">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/delete_account"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:drawableStart="@drawable/delete_account_ic"
+                            android:drawablePadding="20dp"
+                            android:text="@string/delete_account"
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/black"
+                            android:textSize="17sp"
+                            android:textStyle="normal" />
+
+                        <ImageView
+                            android:id="@+id/arrow11"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:src="@drawable/ic_arrow_forward" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/logoutButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/button_height_75"
+                        android:layout_below="@id/delete_account_layout"
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="15dp"
+                        android:background="@drawable/border_logout"
+                        android:elevation="5dp">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:drawableStart="@drawable/ic_logout_btn"
+                            android:drawablePadding="12dp"
+                            android:text="@string/logout"
+                            android:textColor="@color/black"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                </RelativeLayout>
+            </RelativeLayout>
+        </ScrollView>
+
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="addressModel"
+            type="com.ripenapps.greenhouse.datamodels.biddermodel.MyAddressesModel" />
+    </data>
+
+    <RelativeLayout
+        android:paddingTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ic_map_pin"
+            android:layout_marginTop="1dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_map_pin" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/id_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@id/ic_map_pin"
+            android:text="@{addressModel.userName}"
+            android:textAlignment="viewStart"
+            android:textColor="@color/black"
+            android:textSize="@dimen/name_size_17"
+            android:textStyle="bold"
+            tools:text="@string/albert_flores" />
+
+        <View
+            android:id="@+id/view_2dp"
+            android:layout_width="2dp"
+            android:layout_height="15dp"
+            android:layout_marginHorizontal="4dp"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@id/id_user_name"
+            android:background="@color/black" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/id_user_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_toEndOf="@id/view_2dp"
+            android:text="@{addressModel.userNumber}"
+            android:textAlignment="viewStart"
+            android:textColor="@color/black"
+            android:textSize="@dimen/number_size_15"
+            android:textStyle="normal"
+            tools:text="@string/_919999999999" />
+
+        <ImageView
+            android:id="@+id/id_delete_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:paddingVertical="7dp"
+            android:paddingHorizontal="25dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/ic_delete_bin" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/id_user_address_line1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/id_user_name"
+            android:layout_marginStart="34dp"
+            android:layout_marginTop="6dp"
+            android:text="@{addressModel.userAddress1}"
+            android:textAlignment="viewStart"
+            android:textColor="#515151"
+            android:textSize="@dimen/address_size_14"
+            android:textStyle="normal"
+            tools:text="@string/address_line1" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/id_user_address_line2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/id_user_address_line1"
+            android:layout_marginStart="34dp"
+            android:layout_marginTop="6dp"
+            android:text="@{addressModel.userAddress2}"
+            android:textAlignment="viewStart"
+            android:textColor="#515151"
+            android:textSize="@dimen/address_size_14"
+            android:textStyle="normal"
+            tools:text="@string/address_line2" />
+
+        <RelativeLayout
+            android:id="@+id/btn_edit_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/id_user_address_line2"
+            android:layout_marginStart="34dp"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/background_edit_button"
+            android:paddingHorizontal="17dp"
+            android:paddingVertical="8dp">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/edit"
+                android:textAlignment="center"
+                android:textColor="#28B17B"
+                android:textSize="@dimen/address_size_14"
+                android:textStyle="normal" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/btn_default_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/id_user_address_line2"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="14dp"
+            android:layout_toEndOf="@id/btn_edit_address"
+            android:background="@drawable/background_edit_button"
+            android:paddingHorizontal="17dp"
+            android:paddingVertical="8dp">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_mark_as_default"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/mark_as_default"
+                android:textAlignment="center"
+                android:textColor="#131313"
+                android:textSize="@dimen/address_size_14"
+                android:textStyle="normal" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/btn_default_address"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="15dp"
+            android:background="#EDEDED" />
+
+    </RelativeLayout>
+</layout>

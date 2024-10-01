@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:fitsSystemWindows="true"
+        tools:context=".screen.SignIn">
+
+        <ImageView
+            android:id="@+id/idGif"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:elevation="10dp" />
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/screen_background" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/footer_layout"
+            android:layout_marginBottom="10dp"
+            android:fillViewport="true"
+            android:overScrollMode="never">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <ImageView
+                    android:id="@+id/logo_company_signin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="21dp"
+                    android:layout_marginTop="66dp"
+                    android:src="@drawable/green_house_logo_large" />
+
+                <com.ripenapps.greenhouse.utills.CustomInputNumberLayout
+                    android:id="@+id/edit_mobile_num_signin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/logo_company_signin"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="38dp" />
+
+
+                <com.ripenapps.greenhouse.utills.CustomInputLayout
+                    android:id="@+id/edit_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/edit_mobile_num_signin"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="16dp" />
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/id_forgot_password"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/edit_password"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="25dp"
+                    android:layout_marginBottom="50dp"
+                    android:paddingVertical="10dp"
+                    android:text="@string/forgot_pass"
+                    android:textAlignment="viewEnd"
+                    android:textColor="#000000"
+                    android:textSize="15sp" />
+
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/footer_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:orientation="vertical">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_sign_in"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height_75"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginBottom="@dimen/dimen10dp"
+                android:backgroundTint="#DCE0DF"
+                android:fontFamily="@font/euclid_circular_medium"
+                android:text="@string/btn_sign_in"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/button_text_size_17"
+                app:cornerRadius="10dp" />
+
+            <View
+                android:id="@+id/view_btn"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#80D9D9D9" />
+
+            <LinearLayout
+                android:id="@+id/user_registration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="15dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="6dp"
+                    android:text="@string/new_user"
+                    android:textAlignment="viewEnd"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/id_register_here"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/euclid_circular_medium"
+                    android:paddingVertical="10dp"
+                    android:text="@string/register_here"
+                    android:textColor="#28B17B"
+                    android:textColorLink="#28B17B"
+                    android:textSize="15sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</layout>

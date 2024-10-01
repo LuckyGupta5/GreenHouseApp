@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="ongoingFeatureModel"
+            type="com.ripenapps.greenhouse.datamodels.sellermodel.OnGoingFeatureBiddingModel" />
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/seller_my_bids"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dimen_15"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/ebebeb_border"
+        android:elevation="@dimen/elevation_5">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/veg_img"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginVertical="15dp"
+            android:layout_marginStart="15dp"
+            android:scaleType="centerCrop"
+            app:shapeAppearanceOverlay="@style/vegetableImageBid"
+            tools:src="@drawable/cauliflowermybids" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/veg_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="18dp"
+            android:layout_toEndOf="@id/veg_img"
+            android:fontFamily="@font/euclid_circular_semi_bold"
+            android:maxLength="15"
+            android:maxLines="1"
+            android:text="@{ongoingFeatureModel.subCategoryName}"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/name_size_17"
+            tools:text="@string/cauliflower" />
+
+        <RelativeLayout
+            android:id="@+id/idNameCard"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="@dimen/dimen_15"
+            android:background="@drawable/positionborder">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/position"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/euclid_circular_semi_bold"
+                android:gravity="center"
+                android:text="@{ongoingFeatureModel.position}"
+                android:textAlignment="center"
+                android:textColor="@color/greenhousetheme"
+                android:textSize="15sp"
+                android:textStyle="normal"
+                tools:text="@string/_1_" />
+
+        </RelativeLayout>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/veg_text"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="6dp"
+            android:layout_toEndOf="@id/veg_img"
+            android:drawableStart="@drawable/map_pin"
+            android:drawablePadding="3dp"
+            android:ellipsize="end"
+            android:maxLength="14"
+            android:maxLines="2"
+            android:text="@{ongoingFeatureModel.location}"
+            android:textColor="#5B5B5B"
+            android:textSize="@dimen/resend_code_size13"
+            android:textStyle="normal"
+            tools:text="riyadh_sa" />
+
+        <ImageView
+            android:id="@+id/view_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/veg_text"
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="12dp"
+            android:layout_toEndOf="@id/location"
+            android:src="@drawable/ellipse_18" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/bids_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/veg_text"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@id/view_1"
+            android:drawablePadding="3dp"
+            android:maxLength="10"
+            android:maxLines="2"
+            android:text="@{ongoingFeatureModel.bids}"
+            android:textColor="#5B5B5B"
+            android:textSize="@dimen/resend_code_size13"
+            android:textStyle="normal"
+            tools:text="2_bids" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/item_weight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/location"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@id/veg_img"
+            android:fontFamily="@font/euclid_circular_medium"
+            android:maxLength="10"
+            android:maxLines="2"
+            android:text="@{ongoingFeatureModel.weight}"
+            android:textAlignment="center"
+            android:textColor="#5F5F5F"
+            android:textSize="13sp"
+            tools:text="100_kg" />
+
+        <ImageView
+            android:id="@+id/view_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/location"
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="12dp"
+            android:layout_toEndOf="@id/item_weight"
+            android:src="@drawable/ellipse_18" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/location"
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@id/view_img"
+            android:fontFamily="@font/euclid_circular_medium"
+            android:text="@{ongoingFeatureModel.time}"
+            android:textColor="@color/red"
+            android:textSize="14sp"
+            tools:text="1_h_30_m_left" />
+
+
+        <View
+            android:id="@+id/view_ebebeb"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/time"
+            android:layout_marginTop="@dimen/dimen10dp"
+            android:background="#EBEBEB" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/view_ebebeb"
+            android:layout_marginVertical="13dp"
+            android:layout_marginStart="12dp"
+            android:fontFamily="@font/euclid_circular_medium"
+            android:text="@string/your_bid"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_15_desc" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/view_ebebeb"
+            android:layout_alignParentEnd="true"
+            android:layout_marginVertical="13dp"
+            android:layout_marginEnd="15dp"
+            android:fontFamily="@font/euclid_circular_medium"
+            android:maxLength="10"
+            android:maxLines="2"
+            android:text="@{ongoingFeatureModel.bidPrice}"
+            android:textColor="#28B17B"
+            android:textSize="@dimen/text_size_15_desc"
+            tools:text="aed_30_15" />
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:clickable="true"
+        android:focusable="true"
+        tools:context=".fragment.sellerfragemnt.SellerHomeFragment">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/screen_background" />
+
+        <RelativeLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/green_house_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="22dp"
+                android:layout_marginEnd="20dp"
+                android:layout_toStartOf="@id/wallet_box"
+                android:paddingVertical="6dp"
+                android:scaleType="fitStart"
+                android:src="@drawable/green_house_logo" />
+
+            <RelativeLayout
+                android:id="@+id/wallet_box"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginTop="34dp"
+                android:layout_marginEnd="17dp"
+                android:layout_toStartOf="@id/ic_notification"
+                android:background="@drawable/wallet_border">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/homeWallet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginHorizontal="5dp"
+                    android:drawableStart="@drawable/ic_wallet"
+                    android:drawablePadding="7.05dp"
+                    android:maxLines="1"
+                    android:text="@string/_0_00_"
+                    android:textAlignment="center"
+                    android:textColor="@color/greenhousetheme"
+                    android:textSize="15sp"
+                    android:textStyle="normal" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/ic_notification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="34dp"
+                android:layout_marginEnd="25dp"
+                android:src="@drawable/notification" />
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:id="@+id/date_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/header"
+            android:layout_centerHorizontal="true"
+            android:layout_marginHorizontal="@dimen/dimen_15"
+            android:layout_marginTop="16dp"
+            android:visibility="visible">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/start_date_text"
+                android:layout_width="135dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/ededed_border"
+                android:drawableEnd="@drawable/ic_calendar_black_20"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="15dp"
+                android:text="@string/start_date"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_15_desc"
+                android:textStyle="bold" />
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/end_date_text"
+                android:layout_width="135dp"
+                android:layout_height="40dp"
+                android:layout_marginHorizontal="@dimen/dimen_15"
+                android:layout_weight="1"
+                android:background="@drawable/ededed_border"
+                android:drawableEnd="@drawable/ic_calendar_black_20"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="15dp"
+                android:text="@string/end_date"
+                android:textColor="@color/black"
+                android:textSize="@dimen/number_size_15"
+                android:textStyle="bold" />
+
+
+            <ImageView
+                android:id="@+id/seller_home_filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/group_221350" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/select_category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/date_layout"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="@dimen/dimen_20"
+            android:layout_marginBottom="@dimen/dimen10dp"
+            android:gravity="center"
+            android:visibility="visible">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/vegetable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableStart="@drawable/rectangle_70026"
+                android:drawablePadding="9dp"
+                android:text="@string/vegetables"
+                android:textAlignment="viewStart"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/fruits"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_weight="1"
+                android:drawableStart="@drawable/rectangle_70026__1_"
+                android:drawablePadding="9dp"
+                android:text="@string/fruits"
+                android:textAlignment="viewStart"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/dates"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_weight="1"
+                android:drawableStart="@drawable/rectangle_70026__2_"
+                android:drawablePadding="9dp"
+                android:text="@string/dates"
+                android:textAlignment="viewStart"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/idRefreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/select_category"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/select_category"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="19dp">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/revenue_chart"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:fontFamily="@font/euclid_circular_medium"
+                        android:text="@string/revenue_chart"
+                        android:textColor="@color/black"
+                        android:textSize="19sp" />
+
+                    <com.github.mikephil.charting.charts.CombinedChart
+                        android:id="@+id/revenue_chart_data"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:layout_below="@id/revenue_chart"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginHorizontal="15dp"
+                        android:layout_marginTop="16dp"
+                        android:visibility="visible" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/booking_chart_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/revenue_chart_data"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="19dp"
+                        android:fontFamily="@font/euclid_circular_medium"
+                        android:text="@string/booking_chart"
+                        android:textColor="@color/black"
+                        android:textSize="19sp" />
+
+                    <com.github.mikephil.charting.charts.LineChart
+                        android:id="@+id/booking_chart"
+                        android:layout_width="match_parent"
+                        android:layout_height="290dp"
+                        android:layout_below="@id/booking_chart_text"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginHorizontal="15dp" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/comparision_chart"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/booking_chart"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="19dp"
+                        android:fontFamily="@font/euclid_circular_medium"
+                        android:text="@string/production_comparison"
+                        android:textColor="@color/black"
+                        android:textSize="19sp" />
+
+                    <com.github.mikephil.charting.charts.PieChart
+                        android:id="@+id/pie_chart"
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:layout_below="@id/comparision_chart"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginHorizontal="15dp"
+                        android:layout_marginBottom="20dp" />
+                </RelativeLayout>
+            </ScrollView>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <ImageView
+            android:id="@+id/placeHolder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_no_data_placeholder"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/headingPlaceHolder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/placeHolder"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/euclid_circular_medium"
+            android:text="@string/no_data_found"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="@dimen/name_size_17"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/placeHolderDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/headingPlaceHolder"
+            android:layout_marginHorizontal="66dp"
+            android:layout_marginTop="8dp"
+            android:lineSpacingExtra="6sp"
+            android:text="@string/no_data_placeholder_desc"
+            android:textAlignment="center"
+            android:textColor="#494949"
+            android:textSize="@dimen/text_size_15_desc"
+            android:textStyle="normal"
+            android:visibility="gone" />
+        <include
+            android:id="@+id/sellerHomeShimmer"
+            layout="@layout/seller_home_fragment_shimmer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/select_category"
+            android:layout_centerHorizontal="true"
+            android:visibility="visible"
+            android:layout_marginTop="28dp" />
+    </RelativeLayout>
+</layout>

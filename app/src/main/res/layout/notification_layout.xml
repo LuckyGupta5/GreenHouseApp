@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="notificationModel"
+            type="com.ripenapps.greenhouse.datamodels.biddermodel.NotificationModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp">
+
+        <TextView
+            android:id="@+id/notificationDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:fontFamily="@font/euclid_circular_medium"
+            android:text="@{notificationModel.formattedDate}"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            tools:text="30 june 2024" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/notificationDate"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dimen_20">
+
+            <ImageView
+                android:id="@+id/notificationIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:src="@drawable/ic_notification" />
+
+            <TextView
+                android:id="@+id/notification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toEndOf="@id/notificationIcon"
+                android:fontFamily="@font/euclid_circular_medium"
+                android:lineSpacingExtra="3sp"
+                android:text="@{notificationModel.notification}"
+                android:textAlignment="viewStart"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_15_desc"
+                tools:text="@string/notification_title" />
+
+            <TextView
+                android:id="@+id/notificationDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/notification"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toEndOf="@id/notificationIcon"
+                android:lineSpacingExtra="3sp"
+                android:text="@{notificationModel.message}"
+                android:textAlignment="viewStart"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                tools:text="@string/notification_desc" />
+
+
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/notificationDescription"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="@dimen/dimen_15"
+                android:layout_toEndOf="@id/notificationIcon"
+                android:text="@{notificationModel.time}"
+                android:textAlignment="viewStart"
+                android:textColor="#797979"
+                android:textSize="11sp"
+                android:textStyle="normal"
+                tools:text="12:50 PM" />
+
+            <LinearLayout
+                android:id="@+id/buttonLayer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/time"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/rejectButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/button_height_75"
+                    android:layout_marginStart="@dimen/dimen_15"
+                    android:layout_marginTop="16dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/white"
+                    android:text="@string/reject"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    app:cornerRadius="@dimen/dimen10dp"
+                    app:strokeColor="#CFCFCF"
+                    app:strokeWidth="1dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/acceptButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/button_height_75"
+                    android:layout_marginHorizontal="@dimen/dimen_15"
+                    android:layout_marginTop="16dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/greenhousetheme"
+                    android:elevation="@dimen/elevation_5"
+                    android:text="@string/accept"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    app:cornerRadius="@dimen/dimen10dp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/buttonLayer"
+                android:layout_marginStart="64dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="15dp"
+                android:background="#1C707070" />
+        </RelativeLayout>
+    </RelativeLayout>
+</layout>

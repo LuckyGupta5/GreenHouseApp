@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="itemSubCategoryModel"
+            type="com.ripenapps.greenhouse.datamodels.sellermodel.SelectCategoryModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_subcategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{itemSubCategoryModel.text}"
+            tools:text="@string/cauliflower"
+            android:textSize="19sp"
+            android:textStyle="normal"
+            android:textAlignment="viewStart"
+            android:textColor="@color/black"
+            android:paddingVertical="@dimen/dimen10dp"
+            android:fontFamily="@font/euclid_circular_light"/>
+
+        <View
+            android:id="@+id/view3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/text_subcategory"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"
+            android:background="#F5F5F5" />
+
+    </RelativeLayout>
+</layout>

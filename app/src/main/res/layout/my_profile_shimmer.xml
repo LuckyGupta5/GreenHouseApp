@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/myProfileMainShimmer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/user_name_id"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:layout_marginHorizontal="@dimen/dimen_20"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/ebebeb_border"
+                android:backgroundTint="@color/gray" />
+
+            <TextView
+                android:id="@+id/user_name_myProfile"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:layout_marginHorizontal="@dimen/dimen_20"
+                android:layout_marginTop="@dimen/dimen_15"
+                android:background="@drawable/ebebeb_border"
+                android:backgroundTint="@color/gray" />
+
+            <TextView
+                android:id="@+id/edit_mobile_num_signin"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:layout_marginHorizontal="@dimen/dimen_20"
+                android:layout_marginTop="@dimen/dimen_15"
+                android:background="@drawable/ebebeb_border"
+                android:backgroundTint="@color/gray" />
+
+            <TextView
+                android:id="@+id/user_mail_address"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:layout_marginHorizontal="@dimen/dimen_20"
+                android:layout_marginTop="@dimen/dimen_15"
+                android:background="@drawable/ebebeb_border"
+                android:backgroundTint="@color/gray" />
+
+            <TextView
+                android:id="@+id/tax_resgistration_number"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:layout_marginHorizontal="@dimen/dimen_20"
+                android:layout_marginTop="@dimen/dimen_15"
+                android:layout_marginBottom="40dp"
+                android:background="@drawable/ebebeb_border"
+                android:backgroundTint="@color/gray" />
+
+        </LinearLayout>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+</layout>

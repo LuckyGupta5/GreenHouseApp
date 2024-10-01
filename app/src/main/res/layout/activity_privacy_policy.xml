@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".screen.PrivacyPolicy">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/screen_background"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/security_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="26dp"
+            android:src="@drawable/ic_privacy_policy"
+            tools:ignore="ContentDescription" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/privacy_policy_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="26dp"
+            android:layout_toEndOf="@+id/security_img"
+            android:text="@string/privacy_policy_main"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_23_title"
+            android:textStyle="bold"
+            tools:ignore="RelativeOverlap" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/last_updated_privacy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/privacy_policy_text"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="2dp"
+            android:layout_toEndOf="@id/security_img"
+            android:text="@string/last_updated_on_3_dec_2023"
+            android:textAlignment="center"
+            android:textColor="#5F5F5F"
+            android:textSize="@dimen/resend_code_size13"
+            android:textStyle="normal" />
+
+        <ImageView
+            android:id="@+id/close_privacy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="26dp"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/ic_cross_white_bg"
+            tools:ignore="ContentDescription" />
+
+        <ProgressBar
+            android:id="@+id/pdBarPrivacy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:elevation="@dimen/elevation_5"
+            android:visibility="visible" />
+
+        <WebView
+            android:id="@+id/privacyWebView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/close_privacy"
+            android:background="@android:color/transparent"
+            android:layout_marginTop="24dp" />
+    </RelativeLayout>
+</layout>

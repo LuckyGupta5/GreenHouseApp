@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="myBidModel"
+            type="com.ripenapps.greenhouse.datamodels.biddermodel.MyBidModel" />
+
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/seller_my_bids"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/ebebeb_border">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/bidStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="11dp"
+            android:layout_marginTop="10dp"
+            android:drawableStart="@drawable/ic_bid_green_small"
+            android:drawablePadding="6dp"
+            android:fontFamily="@font/euclid_circular_medium"
+            android:textAlignment="viewStart"
+            android:textColor="@color/greenhousetheme"
+            android:textSize="@dimen/address_size_14"
+            tools:text="@string/you_won" />
+
+        <TextView
+            android:id="@+id/timer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="15dp"
+            android:textAlignment="viewEnd"
+            android:textColor="@color/red"
+            android:textSize="@dimen/resend_code_size13"
+            tools:text="20_00_min_left" />
+
+        <View
+            android:id="@+id/view100"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/bidStatus"
+            android:layout_marginTop="9dp"
+            android:background="#EBEBEB" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/productImage"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_below="@id/view100"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="18dp"
+            android:scaleType="centerCrop"
+            app:shapeAppearanceOverlay="@style/vegetableImageBid"
+            tools:src="@drawable/vegieimagemybid" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/view100"
+            android:layout_marginEnd="@dimen/dimen_20"
+            android:layout_toStartOf="@id/sar"
+            android:layout_toEndOf="@id/productImage">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/productName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/euclid_circular_medium"
+                android:text="@{myBidModel.productName}"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/name_size_17"
+                tools:text="@string/cauliflower" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/productName"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginEnd="@dimen/dimen10dp"
+                android:drawableStart="@drawable/map_pin"
+                android:drawablePadding="3dp"
+                android:ellipsize="end"
+                android:maxWidth="220dp"
+                android:maxLines="1"
+                android:paddingEnd="20dp"
+                android:text="@{myBidModel.address}"
+                android:textAlignment="viewStart"
+                android:textColor="#5B5B5B"
+                android:textSize="@dimen/resend_code_size13"
+                tools:text="riyadh_sa" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/item_weight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/location"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="5dp"
+                android:text="@{myBidModel.productWeight}"
+                android:textAlignment="center"
+                android:textColor="#5F5F5F"
+                android:textSize="13sp"
+                tools:text="100kg" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/sar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/view100"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="35dp"
+            android:layout_marginEnd="15dp"
+            android:text="@string/sar"
+            android:textAlignment="center"
+            android:textColor="#707070"
+            android:textSize="@dimen/resend_code_size13"
+            android:fontFamily="@font/euclid_circular_medium" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/sar"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="15dp"
+            android:fontFamily="@font/euclid_circular_medium"
+            android:text="@{myBidModel.myBidAmount}"
+            android:textAlignment="viewEnd"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            tools:text="25_99" />
+
+        <View
+            android:id="@+id/view_ebebeb"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/productImage"
+            android:layout_marginTop="12dp"
+            android:background="#EBEBEB" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/view_ebebeb"
+            android:layout_marginVertical="13dp"
+            android:layout_marginStart="12dp"
+            android:fontFamily="@font/euclid_circular_medium"
+            android:text="@string/highest_bid"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_15_desc" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/view_ebebeb"
+            android:layout_alignParentEnd="true"
+            android:layout_marginVertical="13dp"
+            android:layout_marginEnd="15dp"
+            android:fontFamily="@font/euclid_circular_medium"
+            android:text="@{myBidModel.productHighestBid}"
+            android:textColor="#28B17B"
+            android:textSize="@dimen/text_size_15_desc"
+            tools:text="sar_29_50" />
+    </RelativeLayout>
+</layout>

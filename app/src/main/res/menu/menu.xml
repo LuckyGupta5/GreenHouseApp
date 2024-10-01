@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_myBids"
+        android:icon="@drawable/mybids_green_icons"
+        android:background="@color/gray"
+        android:title="@string/my_bids" />
+
+    <item
+        android:id="@+id/nav_Search"
+        android:icon="@drawable/icon_search"
+        android:title="@string/search" />
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/icon_home"
+        android:title="@string/home" />
+
+    <item
+        android:id="@+id/nav_Products"
+        android:icon="@drawable/icon_products"
+        android:title="@string/products" />
+    <item
+        android:id="@+id/nav_Profile"
+        android:icon="@drawable/icon_my_profile"
+        android:title="@string/profile" />
+
+
+</menu>

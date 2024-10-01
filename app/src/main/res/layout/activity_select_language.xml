@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#28B17B"
+        tools:context=".screen.SelectLanguage">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/lang_selection"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="100dp"
+            android:src="@drawable/application_logo" />
+
+        <RelativeLayout
+            android:id="@+id/lang_selection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/bg_lang_selection"
+            android:paddingHorizontal="20dp">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/select_lang_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="34dp"
+                android:text="@string/select_lang"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_23_title"
+                android:textStyle="bold" />
+
+
+            <RelativeLayout
+                android:id="@+id/englishLangCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/select_lang_title"
+                android:layout_centerHorizontal="true"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/border_select_language"
+                android:elevation="5dp">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/englishLangHeading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="21dp"
+                    android:layout_marginTop="22dp"
+                    android:fontFamily="@font/euclid_circular_medium"
+                    android:text="@string/english"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_19_subheading"
+                    android:textStyle="normal" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/englishLangHeading"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="21dp"
+                    android:layout_marginTop="17dp"
+                    android:layout_marginBottom="22dp"
+                    android:text="@string/english_desc"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_15_desc"
+                    android:textStyle="normal" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/btn_lang_english"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="20dp"
+                    android:src="@drawable/ic_lang_selected" />
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/arabicLangCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/englishLangCard"
+                android:layout_centerHorizontal="true"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/border_select_language"
+                android:elevation="5dp">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/arabicLangHeading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="21dp"
+                    android:layout_marginTop="22dp"
+                    android:fontFamily="@font/euclid_circular_medium"
+                    android:text="@string/arabic"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_19_subheading"
+                    android:textStyle="normal" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/arabicLangHeading"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="21dp"
+                    android:layout_marginTop="17dp"
+                    android:layout_marginBottom="22dp"
+                    android:text="@string/arabic_desc"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_15_desc"
+                    android:textStyle="normal" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/btn_lang_arabic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="20dp"
+                    android:src="@drawable/ic_lang_unselected" />
+
+            </RelativeLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_continue"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height_75"
+                android:layout_below="@id/arabicLangCard"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="55dp"
+                android:layout_marginBottom="@dimen/dimen_15"
+                android:backgroundTint="#28B17B"
+                android:elevation="10dp"
+                android:text="@string/btn_continue"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/button_text_size_17"
+                app:cornerRadius="10dp" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+</layout>

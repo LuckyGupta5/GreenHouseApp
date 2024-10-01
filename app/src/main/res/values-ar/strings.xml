@@ -1,0 +1,877 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="price_range_format">%1\$d - %2\$d</string>
+    <string name="app_name">قرين هاوس</string>
+    <string name="select_language">اختار اللغة</string>
+    <string name="title_activity_base">BaseActivity</string>
+    <!-- Bidder Flow-->
+
+    <!-- Select Language -->
+    <string name="select_lang">اختار اللغة</string>
+    <string name="english">English</string> <!-- no change in this-->
+    <string name="english_desc">Hello, I am John Doe!</string>  <!-- no change in this-->
+    <string name="arabic">Arabic</string>  <!-- no change in this-->
+    <string name="arabic_desc">مرحبًا، أنا جون دو!</string>
+    <string name="btn_continue">يكمل</string>
+    <string name="sar_has_been_freezed_from_your_wallet_it_will_be_deducted_once_you_won_the_auction_else_it_will_be_unfreezed">
+    تم تجميد مبلغ %1$s ريال سعودي من محفظتك. سيتم خصمه بمجرد فوزك بالمزاد، وإلا سيتم فك التجميد.
+</string>
+
+
+    <!--OnBoarding Screen1-->
+    <string name="auction">مزاد علني</string>
+    <string name="auction_title">اكتشف، تواصل، تبادل الآن</string>
+    <string name="auction_desc"> فتح باب المزاد اليوم</string>
+
+    <!-- OnBoarding Screen2-->
+    <string name="onBoard2_title2">اتاحة فرصك للوصول الى السوق السعودي</string>
+    <string name="onBoard2_desc2">تمكين عروضك واكتشف فرصًا لا حصر لها في السوق</string>
+
+    <!-- OnBoarding Screen3-->
+    <string name="onBoard3_title3">أموالك، من اهم أولوياتنا </string>
+    <string name="onBoard3_desc3">هنا تجد منتجاتك الزراعية أفضل قيمة لها</string>
+
+    <!--  Sign InActive Screen-->
+    <string name="green_house">قرين هاوس</string>
+    <string name="mobil_num_show">رقم الهاتف المحمول</string>
+    <string name="enter_mobil">ادخل رقم الجوال</string>
+    <string name="password">كلمة السر</string>
+    <string name="sign_in_forgot_pass">هل نسية كلمة المرور</string>
+    <string name="btn_sign_in">تسجيل الدخول</string>
+    <string name="new_user">مستخدم جديد </string>
+    <string name="register_here"><u>قم بالتسجيل هنا</u></string>
+
+    <!-- Forgot password InActive-->
+    <string name="forgot_pass">هل نسية كلمة المرور</string>
+    <string name="forgot_desc">ادخل رقم الجوال من اجل استعادة كلمة المرور</string>
+    <string name="send_verify_code">ارسال رمز التاكيد</string>
+    <string name="mobil_verify">تاكيد رقم الجوال </string>
+    <string name="mobil_verify_desc">لقد قمنا بارسال الرمز الى</string>
+    <string name="resend_code">اعادة ارسال الرمز خلال</string>
+    <string name="forgot_verify">تأكيد</string>
+
+    <!-- SignUp Mobile Verification  -->
+    <string name="reset_pass">استعادة كلمة المرور</string>
+    <string name="reset_desc">يجب ان تكون كلمة المرور الجديدة مختلفة عن كلمات المرور السابقة</string>
+    <string name="new_pass">كلمة مرور جديدة</string>
+    <string name="confirm_new_pass">تاكيد كلمة المرور الجديدة</string>
+    <string name="btn_save">حفظ</string>
+    <string name="signup_layout_title">هل انت</string>
+    <string name="bidder">مشتري</string>
+    <string name="seller">بائع</string>
+    <string name="signup_mobile_num">رقم الجوال</string>
+    <string name="signup_mobile_num_desc">سوف نقوم بإرسال رمز لمرة واحدة لرقم الجوال المسجل</string>
+    <string name="already_hav_account">هل لديك حساب مسبقا</string>
+
+    <!-- SignUp Mobile Verification Screen2  -->
+    <string name="signup_screen2_title2">هل أنت بائع؟</string>
+    <string name="complete_profile">ملف مكتمل</string>
+    <string name="enter_personal_detail">ادخل معلوماتك الشخصية</string>
+    <string name="full_name">الاسم الكامل</string>
+    <string name="email_address">البريد الالكتروني (اختياري)</string>
+    <string name="profile_pass">كلمة المرور</string>
+    <string name="profile_confirm_pass">تاكيد كلمة المرور</string>
+    <string name="terms_and_condition_privacy_policy">من خلال الاستمرار، فإنك توافق على كل ما لدينا<u><b>البنود و الظروف</b></u> و <u><b>سياسة الخصوصية.</b></u></string>
+    <string name="privacy_policy1"><u>سياسة الخصوصية.</u></string>
+    <string name="continue_word">يكمل</string>
+
+    <!-- Home -->
+    <string name="vegetables">خضروات</string>
+    <string name="dates">تمور</string>
+    <string name="fruits">فواكه</string>
+    <string name="featured_products">منتجات مميزة</string>
+    <string name="viewall">الاطلاع على الكل</string>
+    //show the view all of Featured Products
+
+    <!-- Notifications   -->
+    <string name="home">بيت</string>
+    <string name="notifications">إشعارات</string>
+    <string name="accept">يقبل</string>
+    <string name="reject">يرفض</string>
+
+    <!-- Search -->
+    <string name="search">يبحث</string>
+    <string name="search_desc">استكشف فئاتنا الجديدة للعثور على الفواكه والخضروات والتمور المباعة بالمزاد العلني من مختلف البائعين.</string>
+    <string name="top_search">أهم عمليات البحث</string>
+    <string name="top_search_cauliflower">قرنبيط</string>
+    <string name="new_listing">قوائم جديدة</string>
+    <string name="top_search_spinach">سبانخ</string>
+    <string name="top_search_view_more">عرض المزيد</string>
+    <string name="show_result_fruit">عرض النتائج ل</string>
+    <string name="all">الجميع</string>
+
+    <!-- Product Details -->
+    <string name="products">منتجات</string>
+    <string name="product_details_desc">استكشف فئاتنا الجديدة للعثور على الفواكه والخضروات والتمور المباعة بالمزاد العلني</string>
+    <string name="product_from_same_sellers">المنتج من نفس البائعين</string>
+    <string name="place_a_bid">تقديم العطاء</string>
+    <string name="highest_bid">اعلى مزايدة</string>
+
+    <!-- Account Blocked -->
+    <string name="account_blocked">حساب تم إغلاقه!</string>
+    <string name="account_blocked_desc">تم حظر الحساب بسبب استغلال سياسة الإلغاء. اتصل بالمساعدة والدعم.</string>
+    <string name="ok_got_it">حسنًا، فهمت!</string>
+
+    <!-- Place a Bid -->
+
+    <string name="place_Bid_title">ضع عرضك</string>
+    <string name="your_max_bid">محاولة الحد الأقصى الخاص بك</string>
+    <string name="btn_confirm_bid">تأكيد محاولة</string>
+
+
+    <!-- Confirm place a Bid -->
+    <string name="confirm_bid_title">لقد تم تقديم عرضك بنجاح</string>
+    <string name="confirm_bid_desc"> تم تجميده من محفظتك. سيتم خصمه بمجرد فوزك بالمزاد وإلا سيتم إلغاء تجميده</string>
+    <string name="change_bid">تغيير العطاء</string>
+
+    <!-- About Seller -->
+    <string name="about_seller">حول البائع</string>
+    <string name="reviews">التعليقات</string>
+    <string name="rating_reviews">التقييم والمراجعات</string>
+    <string name="view">عرض جميع التقييمات</string>
+
+    <!-- Best Sellers All -->
+
+    <string name="best_sellers">أفضل البائعين</string>
+
+    <!-- Sellers listing Sorting -->
+
+    <string name="sort_by">ترتيب حسب</string>
+    <string name="most_favourite">المفضل</string>
+    <string name="most_selling">الأكثر مبيعا</string>
+    <string name="nearest_seller">أقرب بائع</string>
+    <string name="highest_rating">أعلى تقييم</string>
+    <string name="lowest_rating">أدنى تقييم</string>
+    <string name="newly_listed">المدرجه حديثا</string>
+
+    <!-- My Bids -->
+    <string name="my_bids">المزايدة الخاص بك</string>
+    <string name="bid_in_process">المزايدة قيد المعالجة</string>
+    <string name="bid_in_process_desc">سيتم عرض المزاد قيد التشغيل هنا</string>
+    <string name="you_won">ربحت هذا المزاد</string>
+    <string name="you_lost">لقد خسرت هذا المزاد</string>
+
+    <!-- My Bids Filter -->
+    <string name="filter_by">مصنف بواسطة</string>
+    <string name="filter_Status">حالة</string>
+    <string name="status_won_auction">فاز بالمزاد</string>
+    <string name="status_loss_auction">المزاد المفقود</string>
+    <string name="filter_product_category">فئة المنتجات</string>
+    <string name="reset">إعادة ضبط</string>
+    <string name="apply">يتقدم</string>
+
+    <!-- Biding Details Won -->
+    <string name="congrats_won_auction">تهاني! ربحت هذا المزاد.</string>
+    <string name="order_time_remain">وقت الطلب المتبقي</string>
+    <string name="your_bid">مزايدتك</string>
+    <string name="quantity">كمية</string>
+    <string name="box_count">عدد صندوق</string>
+    <string name="box_height">ارتفاع</string>
+    <string name="box_length">طول</string>
+    <string name="box_width">عرض</string>
+    <string name="process_to_deliver">عملية التسليم</string>
+    <string name="bid_details_winning_bid">العرض الفائز</string>
+
+
+    <!-- Process to Deliver Inactive -->
+    <string name="shipping_method_title">طريقة الشحن</string>
+    <string name="shipping_method_desc">لديك 20 دقيقة. لتقديم هذا الطلب وإلا فسيتم إلغاؤه تلقائيًا.</string>
+    <string name="select_shipping_method">إختر طريقة الشحن</string>
+    <string name="price_details">تفاصيل الأسعار</string>
+    <string name="product_price">سعر المنتج</string>
+    <string name="value_add_tax">ضريبة القيمة المضافة</string>
+    <string name="total_price">السعر الكلي</string>
+    <string name="remaining_amount">المبلغ المتبقي الذي يجب دفعه هو</string>
+    <string name="please_click_place_order">من فضلك انقر على زر العنصر النائب لدفع المبلغ المتبقي وتقديم طلبك.</string>
+    <string name="btn_place_order">مكان الامر</string>
+    <string name="select_ship_method_pick_myself">سأختار بنفسي</string>
+
+
+    <!-- Order Placed Successfully -->
+    <string name="order_place_success">تم تقديم الطلب بنجاح!</string>
+    <string name="track_your_order">تهانينا! لقد تم تقديم طلباتك. يمكنك تتبع رقم طلبك</string>
+    <string name="btn_ok_continue">حسنًا، تابع</string>
+
+
+    <!-- Order not Placed  -->
+    <string name="order_not_placed">أُووبس! لم يتم تقديم الطلب!</string>
+    <string name="order_not_placed_desc">عذرًا، تعذرت معالجة طلبك. يرجى المحاولة مرة أخرى لاحقًا.</string>
+    <string name="btn_please_try_again">حاول مرة اخرى!</string>
+
+
+    <!-- Bidding Details Won Pick Myself  -->
+    <string name="view_all_details">الاطلاع على الكل</string>
+
+
+    <!-- Bidding Details Lost -->
+    <string name="bidding_details_loss">أُووبس! لقد خسرت هذا المزاد.</string>
+
+
+    <!-- Bidding Details in Progress -->
+    <string name="your_bidding_in_progress">المزايدة الخاصة بك في التقدم.</string>
+
+
+    <!-- Bidding Details Seller Request -->
+
+    <string name="unfilled_seller_request">طلب بائع أعلى عرض غير مكتمل</string>
+
+    <!-- Products Filter -->
+    <string name="products_filter_price_range">نطاق السعر</string>
+    <string name="products_filter_bid_clos_time_range">النطاق الزمني لإغلاق العطاء</string>
+    <string name="seller_rating">تقييمات البائع</string>
+    <string name="clear_all">امسح الكل</string>
+
+    <!-- My Profile -->
+    <string name="profile">حساب تعريفي</string>
+    <string name="my_profile">ملفي</string>
+    <string name="switch_to_seller">التبديل إلى البائع</string>
+    <string name="wallet">محفظة</string>
+    <string name="my_orders">طلباتي</string>
+    <string name="favourites">المفضلة</string>
+    <string name="account_setting">إعدادت الحساب</string>
+    <string name="about_green_house">عن البيت الأخضر</string>
+    <string name="change_password">تغيير كلمة المرور</string>
+    <string name="my_wishlist">قائمة امنياتي</string>
+    <string name="my_address">عناويني</string>
+    <string name="change_language">تغيير اللغة</string>
+    <string name="refer_and_earn">الرجوع وكسب</string>
+
+    <!-- Wallet  -->
+    <string name="total_balance">الرصيد الإجمالي</string>
+    <string name="wallet_term_condition">سيتم استخدام أموال المحافظ وفقًا لها<b><u> البنود و الظروف</u></b></string>
+    <string name="freezed_balance">رصيد متجمد</string>
+    <string name="available_balance">الرصيد المتوفر</string>
+    <string name="transaction_history">تاريخ المعاملات</string>
+
+    <!-- Place a Bid -->
+    <string name="add_money_to_wallet">إضافة المال إلى المحفظة</string>
+    <string name="aed_price">ريال سعودي</string>
+    <string name="btn_proceed_to_add">انتقل إلى إضافة</string>
+
+    <!-- Favourite Sellers -->
+    <string name="favourite_seller">البائعين المفضلين</string>
+    <string name="about_us">معلومات عنا</string>
+
+    <!-- Change Password -->
+    <string name="change_password_change_desc">يجب أن تكون كلمة المرور الجديدة مختلفة عن كلمات المرور السابقة</string>
+    <string name="update">تحديث</string>
+
+
+    <!-- My Address -->
+    <string name="add_new_address">+ إضافة عنوان جديد</string>
+
+    <!-- Change Language -->
+    <string name="hindi_lang">Hindi</string>
+    <string name="urdu_lang">Urdu</string>
+    <string name="urdu_desc">ہیلو، میں جان ڈو ہوں!</string>
+
+    <!-- FAQ -->
+    <string name="faq">أسئلة مكررة</string>
+    <string name="question_about">أسئلة حول</string>
+    <string name="getting_start">ابدء</string>
+    <string name="how_to_bidding">كيفية تقديم العطاءات</string>
+    <string name="top_questions">أهم الأسئلة</string>
+    <string name="faq_view_all">الاطلاع على الكل</string>
+
+    <!-- Help & Support -->
+    <string name="help_and_support">ساعد لدعم</string>
+    <string name="help_and_support_desc">ونحن سعداء أن نسمع منك. نحن متواجدون من الساعة 9 صباحًا حتى 7 مساءً من الاثنين إلى الجمعة.</string>
+    <string name="call_us">اتصل بنا</string>
+    <string name="email_us">ارسل لنا عبر البريد الإلكتروني</string>
+    <string name="view_ticket_history">عرض تاريخ التذاكر</string>
+    <string name="any_ques_or_remark">أي أسئلة أو ملاحظات؟ فقط اكتب لنا رسالة</string>
+    <string name="select_topic">حدد الموضوع</string>
+    <string name="write_here">اكتب هنا…</string>
+    <string name="submit">يُقدِّم</string>
+
+    <!-- Ticket History All -->
+    <string name="ticket_history">تاريخ التذاكر</string>
+    <string name="open">يفتح</string>
+    <string name="solved">تم حلها</string>
+
+    <!-- Ticket Card Details -->
+    <string name="case_details">تفاصيل الحالة</string>
+
+    <!-- Privacy Policy  and Term and Conditions -->
+    <string name="please_read_privacy_policy">يرجى قراءة سياسة الخصوصية هذه بعناية قبل استخدام التطبيق الذي يديره المزاد.</string>
+    <string name="privacy_policy_main">سياسة الخصوصية</string>
+    <string name="term_condition_main">البنود و الظروف</string>
+    <string name="please_read_carefully">يرجى قراءة هذه الشروط والأحكام بعناية قبل استخدام التطبيق الذي يديره المزاد.</string>
+
+    <!-- LogOut Popup -->
+    <string name="are_u_sure_want_logout">هل أنت متأكد أنك تريد تسجيل الخروج؟</string>
+    <string name="no_cancel">لا، إلغاء</string>
+    <string name="yes_logout">نعم، تسجيل الخروج</string>
+
+    <!-- My Orders Cancellation Reason -->
+    <string name="cancellation_reason">سبب الإلغاء</string>
+    <string name="cancellation_reason_desc">If you cancel this order, ريال سعودي xx will be charged as cancellation fees.</string>
+    <string name="change_mind">غيرت رأيي/لم تعد هناك حاجة إليها</string>
+    <string name="delivery_delay">تأخير التسليم</string>
+    <string name="shipping_cost_too_high">تكاليف الشحن مرتفعة للغاية</string>
+    <string name="delivery_issues">مشاكل العنوان أو التسليم</string>
+    <string name="others">آحرون</string>
+    <string name="others_write_reason_here">أكتب السبب هنا…</string>
+    <string name="go_back">عُد</string>
+    <string name="yes_cancel">نعم، إلغاء</string>
+
+    <!-- Order Details -->
+    <string name="order_details">تفاصيل الطلب</string>
+    <string name="order_status">حالة الطلب</string>
+    <string name="order_id_placeholder">ORDER ID #%1$d</string>
+    <string name="order_confirmed">تم تاكيد الطلب</string>
+    <string name="packed">معباه</string>
+    <string name="delivery">تم التوصيل</string>
+    <string name="cancel_order">الغاء الطلب</string>
+    <string name="shipping_details">تفاصيل الشحن</string>
+    <string name="order_pickup_address">عنوان الاستلام</string>
+    <string name="phone_number">رقم التليفون</string>
+    <string name="call_now">اتصل الان</string>
+    <string name="subtotal">المجموع الفرعي</string>
+    <string name="delivery_fees">رسوم التوصيل</string>
+    <string name="amount_paid">المبلغ المدفوع</string>
+    <string name="order_received">طلب وارد</string>
+    <string name="returned_order">أمر الإرجاع</string>
+    <string name="map_view"><u>عرض الخريطة</u></string>
+    <string name="track">مسار</string>
+    <string name="order_cancelled">تم الغاء الأمر او الطلب</string>
+    <!-- Order Details Help -->
+    <string name="active_conversations">المحادثات النشطة</string>
+    <string name="help_with">مساعدة في</string>
+    <string name="chat_with_us">دردش معنا</string>
+    <string name="chat_with_green_house">الدردشة مع البيت الأخضر</string>
+
+    <!--  Order Received Or Not Order Details  -->
+    <string name="are_u_confirm_receive_order">هل أنت متأكد من أنك تلقيت هذا الطلب؟</string>
+    <string name="yes_received">نعم تم الاستلام</string>
+    <string name="no_order_received">لا</string>
+
+    <!-- Why you want to return this order -->
+
+    <string name="why_u_want_return_order">لماذا تريد إرجاع هذا الطلب؟</string>
+    <string name="why_u_want_return_order_desc">اختر السبب الخاص بك لإعادة الطلب إذا كان صالحًا، فستحصل على كامل المبلغ وإلا سيتم فرض رسوم الإلغاء.</string>
+    <string name="yes_return">نعم العودة</string>
+
+
+    <!--  Order Details Cancelled -->
+    <string name="refund_details">تفاصيل استرداد الأموال</string>
+    <string name="cancellation_charges">رسوم الإلغاء</string>
+    <string name="total_amount_refund">إجمالي مبلغ الاسترداد</string>
+    <string name="added_to_your_source_account">تمت إضافتها إلى حسابك المصدر</string>
+
+    <!-- Order Details Returned -->
+    <string name="return_requested">طلب العودة</string>
+    <string name="out_for_pickup">خارج للالتقاط</string>
+    <string name="pickup_successful">تم الالتقاط بنجاح</string>
+    <string name="refund_initiated">بدأ استرداد الأموال</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="_966_256_859_7859">+966 256 859 7859</string>
+    <string name="mobile_number">رقم الهاتف المحمولr</string>
+    <string name="sign_in"><u>تسجيل الدخول</u></string>
+    <string name="email_tax_registration_number">أدخل رقم التسجيل الضريبي</string>
+    <string name="last_updated_on_3_dec_2023">آخر تحديث بتاريخ</string>
+    <string name="old_password">كلمة المرور القديمة</string>
+    <string name="albert_flores">Albert Flores</string>
+    <string name="_919999999999">+91 9999999999</string>
+    <string name="address_line1">Ulaya Dist., P.O.Box: 64214</string>
+    <string name="address_line2">Riyadh, Saudi Arabia 64214</string>
+    <string name="edit">يحرر</string>
+    <string name="mark_as_default">علامة كما الافتراضي</string>
+    <string name="are_you_delete_address">هل أنت متأكد أنك تريد حذف هذا العنوان؟</string>
+    <string name="yes_delete">نعم، احذف</string>
+    <string name="confirm_address">تأكيد العنوان</string>
+    <string name="ulaya_dist_p_o_box_64214_riyadh">Ulaya Dist. P.O.Box: 64214, Riyadh..</string>
+    <string name="username">اسم المستخدم</string>
+    <string name="albfl21">albfl21</string>
+    <string name="albertflores12_gmail_com">albertflores12@gmail.com</string>
+    <string name="tax_registration_number">رقم التسجيل الضريبي</string>
+    <string name="gg5849262kl2562d">GG5849262KL2562D</string>
+    <string name="search_on_auction">البحث عن المنتجات والبائعين</string>
+    <string name="logout">تسجيل خروج</string>
+    <string name="faq_s">الأسئلة الشائعة</string>
+    <string name="support_legal">الدعم والشؤون القانونية</string>
+    <string name="_000">000</string>
+    <string name="_0_00">0.00</string>
+    <string name="aed">ريال سعودي</string>
+    <string name="filter">منقي</string>
+    <string name="add_money">إضافة المال</string>
+    <string name="resend_code_green"><u><b>أعد إرسال الرمز</b></u></string>
+    <string name="_9999999999">9999999999</string>
+    <string name="search_questions">أسئلة البحث…</string>
+    <string name="how_to_create_a_account">كيفية إنشاء حساب؟</string>
+    <string name="answer1">افتح تطبيق Tradebase للبدء واتبع الخطوات. لا تفرض Tradebase أي رسوم لإنشاء حساب Tradebase الخاص بك أو الحفاظ عليه.</string>
+    <string name="is_the_stock_market_open_on_weekends">هل سوق الأوراق المالية مفتوح في عطلة نهاية الأسبوع؟</string>
+    <string name="what_time_does_the_stock_market_open">في أي وقت يفتح سوق الأسهم؟</string>
+    <string name="how_to_add_a_payment_method_by_this_app">كيفية إضافة طريقة الدفع عن طريق هذا التطبيق؟</string>
+    <string name="base_price">السعر الكلي</string>
+    <string name="bid">مُنَاقَصَة</string>
+
+
+    <!-- Seller Flow -->
+
+    <!-- Seller Flow  Signup Mobile Verification  -->
+    <string name="seller_confirm_Password">تأكيد كلمة المرور</string>
+    <string name="we_will_send_one_time_code_email">سوف نرسل الرمز الذي يستخدم لمرة واحدة على عنوان البريد الإلكتروني هذا.</string>
+    <string name="next">التالي</string>
+    <string name="green_house_requires_this_permission">البيت الأخضر يتطلب هذا الإذن</string>
+
+    <!--  Complete Profile -->
+    <string name="enter_personal_details" tools:ignore="TypographyFractions">أدخل بياناتك الشخصية (1/2)</string>
+    <string name="enter_personal_details2">أدخل بياناتك الشخصية (2/2)</string>
+    <string name="enter_full_name">أدخل الاسم الكامل</string>
+    <string name="enter_email_address">أدخل عنوان البريد الالكتروني</string>
+    <string name="national_id_card"> 🪪وثيقة الرخصة التجارية</string>
+    <string name="national_id_card_desc">يتطلب منك تحميل مستند الرخصة التجارية.</string>
+
+    <!-- Seller Flow Business Details -->
+
+    <string name="enter_business_details">أدخل تفاصيل عملك (2/2)</string>
+    <string name="enter_business_name">أدخل اسم العمل</string>
+    <string name="select_location">اختر موقعا</string>
+    <string name="select_category">اختر الفئة</string>
+    <string name="email_trade_license_number">أدخل رقم الرخصة التجارية</string>
+    <string name="select_license_expiry">حدد تاريخ انتهاء الترخيص</string>
+    <string name="email_tax_registration">البريد الإلكتروني رقم التسجيل الضريبي</string>
+    <string name="Verification_request_sent">تم إرسال طلب التحقق إلى المشرف</string>
+    <string name="Verification_request_sent_desc">لقد أرسلنا طلب التسجيل الخاص بك إلى المشرف، وبمجرد موافقته عليه، ستتمكن من إدراج منتجاتك.</string>
+    <string name="continue_to_login">الاستمرار في تسجيل الدخول</string>
+
+
+    <!-- Seller Flow Home -->
+    <string name="start_date">تاريخ البدء</string>
+    <string name="end_date">تاريخ الانتهاء</string>
+    <string name="revenue_chart">مخطط الإيرادات</string>
+    <string name="booking_chart">مخطط الحجز</string>
+    <string name="production_comparison">مقارنة السلعة</string>
+    <string name="bidding_details">بيانات المزايدة</string>
+    <string name="time_left">الوقت المتبقي</string>
+    <string name="bid_count">عدد العطاءات</string>
+    <string name="bidding_history">تاريخ العطاءات</string>
+    <string name="no_bid_placed">لم يتم تقديم أي عرض!</string>
+    <string name="no_bid_placed_desc">بمجرد قيام أحد المزايدين بتقديم عرض على منتجك، سيظهر ذلك في هذا القسم.</string>
+    <string name="there_is_no_bid_placed_for_product">لم يتم تقديم أي عطاءات لهذا المنتج. إذا كنت ترغب في بيع هذا المنتج، يرجى تحديث وقت انتهاء المزاد.</string>
+    <string name="change_auction_time">تغيير وقت المزاد</string>
+    <string name="select_date">حدد تاريخ</string>
+    <string name="start_time">وقت البدء</string>
+    <string name="end_time">وقت النهاية</string>
+    <string name="select_time">حدد الوقت</string>
+
+    <!-- Seller Flow My Orders -->
+    <string name="order_received_capital">طلب وارد</string>
+    <string name="shipping_company_1">شركة الشحن 1</string>
+
+    <!-- Seller Flow  My Orders Filter -->
+    <string name="filter_received">تلقى</string>
+    <string name="filter_cancelled">ألغيت</string>
+    <string name="delivered">تم التوصيل</string>
+    <string name="mark_as_packed">وضع علامة معبأة</string>
+
+
+    <!-- Order Details self pickup add package   -->
+
+    <string name="add_package_details">أضف تفاصيل الحزمة</string>
+    <string name="boxes">مربعات</string>
+    <string name="enter_box_count">أدخل عدد المربعات</string>
+    <string name="boxes_dimension">أبعاد الصناديق</string>
+    <string name="l">ل.</string>
+    <string name="h">ح.</string>
+    <string name="w">دبليو.</string>
+    <string name="pick_up_person_is_notified">يتم إخطار شخص الالتقاط بحالة الطلب هذه. الآن، سوف يصلون إلى موقع المنتج ويستلمونه.</string>
+    <string name="download_invoiceOk">تحميل فاتورة</string>
+    <string name="ok">نعم</string>
+    <string name="commission">عمولة</string>
+    <string name="you_earned">لقد حصلت على</string>
+    <string name="vat">ضريبة القيمة المضافة </string>
+    <string name="shipping_cost">تكلفة الشحن</string>
+    <string name="generate_label">إنشاء التسمية</string>
+
+
+    <!-- Order Details Shipping Company -->
+    <string name="order_is_cancelled_y_user">تم إلغاء طلب الطلب من قبل المستخدم، يرجى اختيار القرار المناسب لهذا المنتج.</string>
+    <string name="award_product">منح المنتج لثاني أعلى مزايد</string>
+    <string name="open_auction_for_this">مزاد مفتوح لهذا المنتج</string>
+    <string name="the_order_request_has">تم إرسال طلب الطلب إلى مقدم العرض، وبمجرد قبوله، سنقوم بتقديم طلب جديد وإعلامك به.</string>
+    <string name="restart_auction">إعادة تشغيل المزاد</string>
+
+    <!-- Products All -->
+    <string name="my_products">منتجاتي</string>
+    <string name="sold_products">المنتجات المباعة</string>
+    <string name="all_sold_products">جميع قوائم المنتجات المباعة هنا</string>
+
+    <!--  Seller Flow  Products Filter   -->
+    <string name="address_only">عنوان</string>
+    <string name="select_address">حدد العنوان</string>
+
+    <!-- Seller Flow  My Profile -->
+    <string name="business_details">تفاصيل الأعمال</string>
+    <string name="switch_to_bidder">التبديل إلى مقدم العرض</string>
+    <string name="bank_accounts">حسابات بنكية</string>
+    <string name="bio">السيرة الذاتية</string>
+
+    <!-- Seller Flow Wallet -->
+    <string name="total_wallet">المجموع</string>
+    <string name="freezed">مجمدة</string>
+    <string name="available">متاح</string>
+    <string name="add_money_seller">إضافة المال</string>
+    <string name="withdraw">ينسحب</string>
+
+    <!--  Seller Flow Place a Bid   -->
+    <string name="amount_">كمية</string>
+    <string name="withdraw_money_to">سحب الأموال إلى</string>
+    <string name="add_bank">+ إضافة البنك</string>
+
+    <!--  Seller Flow Business Details -->
+    <string name="add_bank_account">+إضافة حساب بنكي</string>
+    <string name="select_bank_name">حدد اسم البنك</string>
+    <string name="enter_account_holder">أدخل اسم صاحب الحساب</string>
+    <string name="enter_iban_number">أدخل رقم الآيبان</string>
+    <string name="enter_address_line">أدخل سطر العنوان</string>
+    <string name="select_country">حدد الدولة</string>
+    <string name="enter_city">أدخل المدينة</string>
+    <string name="add_only">يضيف</string>
+    <string name="business_name_only">الاسم التجاري</string>
+    <string name="location">موقع</string>
+    <string name="trade_license_number">رقم الرخصة التجارية</string>
+    <string name="license_expiry_date">تاريخ انتهاء الترخيص</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="support_amp_legal">الدعم والشؤون القانونية</string>
+    <string name="terms_and_conditions">الأحكام والشروط</string>
+    <string name="title_activity_add_money">إضافة المال</string>
+
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="previous">Previous</string>
+    <string name="title_activity_view_all_featured_product">عرض الكلالمنتج المميز</string>
+    <string name="_4_5sp">4.5</string>
+    <string name="available_balance_format"> %.2f</string>
+    <string name="upload_id_proof">تحميل إثبات الهوية</string>
+    <string name="upload_size_max_5_mb">(حجم التحميل بحد أقصى 5 ميجابايت)</string>
+    <string name="aed_0_00">ريال سعودي 0.00</string>
+    <string name="wallet_add_money">المحفظة - إضافة أموال</string>
+    <string name="tax_number">55261234ASDF23</string>
+    <string name="bank_accounts_heading">حسابات بنكية</string>
+    <string name="riyad_bank">بنك الرياض</string>
+    <string name="price_range">نطاق السعر</string>
+    <string name="_0_65">ريال سعودي 0 - ريال سعودي 0</string>
+    <string name="_0">ريال سعودي 0</string>
+    <string name="_250">ريال سعودي 250</string>
+    <string name="bid_closing_time_range">النطاق الزمني لإغلاق العطاء</string>
+    <string name="_0_7_hr">0 – 0 hr.</string>
+    <string name="_0_hr">0 hr.</string>
+    <string name="seller_ratings">تقييمات البائع</string>
+    <string name="_1">1+</string>
+    <string name="_2">2+</string>
+    <string name="_3">3+</string>
+    <string name="_4">4+</string>
+    <string name="address">عنوان</string>
+    <string name="featured_biddings">العطاءات المميزة</string>
+    <string name="add_bank_account_title">إضافة حساب بنكي</string>
+    <string name="remove_this_bank_account">هل أنت متأكد أنك تريد إزالة هذا الحساب المصرفي؟</string>
+    <string name="yes_remove">نعم، إزالة</string>
+    <string name="total">المجموع</string>
+    <string name="confirm_withdraw">تأكيد السحب</string>
+    <string name="actual_price">السعر الفعلي</string>
+    <string name="box_details">تفاصيل الصندوق</string>
+    <string name="none">لا أحد</string>
+    <string name="_12_00">12:00</string>
+    <string name="delivery_address">عنوان التسليم</string>
+    <string name="length_mtr">الطول (متر)</string>
+    <string name="height_mtr">الارتفاع (متر)</string>
+    <string name="width_mtr">العرض (متر)</string>
+    <string name="download_invoice">تحميل فاتورة</string>
+    <string name="edit_auction_time">تحرير وقت المزاد</string>
+    <string name="are_you_sure_you_want_to_remove_this_product">هل أنت متأكد أنك تريد إزالة هذا المنتج؟</string>
+    <string name="to_feature_your_product_on_the_chosen_date_your_bid_must_rank_within_the_top_10">لعرض منتجك في التاريخ المختار، يجب أن يكون عرضك ضمن أفضل 10 عروض.</string>
+    <string name="proceed_to_bid">انتقل إلى المزايدة</string>
+    <string name="featured_bidding_details">تفاصيل العطاءات المميزة</string>
+    <string name="the_products_of_top_10_rankers_will_be_marked_as_featured_and_product_ranking_will_be_same_as_their_bidding">سيتم وضع علامة على منتجات أفضل 10 مصنفين على أنها مميزة وسيكون تصنيف المنتج مماثلاً لعروض الأسعار الخاصة بهم.</string>
+    <string name="bid_ranking">ترتيب العطاءات</string>
+    <string name="_1_">1</string>
+    <string name="add_product">أضف منتج</string>
+    <string name="add_photos">إضافة الصور</string>
+    <string name="product_sub_category">فئة فرعية للمنتج</string>
+    <string name="explore_our_new_categories_to_find_auctioned_fruits_vegetables_and_dates">استكشف فئاتنا الجديدة للعثور على الفواكه والخضروات والتمور المباعة بالمزاد العلني</string>
+    <string name="kg">كلغ</string>
+    <string name="enter_base_price">أدخل السعر الإجمالي</string>
+    <string name="the_price_includes_the_15_of_commission">السعر يشمل 15% عمولة</string>
+    <string name="that_will_be_deducted_when_product_is_awarded_to_someone">% سيتم خصمه عند منح المنتج لشخص ما.</string>
+    <string name="product_location">موقع المنتج</string>
+    <string name="ex_245_256_2569">(مثال: 245 256 256)</string>
+    <string name="auction_time">وقت المزاد</string>
+    <string name="resend_request">إعادة إرسال الطلب</string>
+    <string name="successful_bid_desc"> تم تجميدها من محفظتك. سيتم خصمها بمجرد الفوز بالمزاد؛ وإلا فسيتم إلغاء تجميده</string>
+    <string name="your_bid_has_been_placed_successfully">لقد تم تقديم عرضك بنجاح</string>
+    <string name="cauliflower">قرنبيط</string>
+    <string name="green_peas">البازلاء الخضراء</string>
+    <string name="add">يضيف</string>
+    <string name="bank_name">اسم البنك</string>
+    <string name="_100_user_s_favourite">100 user’s favourite</string>
+    <string name="view_all">الاطلاع على الكل</string>
+    <string name="place_your_bid">ضع عرضك</string>
+    <string name="continue_bid">متابعة المزايدة</string>
+    <string name="view_all_reviews">عرض جميع التقييمات</string>
+    <string name="today">اليوم</string>
+    <string name="bidding_in_process">المزايدة قيد المعالجة</string>
+    <string name="desc_mybid">سيتم عرض المزاد قيد التشغيل هنا</string>
+    <string name="sar">ريال سعودي </string>
+    <string name="congrats_you_won_this_auction">تهاني! ربحت هذا المزاد.</string>
+    <string name="ordering_time_remaining">وقت الطلب المتبقي</string>
+    <string name="bid_won_desc">الرسوم الأخرى معلقة ويجب دفعها. يرجى المتابعة لتقديم الطلب بنجاح.</string>
+    <string name="winning_bid">العرض الفائز</string>
+    <string name="pickup_desc">يرجى التأكد من استلام هذا الطلب خلال 48 ساعة؛ وإلا فسيتم إلغاؤه تلقائيًا، وقد يتم تطبيق رسوم الإلغاء</string>
+    <string name="remaining_amount_desc">من فضلك انقر على زر العنصر النائب لدفع المبلغ المتبقي وتقديم طلبك.</string>
+    <string name="i_will_pick_by_myself">سأختار بنفسي</string>
+    <string name="will_pick_up">سوف تلتقط هذا الطلب</string>
+    <string name="order_success_desc">تهانينا! لقد تم تقديم طلباتك، يمكنك تتبع رقم طلبك</string>
+    <string name="search_orders">تقسيمات البحث…</string>
+    <string name="changed_mind_no_longer_needed">غيرت رأيي/لم تعد هناك حاجة إليها</string>
+    <string name="address_or_delivery_issues">مشاكل العنوان أو التسليم</string>
+    <string name="order_received_desc">هل أنت متأكد من أنك تلقيت هذا الطلب؟</string>
+    <string name="packed_received_desc">هل أنت متأكد أنك تلقيت هذه الحزمة؟</string>
+    <string name="no">لا</string>
+    <string name="rate_your_experience">قيم تجربتك</string>
+    <string name="rating_desc">كيف تقيم التجربة الشاملة لهذا المزاد؟</string>
+    <string name="review">مراجعة</string>
+    <string name="describe_your_experience">اوصف تجربتك…</string>
+    <string name="item_not_as_described">المنتج ليس كما هو موصوف</string>
+    <string name="received_damaged_or_defective">تلقى التالفة أو المعيبة</string>
+    <string name="wrong_item_received">تم استلام السلعة الخاطئة</string>
+    <string name="size_dimensions_mismatch">عدم تطابق الحجم/الأبعاد</string>
+    <string name="quality_concerns">مخاوف الجودة</string>
+    <string name="quantity_mismatch">عدم تطابق الكمية</string>
+    <string name="help">يساعد</string>
+    <string name="few_items_are_missing">بعض العناصر مفقودة بهذا الترتيب</string>
+    <string name="question1">لم أتلق هذا الطلب</string>
+    <string name="answer01">نحن نأسف حقا لهذه التجربة. يمكنك محاولة التواصل مع مسؤول التوصيل لدينا أو معنا وسنحاول حل هذه المشكلة في أقرب وقت ممكن.</string>
+    <string name="question2">حجم جزء العناصر غير مناسب</string>
+    <string name="question3">بعض العناصر مفقودة بهذا الترتيب</string>
+    <string name="question5">العناصر المسلمة غير صحيحة أو خاطئة</string>
+    <string name="question4">جودة السلعة سيئة</string>
+    <string name="where_is_my_order">اين طلبي؟</string>
+    <string name="forward">for</string>
+    <string name="about_product">حول المنتج</string>
+    <string name="about_product_desc">استكشف فئاتنا الجديدة للعثور على الفواكه والخضروات والتمور المباعة بالمزاد العلني</string>
+    <string name="product_qty">الكمية المنتج.</string>
+    <string name="mark_as_feature">وضع علامة كميزة</string>
+    <string name="time_duration">المدة الزمنية</string>
+    <string name="_24hr">24 hr.</string>
+    <string name="_966">+966</string>
+    <string name="enter_email_address_optional">عنوان البريد الإلكتروني (اختياري)</string>
+    <string name="enter_tax_registration_number_optional">أدخل رقم التسجيل الضريبي (اختياري)</string>
+    <string name="shipping_method">طريقة الشحن</string>
+    <string name="view_order_details">معاينة تفاصيل الطلب</string>
+    <string name="status">حالة</string>
+    <string name="returned">عاد</string>
+    <string name="cancelled">ألغيت</string>
+    <string name="upcoming">القادمة</string>
+    <string name="hr_left">hr. left</string>
+    <string name="_48_00">48:00</string>
+    <string name="pickup_address">عنوان الاستلام</string>
+    <string name="you_may_cancel_this_order_until_it_s_packed">يمكنك إلغاء هذا الطلب حتى يتم تعبئته.</string>
+    <string name="select_unit">حدد الوحدة</string>
+    <string name="kilogram">كيلوغرام</string>
+    <string name="gram">غرام</string>
+    <string name="tonne">طن</string>
+    <string name="edit_bid_time"><b>تحرير وقت العرض</b></string>
+    <string name="remove_product"><b>إزالة المنتج</b></string>
+    <string name="re_submit_information">إعادة تقديم المعلومات</string>
+    <string name="admin_has_declined_your_seller_registration_request_please_update_your_details_and_reapply">لقد رفض المشرف طلب تسجيل البائع الخاص بك. يرجى تحديث التفاصيل الخاصة بك وإعادة تقديم الطلب.</string>
+    <string name="bank_accounts2">حسابات بنكية</string>
+    <string name="no_bank_account_found">لم يتم العثور على حساب مصرفي!</string>
+    <string name="please_add_your_bank_account_to_add_withdraw_money">يرجى إضافة حسابك البنكي لإضافة/سحب الأموال.</string>
+    <string name="delete">يمسح</string>
+    <string name="_0_00_">0.00</string>
+    <string name="delete_">يمسح</string>
+    <string name="delete_upper">يمسح</string>
+    <string name="upper_delete">يمسح</string>
+    <string name="oops_you_lost_this_auction">أالمعذرة لقد خسرة المزاد</string>
+    <string name="missed_the_chance">راحت عليك الفرصة</string>
+    <string name="missed_chance_desc">لقد ضاعت فرصتك في هذا المزاد لأنك لم تقدم طلبًا في الوقت المناسب. تأكد من تقديم طلبك على الفور للمزايدة الناجحة التالية.</string>
+    <string name="congratulations_you_won_the_auction_for_cauliflower_and_your_order_has_been_placed_for_the_product">تهانينا! لقد فزت بالمزاد على القرنبيط وتم تقديم طلبك للمنتج.</string>
+    <string name="verification_request_failed">فشل طلب التحقق!</string>
+    <string name="rejected_desc">لقد رفض المشرف طلب تسجيل البائع الخاص بك. يرجى تحديث التفاصيل الخاصة بك وإعادة تقديم الطلب.</string>
+    <string name="title_activity_rejected3_times">رفض 3 مرات</string>
+    <string name="back_to_sign_up">العودة إلى التسجيل</string>
+    <string name="time3rejection">لست مؤهلاً للتسجيل كبائع باستخدام رقم الهاتف المحمول هذا بعد الآن.</string>
+    <string name="email_tax_registration_number_bidder">أدخل رقم التسجيل الضريبي (اختياري)</string>
+    <string name="back_to_sign_in">العودة لتسجيل الدخول</string>
+    <!--    <string name="confirm_address">Confirm Address</string>-->
+
+    <string name="please_enter_valid_quantity">يجب أن تكون الكمية الصالحة أكبر من الصفر</string>
+    <string name="please_enter_more_than_zero_enter_price">يجب أن يكون السعر الأساسي أكبر من الصفر</string>
+
+    <string name="title_activity_maps">نشاط الخرائط</string>
+    <string name="choose_from_sold_products">اختر من المنتجات المباعة</string>
+    <string name="upload_photos">تحميل الصور</string>
+    <string name="select_sub_category">حدد فئة فرعية</string>
+    <string name="product_description">وصف المنتج</string>
+    <string name="enter_here">أدخل هنا…</string>
+    <string name="select_sold_product">حدد المنتج المباع</string>
+    <string name="contact_number">رقم الاتصال</string>
+    <string name="no_product_found_description">أُووبس! لا توجد منتجات حتى الآن. ترقبوا القوائم المثيرة المقبلة!</string>
+    <string name="no_product_featured">أُووبس! لم يتم عرض أي منتجات حتى الآن. ترقبوا القوائم المثيرة المقبلة!</string>
+    <string name="wishlist_placeholder">قائمة رغباتك فارغة. ابدأ بإضافة المنتجات لرؤيتها هنا!</string>
+    <string name="no_wishlist_products">لا توجد منتجات في قائمة الرغبات!</string>
+    <string name="no_products_found">لم يتم العثور على منتجات!</string>
+    <string name="no_favourite_sellers_yet">لا يوجد بائعون مفضلون بعد!</string>
+    <string name="favorite_seller_placeholder">أُووبس! لم يتم العثور على البائع المفضل. ابدأ في الإضافة إلى المفضلة للحصول على توصيات مخصصة هنا.</string>
+    <string name="continue_as_bidder">الاستمرار كمزايد</string>
+    <string name="no_addresses_found">لم يتم العثور على عناوين!</string>
+    <string name="your_address_list_is_empty_start_adding_addresses_to_see_them_here">قائمة العناوين الخاصة بك فارغة. ابدأ بإضافة العناوين لرؤيتها هنا!</string>
+    <string name="no_data_found">لاتوجد بيانات!</string>
+    <string name="no_data_placeholder_desc">أُووبس! لا توجد بيانات حتى الآن. ترقبوا البيانات المثيرة المقبلة!</string>
+    <string name="delete_account">حذف الحساب</string>
+    <string name="cancel">يلغي</string>
+    <string name="your_bid_caps">رهانك</string>
+    <string name="no_featured_bidding_yet">لا توجد مزايدة مميزة حتى الآن!</string>
+    <string name="your_bid_">رهانك</string>
+    <string name="password_must_be_at_least_8_characters_containing_uppercase_letters_lowercase_letters_numbers_and_symbols">يجب أن تحتوي كلمة المرور على حرف واحد كبير، وحرف صغير، وحرف خاص واحد، ورقم واحد</string>
+    <string name="no_bids_found">لم يتم العثور على أي عطاءات!</string>
+    <string name="no_bids_placed_desc">ابدأ المزايدة الآن! لم يتم تقديم أي عطاءات حتى الآن. المزادات الخاصة بك في انتظار.</string>
+    <string name="there_is_no_bids_placed_for_this_product_if_you_want_to_sell_this_product_so_kindly_update_the_auction_end_time">لا يوجد أي عطاءات وضعت لهذا المنتج. إذا كنت ترغب في بيع هذا المنتج، يرجى تحديث وقت انتهاء المزاد.</string>
+    <string name="no_orders_found">لم يتم العثور على أية طلبات!</string>
+    <string name="looks_like_you_haven_t_placed_any_orders_yet_start_shopping">يبدو أنك لم تقدم أي طلبات بعد. ابدأ التسوق!</string>
+    <string name="are_you_sure_you_want_to_delete_account">هل أنت متأكد أنك تريد حذف الحساب؟</string>
+    <string name="yes_delete_1">نعم، احذف</string>
+    <string name="are_you_sure_you_want_to_delete_your_account">هل انت متأكد انك تريد حذف حسابك؟</string>
+    <string name="description">وصف</string>
+    <string name="featured_biddings_1">العطاءات المميزة</string>
+    <string name="no_order_found_desc">يبدو أنك لم تقدم أي طلبات بعد. ابدأ التسوق!</string>
+    <string name="cancel_order_its_packed">يمكنك إلغاء هذا الطلب حتى يتم تعبئته</string>
+    <string name="pickup_hr_left">ساعة الالتقاط. غادر</string>
+    <string name="received">تلقى</string>
+    <string name="order_is_cancelled_by_user_please_choose_your_decision_for_this_product">تم إلغاء الطلب من قبل المستخدم، يرجى اختيار القرار الخاص بك لهذا المنتج.</string>
+    <string name="reason_for_cancellation">سبب الالغاء</string>
+    <string name="award_product_to_second_highest_bidder">منح المنتج لثاني أعلى مزايد</string>
+    <string name="open_auction_for_this_product">مزاد مفتوح لهذا المنتج</string>
+    <string name="end_this_auction">إنهاء هذا المزاد</string>
+    <string name="add_description">اضف وصفا</string>
+    <string name="no_notifications_found">لم يتم العثور على أي إشعارات!</string>
+    <string name="notification_placeholder">الصمت يخيم! لم تتلق أي إخطارات حتى الآن. ترقبوا التحديثات.</string>
+    <string name="are_you_sure_you_want_to_end_this_auction">هل أنت متأكد أنك تريد إنهاء هذا المزاد؟</string>
+    <string name="yes">نعم</string>
+    <string name="return_received">تم استلام الإرجاع</string>
+    <string name="order_picked">تم اختيار الطلب</string>
+    <string name="package_received">تم استلام الطرد</string>
+    <string name="rate_us">قيمنا</string>
+    <string name="please_enter_quantity">الرجاء إدخال الكمية</string>
+    <string name="view_product_detail">عرض تفاصيل المنتج</string>
+    <string name="type_message_here">اكتب رسالة هنا…</string>
+    <string name="please_enter_price">الرجاء إدخال السعر</string>
+    <string name="please_enter_location">الرجاء إدخال الموقع</string>
+    <string name="please_enter_a_mobile_number">الرجاء إدخال رقم الهاتف النقال</string>
+    <string name="please_select_start_date">الرجاء تحديد تاريخ البدء</string>
+    <string name="please_select_end_date">الرجاء تحديد تاريخ الانتهاء</string>
+    <string name="please_select_start_time">الرجاء تحديد وقت البدء</string>
+    <string name="please_select_end_time">الرجاء تحديد وقت الانتهاء</string>
+    <string name="you_rated">لقد قمت بالتقييم</string>
+    <string name="return_accepted">العودة مقبولة</string>
+    <string name="return_desciption">لقد تم إرسال طلب الإرجاع الخاص بك إلى المشرف. سيتواصل الفريق قريبًا.</string>
+    <string name="add_another_address">أضف عنوان آخر</string>
+    <string name="no_history_found">لم يتم العثور على التاريخ!</string>
+    <string name="left">غادر</string>
+    <string name="no_data_available">لا تتوافر بيانات</string>
+    <string name="search_on_product">ابحث عن منتج…</string>
+    <string name="ticket">معرف التذكرة #</string>
+    <string name="did_not_find_activity">لم يتم العثور على أي تطبيق</string>
+    <string name="enter_the_location">أدخل الموقع</string>
+    <string name="help_question_1">لم أتلق هذا الطلب</string>
+    <string name="help_question_2">حجم جزء العناصر غير مناسب</string>
+    <string name="help_question_3">بعض العناصر مفقودة بهذا الترتيب</string>
+    <string name="help_question_4">العناصر المسلمة غير صحيحة أو خاطئة</string>
+    <string name="help_question_5">جودة السلعة سيئة</string>
+    <string name="highest">الأعلى</string>
+    <string name="please_select_a_category">الرجاء تحديد الفئة</string>
+    <string name="please_select_a_subcategory">الرجاء تحديد فئة فرعية</string>
+    <string name="please_enter_a_product_description">الرجاء إدخال وصف المنتج</string>
+    <string name="minimum_length_of_number_is_6_to_14_digits">الحد الأدنى لطول الرقم هو من 6 إلى 14 رقمًا</string>
+    <string name="please_turn_on_location">يرجى تشغيل الموقع</string>
+    <string name="you_need_to_enable_the_location_permission">تحتاج إلى تمكين إذن الموقع!</string>
+    <string name="rating">التقييمات</string>
+    <string name="return_desc">لقد تم إرسال طلب الإرجاع الخاص بك إلى المشرف. سيتواصل الفريق قريبًا.</string>
+    <string name="cannot_feature">لا يمكنك عرض هذا المنتج.</string>
+    <string name="enter_sar">أدخل ريال سعودي</string>
+    <string name="or_more">او اكثر</string>
+    <string name="enter_your_business_details">أدخل تفاصيل عملك</string>
+    <string name="ticket_id">معرف التذكرة #</string>
+    <string name="product_expired">انتهت صلاحية المنتج</string>
+    <string name="order_id">رقم التعريف الخاص بالطلب #</string>
+    <string name="mark_as_received">وضع علامة كمستلم</string>
+    <string name="joinedUs">انضم إلينا على</string>
+    <string name="expired">منتهي الصلاحية</string>
+    <string name="bids">العطاءات</string>
+    <string name="something_went_wrong">هناك شئ خاطئ، يرجى المحاولة فى وقت لاحق!</string>
+    <string name="few_seconds">بضع ثوان</string>
+    <string name="for_bidding"> للمزايدة</string>
+    <string name="place_bid">مكان العطاء</string>
+    <string name="wishlist_removed">تمت إزالة المنتج من قائمة الرغبات</string>
+    <string name="wishlist_added">تمت إضافة المنتج إلى قائمة الرغبات بنجاح</string>
+    <string name="search_for_products">البحث عن المنتجات…</string>
+    <string name="search_for_sellers">البحث عن البائعين…</string>
+    <string name="enter_old_password">أدخل كلمة المرور القديمة</string>
+    <string name="enter_new_password">أدخل كلمة المرور الجديدة</string>
+    <string name="confirm_pass">تأكيد كلمة المرور الجديدة</string>
+    <string name="confirm_new_password">أدخل تأكيد كلمة المرور الجديدة</string>
+    <string name="get_started">البدء</string>
+    <string name="how_to_bid">كيفية تقديم العطاءات</string>
+    <string name="payment_method">طريقة الدفع او السداد</string>
+    <string name="email">بريد إلكتروني</string>
+    <string name="enter_password">أدخل كلمة المرور</string>
+    <string name="conformpassword">تأكيد كلمة المرور</string>
+    <string name="enter_conformpassword">أدخل تأكيد كلمة المرور</string>
+    <string name="seconds">ثواني</string>
+    <string name="enter_address">أدخل العنوان</string>
+    <string name="address_edit_successfully">تم تحرير العنوان بنجاح</string>
+    <string name="please_fill_all_fields">لو سمحت أملأ كل الحقول</string>
+    <string name="confirm_password">تأكيد كلمة المرور</string>
+    <string name="enter_confirm_password">أدخل تأكيد كلمة المرور</string>
+    <string name="password_does_not_match">كلمة السر غير متطابقة</string>
+    <string name="email_address_optional">عنوان البريد الإلكتروني (اختياري)</string>
+    <string name="fill_all_the_fields">املأ جميع الحقول</string>
+    <string name="business_name">الاسم التجاري</string>
+    <string name="enter_trade_license_number">أدخل رقم الرخصة التجارية</string>
+    <string name="tax_registration_number_optional">رقم التسجيل الضريبي (اختياري)</string>
+    <string name="order_delivered">أجل تسليم</string>
+    <string name="order_packed">النظام معبأة</string>
+    <string name="order_returned">تم إرجاع الطلب</string>
+    <string name="order_id_hash">رقم التعريف الخاص بالطلب #</string>
+    <string name="location_permission">إذن الموقع</string>
+    <string name="location_permission_is_required_please_allow_location_permission_from_setting">%1$s إذن الموقع مطلوب، الرجاء السماح بإذن الموقع من الإعدادات</string>
+    <string name="image_permission">إذن الصور</string>
+    <string name="image_permission_is_required_please_allow_image_permission_from_setting">%1$s إذن الصور مطلوب، الرجاء السماح بإذن الصور من الإعدادات</string>
+    <string name="media">وسائط</string>
+    <string name="settings">الإعدادات</string>
+    <string name="cancel_1">إلغاء</string>
+    <string name="kg_1">كغ</string>
+    <string name="gm_1">جم</string>
+    <string name="ton_1">طن</string>
+    <string name="kilogram_1">كيلوغرام</string>
+    <string name="gram_1">غرام</string>
+    <string name="password_changed_successfully">تم تغيير الرقم السري بنجاح.</string>
+    <string name="error_message">يجب أن تحتوي كلمة المرور على 8 أحرف على الأقل، منها على الأقل حرف كبير وحرف صغير وحرف خاص ورقم واحد.</string>
+    <string name="enter_valid_email">أدخل بريدًا إلكترونيًا صالحًا</string>
+    <string name="enter">يدخل</string>
+    <string name="enter_valid">أدخل صالح</string>
+    <string name="notification_desc">الطلب الممنوح لك؛ يرجى قبول ووضعه بنجاح</string>
+    <string name="search_on_green_house">بحث عن البيوت الخضراء...</string>
+    <string name="user_fav">المفضلة للمستخدم</string>
+    <string name="showing_results_for">عرض النتائج ل</string>
+    <string name="notification_title">تهنئة! لقد فزت بالمزاد.</string>
+    <string name="search_a_seller">ابحث عن بائع...</string>
+    <string name="search_for_orders">البحث عن الطلبات...</string>
+    <string name="seller_wallet">رصيد المحفظة</string>
+    <string name="the_order_request_has_been_sent_to_the_bidder_once_he_accepts_we_will_place_a_new_order_and_notify_you_about_it">تم إرسال طلب الطلب إلى مقدم العرض، وبمجرد قبوله، سنقوم بتقديم طلب جديد وإعلامك به.</string>
+    <string name="we_are_awaiting_the_user_s_acceptance_of_your_order_request_upon_their_confirmation_we_will_proceed_to_create_a_new_order">نحن في انتظار قبول المستخدم لطلب طلبك. وبعد تأكيدها، سنشرع في إنشاء طلب جديد.</string>
+    <string name="admin_message">لقد قام المشرف بحل مشكلتك. شكرا لك على صبرك.</string>
+    <string name="trade_license_number_desc">أدخل رقم المنشأة التجارية او رقم السجل الزراعي اذا كنت تريد التسجيل لمؤسسة او شركة, أو يمكنك التسجيل كفرد بإدخال رقم الهوية</string>
+    <string name="invalid_number">رقم غير صالح</string>
+    <string name="cancellation_reason_desc1">إذا قمت بإلغاء هذا الطلب، SAR</string>
+    <string name="cancellation_reason_desc2">سيتم فرض رسوم الإلغاء.</string>
+    <string name="lowest_first">الأدنى أولاً</string>
+    <string name="highest_first">الاعلى اولا</string>
+    <string name="most_recent">الأحدث</string>
+</resources>
+
+

@@ -1,0 +1,118 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.GreenHouse" parent="Theme.MaterialComponents">
+        <item name="colorPrimary">@color/status_bar_color</item>
+        <item name="colorPrimaryVariant">@color/status_bar_color</item>
+        <item name="colorOnPrimary">@color/status_bar_color</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:fontFamily">@font/euclid_circular_regular</item>
+        <item name="bottomSheetDialogTheme">@style/BottomSheetDialogTheme</item>
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
+    </style>
+
+
+    <style name="Colors_Widget.MaterialComponents.Chip.Choice" parent="Widget.MaterialComponents.Chip.Choice">
+        <item name="chipBackgroundColor">@color/white</item>
+        <item name="chipStrokeColor">@color/greenhousetheme</item>
+        <item name="chipStrokeWidth">1dp</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:fontFamily">@font/euclid_circular_regular</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="circleImageView" parent="ShapeAppearance.MaterialComponents.MediumComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:fontFamily">@font/euclid_circular_regular</item>
+        <item name="cornerSize">10%</item>
+    </style>
+
+    <style name="vegetableImageBid" parent="ShapeAppearance.MaterialComponents.MediumComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:fontFamily">@font/euclid_circular_regular</item>
+        <item name="cornerSize">20%</item>
+    </style>
+
+
+    <style name="popupOverflowMenu" parent="@style/Widget.MaterialComponents.PopupMenu.Overflow">
+        <item name="android:fontFamily">@font/euclid_circular_regular</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:popupBackground">@drawable/menu_radius_drawable</item>
+    </style>
+
+    <style name="Theme.GreenHouse" parent="Base.Theme.GreenHouse">
+        <item name="android:fontFamily">@font/euclid_circular_regular</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false
+        </item>
+    </style>
+
+    <style name="RatingBar" parent="Theme.AppCompat">
+        <item name="colorControlNormal">@color/gray</item>
+        <item name="android:fontFamily">@font/euclid_circular_regular</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="colorControlActivated">@color/rating_color</item>
+    </style>
+
+    <color name="rating_bar_color" />
+
+    <style name="AppTheme.NoActionBar" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:fontFamily">@font/euclid_circular_regular</item>
+        <item name="android:statusBarColor">@color/white</item>
+        <item name="android:colorAccent">@color/greenhousetheme</item>
+    </style>
+
+
+    <style name="BottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/AppModalStyle</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:fontFamily">@font/euclid_circular_regular</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+
+    <style name="AppModalStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/bg_lang_selection</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:fontFamily">@font/euclid_circular_regular</item>
+    </style>
+
+    <style name="CustomDialog" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:fontFamily">@font/euclid_circular_regular</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.DatePickerDialog" parent="Theme.MaterialComponents.Light.Dialog">
+        <item name="android:colorAccent">@color/greenhousetheme</item>
+        <item name="android:colorControlActivated">@color/greenhousetheme</item>
+        <item name="android:buttonBarPositiveButtonStyle">@style/AppTheme.Alert.Button.Positive</item>
+        <item name="android:buttonBarNegativeButtonStyle">@style/AppTheme.Alert.Button.Negative</item>
+        <item name="android:buttonBarNeutralButtonStyle">@style/AppTheme.Alert.Button.Neutral</item>
+    </style>
+
+    <style name="AppTheme.Alert.Button.Positive" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:textColor">@color/greenhousetheme</item>
+    </style>
+
+    <style name="AppTheme.Alert.Button.Negative" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:textColor">@color/greenhousetheme</item>
+    </style>
+
+    <style name="AppTheme.Alert.Button.Neutral" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:textColor">@color/greenhousetheme</item>
+    </style>
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:datePickerDialogTheme">@style/AppTheme.DatePickerDialog</item>
+    </style>
+</resources>

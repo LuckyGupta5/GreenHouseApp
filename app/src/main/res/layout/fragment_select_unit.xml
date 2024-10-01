@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_lang_selection"
+        tools:context=".fragment.sellerfragemnt.SelectUnit">
+       <View
+        android:id="@+id/view1"
+        android:layout_width="85dp"
+        android:layout_height="5dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/view_top_verify_num" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/category1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/view1"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/euclid_circular_medium"
+            android:text="@string/select_unit"
+            android:textColor="@color/black"
+            android:textSize="21sp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/select_unit_recycler"
+            android:layout_width="match_parent"
+            android:layout_below="@id/category1"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"/>
+
+        <View
+            android:layout_width="115dp"
+            android:layout_height="4dp"
+            android:layout_below="@id/select_unit_recycler"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="35dp"
+            android:background="@drawable/bottom_black_view_3dp" />
+
+    </RelativeLayout>
+</layout>

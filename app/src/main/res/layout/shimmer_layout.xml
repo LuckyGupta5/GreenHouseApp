@@ -1,0 +1,504 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/idMainShimmer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:shimmer_animation_duration="300">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+            <RelativeLayout
+                android:id="@+id/sold_product_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="70dp"
+                android:background="@drawable/ebebeb_border"
+                android:backgroundTint="@color/gray">
+
+
+                <ImageView
+                    android:id="@+id/ic_sold_products"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:background="@color/gray"
+                    android:backgroundTint="@color/gray"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="0dp" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/sold_product_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="13dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_toEndOf="@id/ic_sold_products"
+                    android:text="@string/sold_products"
+                    android:textAlignment="center"
+                    android:textColor="@color/gray"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/sold_product_text"
+                    android:layout_marginStart="13dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_toEndOf="@id/ic_sold_products"
+                    android:text="@string/all_sold_products"
+                    android:textColor="@color/gray"
+                    android:textSize="14sp"
+                    android:textStyle="normal" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:backgroundTint="@color/gray"
+                    android:paddingHorizontal="18dp"
+                    android:src="@drawable/ic_arrow_forward" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/first_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sold_product_layout"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/seller_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginBottom="25dp">
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/seller_img"
+                            android:layout_width="175dp"
+                            android:layout_height="175dp"
+                            android:background="@color/gray"
+                            app:shapeAppearanceOverlay="@style/circleImageView" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/text1"
+                            android:layout_width="100dp"
+                            android:layout_height="15dp"
+                            android:layout_below="@id/seller_img"
+                            android:layout_marginStart="3dp"
+                            android:layout_marginTop="9dp"
+                            android:background="@color/gray"
+                            android:fontFamily="@font/euclid_circular_regular"
+                            android:textColor="@color/gray"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/text2"
+                            android:layout_width="80dp"
+                            android:layout_height="15dp"
+                            android:layout_below="@id/text1"
+                            android:layout_marginStart="3dp"
+                            android:layout_marginTop="8dp"
+                            android:background="@color/gray" />
+
+                        <View
+                            android:id="@+id/view1"
+                            android:layout_width="5dp"
+                            android:layout_height="5dp"
+                            android:layout_below="@id/text1"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="13dp"
+                            android:layout_toEndOf="@id/text2"
+                            android:background="@color/gray" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/count_bids"
+                            android:layout_width="40dp"
+                            android:layout_height="15dp"
+                            android:layout_below="@id/text1"
+                            android:layout_marginStart="9dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_toEndOf="@id/view1"
+                            android:background="@color/gray" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/weight"
+                            android:layout_width="80dp"
+                            android:layout_height="15dp"
+                            android:layout_below="@id/text2"
+                            android:layout_marginStart="3dp"
+                            android:layout_marginTop="9dp"
+                            android:background="@color/gray" />
+
+                        <View
+                            android:id="@+id/view2"
+                            android:layout_width="5dp"
+                            android:layout_height="5dp"
+                            android:layout_below="@id/text2"
+                            android:layout_marginStart="7dp"
+                            android:layout_marginTop="13dp"
+                            android:layout_toEndOf="@id/weight"
+                            android:background="@color/gray" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/time"
+                            android:layout_width="40dp"
+                            android:layout_height="15dp"
+                            android:layout_below="@id/text2"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="9dp"
+                            android:layout_toEndOf="@id/view2"
+                            android:background="@color/gray" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="80dp"
+                            android:layout_height="15dp"
+                            android:layout_below="@id/weight"
+                            android:layout_marginStart="3dp"
+                            android:layout_marginTop="17dp"
+                            android:background="@color/gray"
+                            android:fontFamily="@font/euclid_circular_bold" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/seller_layout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginBottom="25dp">
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/seller_img1"
+                            android:layout_width="175dp"
+                            android:layout_height="175dp"
+                            android:background="@color/gray"
+                            app:shapeAppearanceOverlay="@style/circleImageView" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/text11"
+                            android:layout_width="100dp"
+                            android:layout_height="15dp"
+                            android:layout_below="@id/seller_img1"
+                            android:layout_marginStart="3dp"
+                            android:layout_marginTop="9dp"
+                            android:background="@color/gray"
+                            android:fontFamily="@font/euclid_circular_regular"
+                            android:textColor="@color/gray"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/text21"
+                            android:layout_width="80dp"
+                            android:layout_height="15dp"
+                            android:layout_below="@id/text11"
+                            android:layout_marginStart="3dp"
+                            android:layout_marginTop="8dp"
+                            android:background="@color/gray" />
+
+                        <View
+                            android:id="@+id/view11"
+                            android:layout_width="5dp"
+                            android:layout_height="5dp"
+                            android:layout_below="@id/text11"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="13dp"
+                            android:layout_toEndOf="@id/text21"
+                            android:background="@color/gray" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/count_bids1"
+                            android:layout_width="40dp"
+                            android:layout_height="15dp"
+                            android:layout_below="@id/text11"
+                            android:layout_marginStart="9dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_toEndOf="@id/view11"
+                            android:background="@color/gray" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/weight1"
+                            android:layout_width="80dp"
+                            android:layout_height="15dp"
+                            android:layout_below="@id/text21"
+                            android:layout_marginStart="3dp"
+                            android:layout_marginTop="9dp"
+                            android:background="@color/gray" />
+
+                        <View
+                            android:id="@+id/view21"
+                            android:layout_width="5dp"
+                            android:layout_height="5dp"
+                            android:layout_below="@id/text21"
+                            android:layout_marginStart="7dp"
+                            android:layout_marginTop="13dp"
+                            android:layout_toEndOf="@id/weight1"
+                            android:background="@color/gray" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/time1"
+                            android:layout_width="40dp"
+                            android:layout_height="15dp"
+                            android:layout_below="@id/text21"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="9dp"
+                            android:layout_toEndOf="@id/view21"
+                            android:background="@color/gray" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="80dp"
+                            android:layout_height="15dp"
+                            android:layout_below="@id/weight1"
+                            android:layout_marginStart="3dp"
+                            android:layout_marginTop="17dp"
+                            android:background="@color/gray"
+                            android:fontFamily="@font/euclid_circular_bold" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/first_layout"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/seller_layout_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginBottom="25dp">
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/seller_img4"
+                            android:layout_width="175dp"
+                            android:layout_height="175dp"
+                            android:background="@color/gray"
+                            app:shapeAppearanceOverlay="@style/circleImageView" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/text14"
+                            android:layout_width="100dp"
+                            android:layout_height="15dp"
+                            android:layout_below="@id/seller_img4"
+                            android:layout_marginStart="3dp"
+                            android:layout_marginTop="9dp"
+                            android:background="@color/gray"
+                            android:fontFamily="@font/euclid_circular_regular"
+                            android:textColor="@color/gray"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/text24"
+                            android:layout_width="80dp"
+                            android:layout_height="15dp"
+                            android:layout_below="@id/text14"
+                            android:layout_marginStart="3dp"
+                            android:layout_marginTop="8dp"
+                            android:background="@color/gray" />
+
+                        <View
+                            android:id="@+id/view14"
+                            android:layout_width="5dp"
+                            android:layout_height="5dp"
+                            android:layout_below="@id/text14"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="13dp"
+                            android:layout_toEndOf="@id/text24"
+                            android:background="@color/gray" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/count_bids4"
+                            android:layout_width="40dp"
+                            android:layout_height="15dp"
+                            android:layout_below="@id/text14"
+                            android:layout_marginStart="9dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_toEndOf="@id/view14"
+                            android:background="@color/gray" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/weight4"
+                            android:layout_width="80dp"
+                            android:layout_height="15dp"
+                            android:layout_below="@id/text24"
+                            android:layout_marginStart="3dp"
+                            android:layout_marginTop="9dp"
+                            android:background="@color/gray" />
+
+                        <View
+                            android:id="@+id/view24"
+                            android:layout_width="5dp"
+                            android:layout_height="5dp"
+                            android:layout_below="@id/text24"
+                            android:layout_marginStart="7dp"
+                            android:layout_marginTop="13dp"
+                            android:layout_toEndOf="@id/weight4"
+                            android:background="@color/gray" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/time4"
+                            android:layout_width="40dp"
+                            android:layout_height="15dp"
+                            android:layout_below="@id/text24"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="9dp"
+                            android:layout_toEndOf="@id/view24"
+                            android:background="@color/gray" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="80dp"
+                            android:layout_height="15dp"
+                            android:layout_below="@id/weight4"
+                            android:layout_marginStart="3dp"
+                            android:layout_marginTop="17dp"
+                            android:background="@color/gray"
+                            android:fontFamily="@font/euclid_circular_bold" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/seller_layout25"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginBottom="25dp">
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/seller_img15"
+                            android:layout_width="175dp"
+                            android:layout_height="175dp"
+                            android:background="@color/gray"
+                            app:shapeAppearanceOverlay="@style/circleImageView" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/text115"
+                            android:layout_width="100dp"
+                            android:layout_height="15dp"
+                            android:layout_below="@id/seller_img15"
+                            android:layout_marginStart="3dp"
+                            android:layout_marginTop="9dp"
+                            android:background="@color/gray"
+                            android:fontFamily="@font/euclid_circular_regular"
+                            android:textColor="@color/gray"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/text215"
+                            android:layout_width="80dp"
+                            android:layout_height="15dp"
+                            android:layout_below="@id/text115"
+                            android:layout_marginStart="3dp"
+                            android:layout_marginTop="8dp"
+                            android:background="@color/gray" />
+
+                        <View
+                            android:id="@+id/view115"
+                            android:layout_width="5dp"
+                            android:layout_height="5dp"
+                            android:layout_below="@id/text115"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="13dp"
+                            android:layout_toEndOf="@id/text215"
+                            android:background="@color/gray" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/count_bids15"
+                            android:layout_width="40dp"
+                            android:layout_height="15dp"
+                            android:layout_below="@id/text115"
+                            android:layout_marginStart="9dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_toEndOf="@id/view115"
+                            android:background="@color/gray" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/weight15"
+                            android:layout_width="80dp"
+                            android:layout_height="15dp"
+                            android:layout_below="@id/text215"
+                            android:layout_marginStart="3dp"
+                            android:layout_marginTop="9dp"
+                            android:background="@color/gray" />
+
+                        <View
+                            android:id="@+id/view215"
+                            android:layout_width="5dp"
+                            android:layout_height="5dp"
+                            android:layout_below="@id/text215"
+                            android:layout_marginStart="7dp"
+                            android:layout_marginTop="13dp"
+                            android:layout_toEndOf="@id/weight15"
+                            android:background="@color/gray" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/time15"
+                            android:layout_width="40dp"
+                            android:layout_height="15dp"
+                            android:layout_below="@id/text215"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="9dp"
+                            android:layout_toEndOf="@id/view215"
+                            android:background="@color/gray" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="80dp"
+                            android:layout_height="15dp"
+                            android:layout_below="@id/weight15"
+                            android:layout_marginStart="3dp"
+                            android:layout_marginTop="17dp"
+                            android:background="@color/gray"
+                            android:fontFamily="@font/euclid_circular_bold" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+</layout>

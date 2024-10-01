@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".screen.seller.AddBankAccount">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/screen_background"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="31dp"
+            android:src="@drawable/ic_back_black"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/bankAccountHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="27dp"
+            android:text="@string/add_bank_account_title"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/profile_heading_21"
+            android:textStyle="bold" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/btnAddBankAccount"
+            android:layout_below="@id/bankAccountHeading"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="19dp"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/bankNameSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edit_field_65"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/border_inactive_ededed"
+                    android:elevation="@dimen/elevation_5"
+                    android:textAlignment="viewStart"
+                    android:textSize="@dimen/name_size_17">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/bankList"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:drawableEnd="@drawable/ic_black_down"
+                        android:paddingHorizontal="20dp"
+                        android:text="@string/select_bank_name"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/name_size_17"
+                        android:textStyle="bold" />
+
+
+                </RelativeLayout>
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/holderName"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edit_field_65"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="21dp"
+                    android:background="@drawable/border_inactive_ededed"
+                    android:elevation="@dimen/elevation_5"
+                    android:hint="@string/enter_account_holder"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:paddingHorizontal="20dp"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/hint_color"
+                    android:textSize="@dimen/name_size_17"
+                    android:textStyle="normal" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ibanNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edit_field_65"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="21dp"
+                    android:background="@drawable/border_inactive_ededed"
+                    android:elevation="@dimen/elevation_5"
+                    android:hint="@string/enter_iban_number"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:paddingHorizontal="20dp"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/hint_color"
+                    android:textSize="@dimen/name_size_17"
+                    android:textStyle="normal" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/holderAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edit_field_65"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="21dp"
+                    android:background="@drawable/border_inactive_ededed"
+                    android:elevation="@dimen/elevation_5"
+                    android:hint="@string/enter_address_line"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:paddingHorizontal="20dp"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/hint_color"
+                    android:textSize="@dimen/name_size_17"
+                    android:textStyle="normal" />
+
+                <RelativeLayout
+                    android:id="@+id/countryList"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edit_field_65"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="21dp"
+                    android:background="@drawable/ededed_border"
+                    android:elevation="@dimen/elevation_5">
+
+                    <com.google.android.material.textview.MaterialTextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:drawableEnd="@drawable/ic_black_down"
+                        android:paddingHorizontal="20dp"
+                        android:text="@string/select_country"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/name_size_17"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edit_field_65"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="21dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/border_inactive_ededed"
+                    android:elevation="@dimen/elevation_5"
+                    android:hint="@string/enter_city"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:paddingHorizontal="20dp"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/hint_color"
+                    android:textSize="@dimen/name_size_17"
+                    android:textStyle="normal" />
+            </LinearLayout>
+
+        </ScrollView>
+
+
+        <Button
+            android:id="@+id/btnAddBankAccount"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height_75"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="@color/greenhousetheme"
+            android:elevation="@dimen/elevation_5"
+            android:fontFamily="@font/euclid_circular_medium"
+            android:text="@string/add"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/button_text_size_17"
+            app:cornerRadius="10dp" />
+
+    </RelativeLayout>
+</layout>

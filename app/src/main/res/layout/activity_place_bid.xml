@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".screen.bidder.PlaceBid">
+
+        <RelativeLayout
+            android:id="@+id/mainLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/screen_background" />
+
+            <TextView
+                android:id="@+id/headingPlaceBid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="26dp"
+                android:fontFamily="@font/euclid_circular_semi_bold"
+                android:text="@string/place_your_bid"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/profile_heading_21"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/idCloseBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="26dp"
+                android:layout_marginEnd="20dp"
+                android:src="@drawable/ic_cross_white_bg" />
+
+            <TextView
+                android:id="@+id/totalBids"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/headingPlaceBid"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="6dp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/name_size_17"
+                android:textStyle="normal"
+                tools:text="2 bids" />
+
+            <View
+                android:id="@+id/dotView"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_below="@id/headingPlaceBid"
+                android:layout_marginStart="9dp"
+                android:layout_marginTop="15dp"
+                android:layout_toEndOf="@id/totalBids"
+                android:background="@drawable/dot_view" />
+
+            <TextView
+                android:id="@+id/timeLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/headingPlaceBid"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_toEndOf="@id/dotView"
+                android:textAlignment="center"
+                android:textColor="#E33030"
+                android:textSize="14sp"
+                android:textStyle="normal"
+                tools:text="1h 30m left" />
+
+            <RelativeLayout
+                android:id="@+id/detailLayer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/timeLeft"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/border_d8eded">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/vegetableImage"
+                    android:layout_width="50dp"
+                    android:layout_height="51dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginVertical="12dp"
+                    android:layout_marginStart="12dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    app:shapeAppearanceOverlay="@style/vegetableImageBid"
+                    tools:src="@drawable/image_vegetables_small" />
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_toEndOf="@id/vegetableImage"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/name_size_17"
+                    android:textStyle="bold"
+                    tools:text="@string/cauliflower" />
+
+                <TextView
+                    android:id="@+id/weight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/name"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toEndOf="@id/vegetableImage"
+                    android:textAlignment="center"
+                    android:textColor="#5F5F5F"
+                    android:textSize="15sp"
+                    android:textStyle="normal"
+                    tools:text="100kg." />
+
+                <ImageView
+                    android:id="@+id/detailBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:paddingHorizontal="18dp"
+                    android:paddingVertical="5dp"
+                    android:src="@drawable/ic_forward_black" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/budTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/detailLayer"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="41dp"
+                android:fontFamily="@font/euclid_circular_semi_bold"
+                android:text="@string/your_max_bid"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:id="@+id/aed_money_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/budTitle"
+                android:layout_centerHorizontal="true"
+                android:layout_marginHorizontal="95dp"
+                android:layout_marginTop="17dp"
+                android:background="@drawable/b8bbbba_border">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/aed_add_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/euclid_circular_semi_bold"
+                    android:paddingHorizontal="12dp"
+                    android:paddingVertical="14dp"
+                    android:text="@string/aed"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/black"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:id="@+id/view_add_money"
+                    android:layout_width="1dp"
+                    android:layout_height="55dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/aed_add_money"
+                    android:background="#B8BBBA" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/enter_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_toEndOf="@id/view_add_money"
+                    android:background="@color/white"
+                    android:hint="@string/_0_00"
+                    android:imeOptions="actionDone"
+                    android:inputType="numberDecimal"
+                    android:maxLength="5"
+                    android:maxLines="1"
+                    android:textColor="@color/black"
+                    android:textColorHint="#C0C0C0"
+                    android:textSize="21sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/maxBidWarning"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/aed_money_layout"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:textAlignment="center"
+                android:textColor="#E33030"
+                android:textSize="14sp"
+                android:textStyle="normal"
+                tools:text="enter 211 or more" />
+
+            <Button
+                android:id="@+id/continueButton"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height_75"
+                android:layout_alignParentBottom="true"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginBottom="15dp"
+                android:backgroundTint="@color/inactive_background"
+                android:elevation="@dimen/elevation_5"
+                android:fontFamily="@font/euclid_circular_medium"
+                android:text="@string/btn_confirm_bid"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/button_text_size_17"
+                app:cornerRadius="10dp" />
+        </RelativeLayout>
+
+        <include
+            android:id="@+id/placeBidShimmer"
+            layout="@layout/place_bid_shimmer"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent" />
+    </RelativeLayout>
+
+</layout>
